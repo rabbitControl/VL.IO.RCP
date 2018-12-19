@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="OgrF8PxIytvQJiRB4G7aGA" Version="0.94">
+<Document xmlns:p="property" Id="OgrF8PxIytvQJiRB4G7aGA" Version="0.95">
   <NugetDependency Id="TLf8OH2tvYkOxKSqp8nFb1" Location="VL.Core" Version="0.93.12-g6fa24bb419" />
   <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="0.93.12-g6fa24bb419" />
   <PlatformDependency Id="VP8lSXnDbq2LD6arlAZmrE" Location="C:/Users/joreg/Documents/repos/vl-libs/VL.RCP/RCPSharp.dll" />
@@ -4262,6 +4262,24 @@
               <Fragment Id="SASwVNgd8KyORsZg73zZTZ" Patch="ONS5KO9P3LrLg6P5g4MdhS" />
               <Fragment Id="OFxQO3ILt5AQItZCzCt7pU" Patch="PnyfKvjs0WyMvruL9UgOFT" />
             </ProcessDefinition>
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Datatype ************************
+
+-->
+        <Node Name="Datatype" Bounds="489,378" Id="NJKWeN1s7fRQbHziFoiOa9">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <FullNameCategoryReference ID="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="RCP.Protocol.RcpTypes" LastSymbolSource="RCPSharp.dll">
+            <Choice Kind="TypeFlag" Name="Datatype" />
+          </p:TypeAnnotation>
+          <Patch Id="Upt5Kp90JEZLGLyL5uBaKF">
+            <Canvas Id="Jgg06QsEnjRNiIYUBxbAua" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="FeXOwanUSBuNIDfkWJWnRb" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
