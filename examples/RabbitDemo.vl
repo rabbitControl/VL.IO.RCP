@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" Version="0.94">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" Version="0.95">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory">
