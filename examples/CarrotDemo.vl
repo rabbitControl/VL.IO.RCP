@@ -948,5 +948,6 @@
   </Patch>
   <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="0.94.62-g2cf6e985bb" />
   <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
-  <NugetDependency Id="GINmODW28nUQPo7WZcAuz3" Location="VL.RCP" Version="0.0.0.0" />
+  <PlatformDependency Id="K64ryp4dCPjMiaoJUlLwPn" Location="System.Drawing" />
+  <DocumentDependency Id="TGt8NV9XGziPZMAPriVIDg" Location="../VL.RCP.vl" />
 </Document>
