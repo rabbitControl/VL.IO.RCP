@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="OgrF8PxIytvQJiRB4G7aGA" Version="0.95">
+<Document xmlns:p="property" Id="OgrF8PxIytvQJiRB4G7aGA" Version="0.98">
   <NugetDependency Id="TLf8OH2tvYkOxKSqp8nFb1" Location="VL.Core" Version="0.93.12-g6fa24bb419" />
   <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="0.93.12-g6fa24bb419" />
-  <PlatformDependency Id="VP8lSXnDbq2LD6arlAZmrE" Location="C:/Users/joreg/Documents/repos/vl-libs/VL.RCP/RCPSharp.dll" />
   <Patch Id="PplcvdvtWupLrsERG0V91V">
     <Canvas Id="ExGrqi5W2YCO3GKnTiJ7o7" DefaultCategory="IO.RCP" CanvasType="FullCategory">
       <!--
@@ -31,7 +30,7 @@
             <Node Bounds="321,200,231,61" Id="EKsswP1iizCMQQQuowJ73x">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ApplicationStatefulRegion" Name="Cache" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="ONQltikfTJCLbZm3CGoA8n" Name="Force" Kind="InputPin" />
@@ -592,7 +591,7 @@
                   <Pin Id="GBVLgtvWx7SMPENqK3vmnz" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="407,488,113,22" Id="BulhYPO34bcOkA8snCxrUb">
-                  <p:NodeReference LastCategoryFullName="RCP.Protocol.Widget" LastSymbolSource="RCPSharp.dll">
+                  <p:NodeReference LastCategoryFullName="IO.RCP.Widget" LastSymbolSource="VL.RCP.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetNeedsConfirmation" />
                   </p:NodeReference>
@@ -714,7 +713,7 @@
                   <Pin Id="A4GDmUaLMiZLG55TZF1dXq" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="493,944,113,22" Id="QF4fTsOjsAKLeylWqRMwTR">
-                  <p:NodeReference LastCategoryFullName="RCP.Protocol.Widget" LastSymbolSource="RCPSharp.dll">
+                  <p:NodeReference LastCategoryFullName="IO.RCP.Widget" LastSymbolSource="VL.RCP.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetNeedsConfirmation" />
                   </p:NodeReference>
@@ -1860,7 +1859,7 @@
                   <Pin Id="Ee01h1OCQlbN8Ju6N64WUq" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="490,445,113,13" Id="LtxTJqqnDeQOaNrJdJ6kt3">
-                  <p:NodeReference LastCategoryFullName="RCP.Protocol.Widget" LastSymbolSource="RCPSharp.dll">
+                  <p:NodeReference LastCategoryFullName="IO.RCP.Widget" LastSymbolSource="VL.RCP.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetNeedsConfirmation" />
                   </p:NodeReference>
@@ -1951,7 +1950,7 @@
                   <Pin Id="H73qOEOpFOwPIEpZnzs3s0" Name="Output" Kind="StateOutputPin" />
                 </Node>
                 <Node Bounds="603,924,113,22" Id="KOHwUcfNXkxOkhMJB3MyI1">
-                  <p:NodeReference LastCategoryFullName="RCP.Protocol.Widget" LastSymbolSource="RCPSharp.dll">
+                  <p:NodeReference LastCategoryFullName="IO.RCP.Widget" LastSymbolSource="VL.RCP.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="SetNeedsConfirmation" />
                   </p:NodeReference>
@@ -2705,7 +2704,7 @@
             <Node Bounds="262,516,118,132" Id="N35rBq95KjbOUB2Gby9Ajk">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-                <Choice Kind="ApplicationStatefulRegion" Name="Cache" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <FullNameCategoryReference ID="Primitive" />
               </p:NodeReference>
               <Pin Id="TzGB5p4WBsrNuZ9sb2L8NF" Name="Force" Kind="InputPin" />
@@ -4552,7 +4551,28 @@
         </Patch>
       </Node>
     </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="PXXqBHexDjGNXXl7Ozay8v">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="Ju3U0vrlJKJONmVjgUsF3b">
+        <Canvas Id="EFpeTQlQguQPwmfJL4S0WL" BordersChecked="false" CanvasType="Group" />
+        <Patch Id="OB7YOrovCInNGTGkDNaNLU" Name="Create" />
+        <Patch Id="BGS74dStllmOGOMEYIBNIe" Name="Update" />
+        <ProcessDefinition Id="LygEAK6MlwZLdYnyT6UNQD">
+          <Fragment Id="NjGgeTTEFhLMMeFLXMXACa" Patch="OB7YOrovCInNGTGkDNaNLU" Enabled="true" />
+          <Fragment Id="DjKkmjTJmPMPED0yUucY85" Patch="BGS74dStllmOGOMEYIBNIe" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
   </Patch>
-  <PlatformDependency Id="ToHGjn5EC1cNeCoZ1lSOO6" Location="System.Numerics.Vectors" />
   <PlatformDependency Id="St3iFYFQrCSL823QHkcnJe" Location="System.Drawing" />
+  <NugetDependency Id="F3wgo1Z0RbuMTJmnokALVh" Location="System.Numerics.Vectors" Version="4.4.0" />
+  <NugetDependency Id="LvAfO6kNlM0Mkzv6yPj9FJ" Location="RCPSharp" Version="0.1.1-g72e9ec5f59" />
 </Document>
