@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" Version="0.98">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0150-g4778b4a38a" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
@@ -30,7 +30,7 @@
             <Pin Id="G7qVKx4Nes2M674JhzpOzJ" Name="RCPServer" Kind="OutputPin" />
             <Pin Id="BtOj6i9Iv2gMW6XgZj00cE" Name="Connection Count" Kind="OutputPin" />
           </Node>
-          <Pad Id="T5ZRc4fvKArPYMTI5w4LCh" Comment="Connection Count" Bounds="413,333,18,19" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="T5ZRc4fvKArPYMTI5w4LCh" Comment="Connection Count" Bounds="413,331,18,19" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="363,780,165,13" Id="IWNGa56SRGnMGTxWyrUOnm">
             <p:NodeReference LastCategoryFullName="IO.RCP" LastSymbolSource="VL.RCP.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -82,7 +82,7 @@
             <Pin Id="Rf7M1U7FzZgPzfVWsofBGJ" Name="Quality" Kind="InputPin" />
             <Pin Id="Agh7fijknrxN71eUYsu7z2" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="DKvc5M9bAOxObU9v0YkctH" Comment="Enabled" Bounds="527,754,40,19" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="DKvc5M9bAOxObU9v0YkctH" Comment="Enabled" Bounds="527,752,40,19" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -160,7 +160,7 @@
                 </Pin>
                 <Pin Id="TWOwAoOj4wAQJnIPVjyiJ3" Name="Value" Kind="OutputPin" />
               </Node>
-              <Pad Id="BK30r2tSNkeOIML9LfpRQj" Comment="Enabled" Bounds="628,480,40,19" ShowValueBox="true" isIOBox="true" Value="True">
+              <Pad Id="BK30r2tSNkeOIML9LfpRQj" Comment="Enabled" Bounds="628,478,40,19" ShowValueBox="true" isIOBox="true" Value="True">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
@@ -195,12 +195,12 @@
             <Pin Id="R7kq9m8BvmjO8YdkEkA9Xn" Name="Count" Kind="InputPin" />
             <Pin Id="B3ZKKZyL4RfO03GdqjZDTq" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="BMie0ycpBdMPjQIzy8cXP5" Comment="Count" Bounds="695,320,18,19" ShowValueBox="true" isIOBox="true" Value="4">
+          <Pad Id="BMie0ycpBdMPjQIzy8cXP5" Comment="Count" Bounds="695,318,18,19" ShowValueBox="true" isIOBox="true" Value="4">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="H1LEh710SrFNUBkhPvFWf5" Bounds="343,104,299,100" ShowValueBox="true" isIOBox="true" Value="To expose parameters from vl, create a Rabbit node and connect FloatParam, IntParam,.... nodes to it.&#xD;&#xA;&#xD;&#xA;then use e.g. this web-client to connect to it:">
+          <Pad Id="H1LEh710SrFNUBkhPvFWf5" Bounds="343,61,299,100" ShowValueBox="true" isIOBox="true" Value="To expose parameters from vl, create a Rabbit node and connect FloatParam, IntParam,.... nodes to it.&#xD;&#xA;&#xD;&#xA;then use e.g. this web-client to connect to it:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -209,7 +209,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="HstESibevS3LDyipeShoFe" Bounds="343,166,239,22" ShowValueBox="true" isIOBox="true" Value="http://rabbitcontrol.github.io/client/">
+          <Pad Id="HstESibevS3LDyipeShoFe" Bounds="343,162,239,22" ShowValueBox="true" isIOBox="true" Value="http://rabbitcontrol.github.io/client/">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
