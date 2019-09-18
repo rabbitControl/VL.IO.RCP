@@ -4771,7 +4771,7 @@
     </Node>
   </Patch>
   <PlatformDependency Id="St3iFYFQrCSL823QHkcnJe" Location="System.Drawing" />
-  <NugetDependency Id="F3wgo1Z0RbuMTJmnokALVh" Location="System.Numerics.Vectors" Version="4.4.0" />
   <NugetDependency Id="LvAfO6kNlM0Mkzv6yPj9FJ" Location="RCPSharp" Version="0.1.1-g72e9ec5f59" />
   <DocumentDependency Id="Dr66wJ6fHXQPuaICiJ9VaG" Location="./VL.RCP.Skia.vl" IsForward="true" />
+  <NugetDependency Id="RgWZZqaFynTLzXZSVB8taX" Location="System.Numerics.Vectors" Version="4.5.0" />
 </Document>
