@@ -25,7 +25,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="VzISHw2Sf2oPggkyDl8uiS" Name="Bounds" Kind="InputPin" DefaultValue="1155, 70, 325, 497">
+            <Pin Id="VzISHw2Sf2oPggkyDl8uiS" Name="Bounds" Kind="InputPin" DefaultValue="1155, 70, 325, 454">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -33,7 +33,11 @@
             <Pin Id="Nj1IVQL1xuWPx2exezF7Fh" Name="Input" Kind="InputPin" />
             <Pin Id="CuHZl0qpAsLQWf9EiQoTLc" Name="Color" Kind="InputPin" />
             <Pin Id="ByyhdGHBRrxL91NKNTTuEd" Name="Clear" Kind="InputPin" />
-            <Pin Id="DaW6hohzIzaLKpy28tErxF" Name="Space" Kind="InputPin" />
+            <Pin Id="DaW6hohzIzaLKpy28tErxF" Name="Space" Kind="InputPin" DefaultValue="DIPTopLeft">
+              <p:TypeAnnotation LastCategoryFullName="VL.Skia" LastSymbolSource="VL.Skia.dll">
+                <Choice Kind="TypeFlag" Name="CommonSpace" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="JngPpOMMYGYLYfiMLiiW0V" Name="Enabled" Kind="InputPin" />
             <Pin Id="USnCYtqjF7EPItzFgoVlCT" Name="Form" Kind="OutputPin" />
             <Pin Id="CUr5PMxPbrhORyUiDE452w" Name="ClientBounds" Kind="OutputPin" />
@@ -177,6 +181,7 @@
               <Choice Kind="ProcessAppFlag" Name="CarrotUI" />
             </p:NodeReference>
             <Pin Id="NQE8ZThxcamN0GB1utM5aj" Name="Position" Kind="InputPin" />
+            <Pin Id="VSYXE37HHU8QVRjBCatQpv" Name="Size" Kind="InputPin" />
             <Pin Id="SsRkAkUvMkWL1Nv89VICN6" Name="Remote Host" Kind="InputPin" />
             <Pin Id="IHO1l7xqUs2MLFQAyP5L9X" Name="Port" Kind="InputPin" />
             <Pin Id="QjeQSko3Fq8NLs8E5FqEhI" Name="Initialize" Kind="InputPin" />
@@ -247,6 +252,19 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
+          <Node Bounds="322,761" Id="FDVdCakOqpaO630q8yGLy6">
+            <p:NodeReference LastCategoryFullName="2D.Rectangle" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Size" />
+              <CategoryReference Kind="RecordType" Name="Rectangle" NeedsToBeDirectParent="true">
+                <p:OuterCategoryReference Kind="Category" Name="2D" NeedsToBeDirectParent="true" />
+              </CategoryReference>
+            </p:NodeReference>
+            <Pin Id="TJW3chKGi1UONiirNZbhm1" Name="Input" Kind="StateInputPin" />
+            <Pin Id="CjIk1MrLXsrPdX0EpyJOr1" Name="Size" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JPQRscSoYpWMJwGPdLjw3q" SlotId="Uu71lgHGkXgPnFR6yde9rP" Bounds="331,806" />
+          <Pad Id="PHi3cpfzUuXPs9oXu5C2Za" SlotId="Uu71lgHGkXgPnFR6yde9rP" Bounds="514,482" />
         </Canvas>
         <Patch Id="HwnAQw7XXpHPzkJ3LoSazd" Name="Create" />
         <Patch Id="HFVKRsatuGfNuRqSXLU6rW" Name="Update" />
@@ -278,6 +296,10 @@
         <Link Id="RFrue37MU55Or30noqI3t9" Ids="QOLqQ1OBNxBNeFD0snypju,KsSmPbjLS01LiZ0NiN0Fjm" />
         <Link Id="IAhMcAtiIilLKjM7gZPhBL" Ids="IHfwrOPocRJN1UNudWpeAu,BsAU1hFOvjPPO7dDW0Ru5c" />
         <Link Id="FVOeDvoPBu1L4FlByqwpn7" Ids="G8jU8miPFBOOXfjQqXViqb,DMpkQv69F3ROR6FjQHGcfh" />
+        <Link Id="JOB1yZpBYGKLXMajVVI7E4" Ids="CUr5PMxPbrhORyUiDE452w,TJW3chKGi1UONiirNZbhm1" />
+        <Slot Id="Uu71lgHGkXgPnFR6yde9rP" Name="Size" />
+        <Link Id="FUH7LTO3oXMMbQWclyhP4k" Ids="CjIk1MrLXsrPdX0EpyJOr1,JPQRscSoYpWMJwGPdLjw3q" />
+        <Link Id="TY58gkUisYdL8PmBMKh3uM" Ids="PHi3cpfzUuXPs9oXu5C2Za,VSYXE37HHU8QVRjBCatQpv" />
       </Patch>
     </Node>
   </Patch>
