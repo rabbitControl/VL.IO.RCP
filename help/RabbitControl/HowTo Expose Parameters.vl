@@ -187,5 +187,5 @@
   </Patch>
   <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="0.94.62-g2cf6e985bb" />
   <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
-  <DocumentDependency Id="HwxHXIHUZLmLhLBmabe4Zx" Location="../VL.RCP.vl" />
+  <NugetDependency Id="AF46cq8QKEuNUcq3nUVAE6" Location="VL.RCP" Version="0.0.0.0" />
 </Document>
