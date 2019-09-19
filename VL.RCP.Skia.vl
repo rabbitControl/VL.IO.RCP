@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0703-g2ca4a704b6" Version="0.128">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0701-g2f74b497b0" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="IO.RCP" CanvasType="FullCategory">
@@ -4244,21 +4244,7 @@
         <FullNameCategoryReference ID="Primitive" />
       </p:NodeReference>
       <Patch Id="GfkwiOQeH7KLHgYztH71Zy">
-        <Canvas Id="UhyIkER3ywNMS7mpScj8AC" CanvasType="Group">
-          <Node Bounds="299,383" Id="HxMJS6l6zFKQJtlPQYqzIf">
-            <p:NodeReference LastCategoryFullName="IO.RCP" LastSymbolSource="VL.RCP.Skia.vl">
-              <Choice Kind="ProcessNode" Name="CarrotUI" />
-            </p:NodeReference>
-            <Pin Id="PuFhsd04S0JLIcjCHZmpxr" Name="Position" Kind="InputPin" />
-            <Pin Id="T0jIHfHyQeKQaKQBGF3UhD" Name="Size" Kind="InputPin" />
-            <Pin Id="Tui9aYnPekZMvC0jHzuQe9" Name="Remote Host" Kind="InputPin" />
-            <Pin Id="Q8K1LYvQ7TXN3iDGJP4K1p" Name="Port" Kind="InputPin" />
-            <Pin Id="SAj0ULkFGaxPl3KZ7Iukx9" Name="Initialize" Kind="InputPin" />
-            <Pin Id="OdH9nVN8yD1QChLwWH8Dsx" Name="Enabled" Kind="InputPin" />
-            <Pin Id="G0VHu7nNYVkNDSOhFZgllA" Name="Output" Kind="OutputPin" />
-            <Pin Id="KZfD6w8shFtLePkKjn4ppL" Name="Is Connected" Kind="OutputPin" />
-          </Node>
-        </Canvas>
+        <Canvas Id="UhyIkER3ywNMS7mpScj8AC" CanvasType="Group" />
         <Patch Id="HwnAQw7XXpHPzkJ3LoSazd" Name="Create" />
         <Patch Id="HFVKRsatuGfNuRqSXLU6rW" Name="Update" />
         <ProcessDefinition Id="SrdqY1gKe8yNwcQXMEYN2Q">
