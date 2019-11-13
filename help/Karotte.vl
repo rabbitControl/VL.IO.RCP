@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0944-g55db11b013" Version="0.128">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0930-g60a3dd6ea9" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -70,7 +70,11 @@
               <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
             </p:NodeReference>
             <Pin Id="UsEn5K7wSRvNxjWA8q9oNr" Name="Input" Kind="InputPin" />
-            <Pin Id="CaURVsAeQ4lNyW1blxLxSZ" Name="Position" Kind="InputPin" />
+            <Pin Id="CaURVsAeQ4lNyW1blxLxSZ" Name="Position" Kind="InputPin" DefaultValue="0.09999999, 0.09999999">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="U59g3rK0S0CNEcCPThYjoG" Name="Size" Kind="InputPin" />
             <Pin Id="AzJeIFWkPKENg91ba39pYu" Name="Spacing" Kind="InputPin" DefaultValue="0.04">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -80,22 +84,6 @@
             <Pin Id="FaC1vViRuaTPq0G0NDqTyi" Name="Output" Kind="StateOutputPin" />
             <Pin Id="DB5pI2OjoMxN59gq7PImOp" Name="Dirty Layout" Kind="OutputPin" />
             <Pin Id="RaRWNlNgLCxLFkv51c7Xk0" Name="Dirty Graph" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="310,452,85,19" Id="J3R8FqzVZqsNaKSKcG9SSM">
-            <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="Bounds" />
-            </p:NodeReference>
-            <Pin Id="TC8mCJXO2hTNpjoOqsaJw6" Name="Position" Kind="InputPin" DefaultValue="0.09, 0.13">
-              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Vector2" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="Ulvl4s421XXNVzvoFOhqMX" Name="Size" Kind="InputPin" />
-            <Pin Id="VjqZ6AKhfI9NhD639dCI9q" Name="Flexibility" Kind="InputPin" />
-            <Pin Id="KRWjQSH9dAEMcRnrGl6Lev" Name="Min Size" Kind="InputPin" />
-            <Pin Id="Kqgwd30cUmIPUyD1MlT9tE" Name="Max Size" Kind="InputPin" />
-            <Pin Id="Qd9EzZOBsloLgv3qvOCCYL" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="280,602,112,19" Id="PkkCRpgWoyZLkAWuS1QVRS">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Transform" LastSymbolSource="VL.Skia.vl">
@@ -217,12 +205,7 @@
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="JUUzJF25LJ2O8zenqNAcmK" Comment="Position" Bounds="312,418,35,28" ShowValueBox="true" isIOBox="true" Value="0.09999999, 0.09999999">
-            <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="Vector2" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="E4i12BEJuDAPA5E2WiMGmX" Comment="Position" Bounds="451,466,35,28" ShowValueBox="true" isIOBox="true" Value="0.09999999, 0.92">
+          <Pad Id="E4i12BEJuDAPA5E2WiMGmX" Comment="Position" Bounds="419,460,35,28" ShowValueBox="true" isIOBox="true" Value="0.09999999, 0.92">
             <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
@@ -289,7 +272,6 @@
         <Link Id="DzKRJlI0tbIMt86PsmbjbA" Ids="EnBGWCb2yFIOdgTtPhmH4s,DH0rQq49kDjPspt6L8IF1N" />
         <Link Id="G5UDjEeCFnwLvKsU76sLhd" Ids="Rr0ilqgadjpLeF6Jpn4ysB,QjeQSko3Fq8NLs8E5FqEhI" />
         <Link Id="DfDVdde58M0MNWEbK70wD9" Ids="KUlbPpPGalJOjU2T5NiJKm,KcuG9Q3bCSPORI9lLVoTTz" />
-        <Link Id="Poy5BW4JhfRLGKuMrynYqv" Ids="JUUzJF25LJ2O8zenqNAcmK,TC8mCJXO2hTNpjoOqsaJw6" />
         <Link Id="Qdv5JiYU2Y9Pu3gQ9zJUFl" Ids="E4i12BEJuDAPA5E2WiMGmX,NQE8ZThxcamN0GB1utM5aj" />
         <Link Id="TDMfKm6zefNNns3pfSxTA6" Ids="ME99WUIHjxTN8DH1msjID5,IHO1l7xqUs2MLFQAyP5L9X" />
         <Link Id="FF5FBf9Cq96LyzL8gbIxx5" Ids="NvxA2rN2QTtPxJuQJaNbzr,L4BjBTgOmHPOGcnxkTZti3" />
