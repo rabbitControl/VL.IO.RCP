@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="OgrF8PxIytvQJiRB4G7aGA" LanguageVersion="2019.1.0-0882-gda69dcbd15" Version="0.128">
+<Document xmlns:p="property" Id="OgrF8PxIytvQJiRB4G7aGA" LanguageVersion="2019.1.0-0944-g55db11b013" Version="0.128">
   <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="0.93.12-g6fa24bb419" />
   <Patch Id="PplcvdvtWupLrsERG0V91V">
     <Canvas Id="ExGrqi5W2YCO3GKnTiJ7o7" DefaultCategory="IO.RCP" CanvasType="FullCategory">
@@ -2222,7 +2222,7 @@
     ************************ Remove (Internal) ************************
 
 -->
-              <Node Name="Remove (Internal)" Bounds="-185,751,179,197" Id="Ft15pV1U2r0PwxYAWzCZ0f">
+              <Node Name="Remove (Internal)" Bounds="-185,749,224,203" Id="Ft15pV1U2r0PwxYAWzCZ0f">
                 <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
                   <Choice Kind="OperationDefinition" Name="Operation" />
                 </p:NodeReference>
@@ -2237,13 +2237,14 @@
                     <Pin Id="DjoCnUPhfXQLNe2y5iL5zV" Name="Apply" Kind="InputPin" />
                     <Pin Id="EMRM9ROQ8PxOpAXiN5bE7e" Name="Output" Kind="StateOutputPin" />
                   </Node>
-                  <Node Bounds="-172,906,45,22" Id="QfRdMVspx6lM755aMzgJnS">
+                  <Node Bounds="-172,906,108,26" Id="QfRdMVspx6lM755aMzgJnS">
                     <p:NodeReference LastCategoryFullName="RCP.RCPServer" LastSymbolSource="RCPSharp.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="Update" />
                       <CategoryReference Kind="AssemblyCategory" Name="RCPServer" NeedsToBeDirectParent="true" />
                     </p:NodeReference>
                     <Pin Id="IqzgqTMnRSDOSUlb6xg5zM" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="FRNuBAT3u5FOCGjl0nT8sq" Name="Apply" Kind="InputPin" />
                     <Pin Id="R0JD7DNvO5RP9uUP8rFwsK" Name="Output" Kind="StateOutputPin" />
                   </Node>
                   <Link Id="HJCr5qjcSRSL3MaHnPCIYE" Ids="EMRM9ROQ8PxOpAXiN5bE7e,IqzgqTMnRSDOSUlb6xg5zM" />
@@ -2255,7 +2256,7 @@
                   <Link Id="Okz6JBSnF6dLfRu55ZxJQ2" Ids="L76Yj0bNtlYMrnJCLKpGjk,MI7By3ILMHkL2nPIU4r10l" />
                   <Pin Id="CwMc6CFhRORNYmcNKvuWfP" Name="Param" Kind="InputPin" Bounds="199,839" />
                   <Link Id="QWcJ0ktFLavPN44QS1ZYZH" Ids="CwMc6CFhRORNYmcNKvuWfP,L76Yj0bNtlYMrnJCLKpGjk" IsHidden="true" />
-                  <Node Bounds="-77,792,59,13" Id="C1tSufQExMfLALfWiUMtpR">
+                  <Node Bounds="-38,792,65,19" Id="C1tSufQExMfLALfWiUMtpR">
                     <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="IsAssigned" />
@@ -2275,7 +2276,7 @@
                     <Pin Id="OFWDHhDFrSZLjDFk7LP2nX" Name="Not Assigned" Kind="OutputPin" />
                   </Node>
                   <Link Id="UNQCqzk5B0YNuSHlR33oZJ" Ids="G5kaySFvLENPFnLJtX8yCy,FGzy1gE0r0ePiVpYTWQXCB" />
-                  <Node Bounds="-102,826,30,13" Id="Ss1ufMpsfFqLygsmVy94wc">
+                  <Node Bounds="-68,826,37,19" Id="Ss1ufMpsfFqLygsmVy94wc">
                     <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="AND" />
@@ -2287,16 +2288,8 @@
                   <Link Id="DuEJ1nSSQO6LFdnEB5codr" Ids="IW3f2GrrZywQFUacRD9056,LuBJHOYQcu2OeRwLW6324X" />
                   <Link Id="AsgpBxHcw3IMWqNf84vD1v" Ids="SYnhA5pPRSoOxDgRaguwR9,DjoCnUPhfXQLNe2y5iL5zV" />
                   <Link Id="DhCS0GKxQHBOr9uKtQJUrm" Ids="LtsFqQa61wJLy15Z9ODySl,Biz0pCZSyrRLNM4sFKnX2N" />
+                  <Link Id="E9CI55kcSe2LJzJIeFxQEH" Ids="SYnhA5pPRSoOxDgRaguwR9,FRNuBAT3u5FOCGjl0nT8sq" />
                 </Patch>
-              </Node>
-              <Node Bounds="76,785,62,13" Id="Pc1ZmJaGcCFON8yI0clEfw">
-                <p:NodeReference LastCategoryFullName="IO.RCP.ValueParam" LastSymbolSource="VL.RCP.vl">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="OperationCallFlag" Name="Remove" />
-                  <CategoryReference Name="ValueParam" NeedsToBeDirectParent="true" />
-                </p:NodeReference>
-                <Pin Id="DH43xjAefFsQPGIpta2TXT" Name="Input" Kind="InputPin" />
-                <Pin Id="Ecx3sjfwhAwOHAWk75R7Uh" Name="Param" Kind="InputPin" />
               </Node>
               <Node Bounds="237,683,62,13" Id="UtnHN0vu2PJQDQhxaj51MB">
                 <p:NodeReference LastCategoryFullName="IO.RCP.ValueParam" LastSymbolSource="VL.RCP.vl">
@@ -2522,6 +2515,15 @@
               <ControlPoint Id="JYtjiCgVg4iMapVq96LKV1" Bounds="648,439" />
               <Pad Id="QDCx3ipjaekNeRObyIoy2u" SlotId="NaIuRpasR8aPlewXbWTepe" Bounds="374,644" />
               <Pad Id="A8Y0tjfZ6BeQUaKwmA3WlQ" SlotId="NaIuRpasR8aPlewXbWTepe" Bounds="518,213" />
+              <Node Bounds="99,796,52,19" Id="JMApAGiAo43OfO5ZDBvqA8">
+                <p:NodeReference LastCategoryFullName="IO.RCP.Parameters.ValueParam" LastSymbolSource="VL.RCP.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Remove" />
+                  <CategoryReference Kind="Category" Name="ValueParam" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="AY6BGCqFbChMfPc4261f30" Name="Input" Kind="InputPin" />
+                <Pin Id="JlGtXXlMLT2MT7SR7B2bcb" Name="Param" Kind="InputPin" />
+              </Node>
             </Canvas>
             <Patch Id="G6K2bYccxL0MzgmuSJVN9B" Name="Create" />
             <Patch Id="L6RI4etcFAAOXCDjKn7O19" Name="Update">
@@ -2553,7 +2555,7 @@
             <Slot Id="OkqsGtSdwisNHGJZjxHHPR" Name="Param" />
             <Link Id="UwlYqE7GZmxLeE6Fz2XNNX" Ids="E206t64xvKqNCyuJz2pfAP,PaRxbZJtnm1OzM1K1dsJix" />
             <Link Id="QRxBRuss4taQaTN5oX6K4O" Ids="Vr2wWe0v1HyNmembrhUNH3,TlDO5ZNyDYOLflUmpCvOKY" />
-            <Patch Id="PF5JhykALSFL8gI7SWEuab" Name="Dispose" ParticipatingElements="Pc1ZmJaGcCFON8yI0clEfw" />
+            <Patch Id="PF5JhykALSFL8gI7SWEuab" Name="Dispose" ParticipatingElements="JMApAGiAo43OfO5ZDBvqA8" />
             <Slot Id="SViekUftZoxP6v2Ktf5oda" Name="Server" />
             <Link Id="A5hpT77ArIVLjTcAk1etQj" Ids="Jz7n5AD3LDuLsFgunIQ3yU,BqeDehvvGopNSotHK9oa1J" />
             <Link Id="TwD9laDZiT4N5Vi05M14kV" Ids="BdzBghkmiuwMoYI8kvnGhv,Jz7n5AD3LDuLsFgunIQ3yU" IsHidden="true" />
@@ -2574,8 +2576,6 @@
             <Link Id="QGSYuzYVzvmMaE4g7zgtFd" Ids="Rn1Nk32fHdcOOvBbxpyPc8,Phi4dbSYWwOOpsraeej2Hf" IsHidden="true" />
             <Link Id="EJRFFmXv13iQTJJ3PVf5D1" Ids="E2lMuSYq4YjP6XlFQJl3vj,Jlu5AgnbkKyORE028B8iUj" IsHidden="true" />
             <Link Id="QjQHoU0wroqOeijGyibClq" Ids="C1PayM5OGhZQPJS0YSAZV2,DeGhEy0k02AQM1YTScCNgp" />
-            <Link Id="LBvhLNzXdC4LCh8HbwafYR" Ids="TlDO5ZNyDYOLflUmpCvOKY,DH43xjAefFsQPGIpta2TXT" />
-            <Link Id="Uf3J3qBc1RsOjVi78EJu0g" Ids="HGtzo5Nj8NWMmSRq1bZBaB,Ecx3sjfwhAwOHAWk75R7Uh" />
             <Link Id="URHSxuu5RzTL7U21cqMr5G" Ids="TlDO5ZNyDYOLflUmpCvOKY,RYHzxfvwnebPzyTkCh4ma9" />
             <Link Id="TMq2kKcMBdeMC3iXPmlTRW" Ids="QCRdeJggdtSQOGGOwKaJ7I,GtrKB5C70tvNLbVpw09HBQ" />
             <Link Id="OCpoYPIJQsBLUYsJL1y9Tk" Ids="KLhMv85Jkl0MHvTOHbESR8,VWjvq6YAQPoOcMKtx4T5J6" />
@@ -2633,6 +2633,8 @@
             <Link Id="TIcF75e7LEDLuyArJ9sOIP" Ids="Jlu5AgnbkKyORE028B8iUj,DyVDQIdqgoXPVWcAYgXDQP" />
             <Link Id="EmMGKlXWZmOQdeY5oT1Tpm" Ids="F2iWWK9K8GnPrCLfW4Ntua,TS0S9gewlZGNXlpaqsQZad" />
             <Link Id="UT95EZuFs76NjB92ivciXa" Ids="CUUgpu1D7nwNA2C7zB09kH,NUIRYkWQHmbPcPz3enLEId" />
+            <Link Id="K5YLOYksIBINw1PtVcncpA" Ids="HGtzo5Nj8NWMmSRq1bZBaB,JlGtXXlMLT2MT7SR7B2bcb" />
+            <Link Id="AboWjxDz6dgM5fQuTO58KH" Ids="TlDO5ZNyDYOLflUmpCvOKY,AY6BGCqFbChMfPc4261f30" />
           </Patch>
         </Node>
         <!--
