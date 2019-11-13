@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0703-g2ca4a704b6" Version="0.128">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0944-g55db11b013" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -38,6 +38,7 @@
                 <Choice Kind="TypeFlag" Name="CommonSpace" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="Kb267UCMuz7NGAMZ4eFpi1" Name="VSync" Kind="InputPin" />
             <Pin Id="JngPpOMMYGYLYfiMLiiW0V" Name="Enabled" Kind="InputPin" />
             <Pin Id="USnCYtqjF7EPItzFgoVlCT" Name="Form" Kind="OutputPin" />
             <Pin Id="CUr5PMxPbrhORyUiDE452w" Name="ClientBounds" Kind="OutputPin" />
@@ -58,11 +59,10 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="LGjZfq7ZrPSPndxpBRC6Fu" Name="Output" Kind="OutputPin" />
-            <Pin Id="KFqRbLqDQCjNoIh5u6bPmL" Name="Mouse State" Kind="OutputPin" />
             <Pin Id="KL7QQW8vQCGNFfHmL6yHC4" Name="Layout Rebuild" Kind="OutputPin" />
+            <Pin Id="KFqRbLqDQCjNoIh5u6bPmL" Name="Mouse State" Kind="OutputPin" />
             <Pin Id="Dttd0BWQlvTNiQFXnenILR" Name="Keyboard State" Kind="OutputPin" />
-            <Pin Id="QR3aK9lsGWIOMdclMkPBe4" Name="Selected Elementa" Kind="OutputPin" />
-            <Pin Id="Rhh9t6OP4CKNa9Lx1S6VXm" Name="Stream" Kind="OutputPin" />
+            <Pin Id="QLDHxypf2FiMOEBrsyBhzv" Name="Component Processor Context" Kind="OutputPin" />
           </Node>
           <Node Bounds="280,489,65,19" Id="OOByGKobImRPWP08gKICdI">
             <p:NodeReference LastCategoryFullName="Elementa.Core.Layout" LastSymbolSource="Elementa.Core.vl">
@@ -70,13 +70,16 @@
               <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
             </p:NodeReference>
             <Pin Id="UsEn5K7wSRvNxjWA8q9oNr" Name="Input" Kind="InputPin" />
-            <Pin Id="J2sI3LUy3FqMkz8IjJTANY" Name="Bounds" Kind="InputPin" />
+            <Pin Id="CaURVsAeQ4lNyW1blxLxSZ" Name="Position" Kind="InputPin" />
+            <Pin Id="U59g3rK0S0CNEcCPThYjoG" Name="Size" Kind="InputPin" />
             <Pin Id="AzJeIFWkPKENg91ba39pYu" Name="Spacing" Kind="InputPin" DefaultValue="0.04">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="FaC1vViRuaTPq0G0NDqTyi" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="DB5pI2OjoMxN59gq7PImOp" Name="Dirty Layout" Kind="OutputPin" />
+            <Pin Id="RaRWNlNgLCxLFkv51c7Xk0" Name="Dirty Graph" Kind="OutputPin" />
           </Node>
           <Node Bounds="310,452,85,19" Id="J3R8FqzVZqsNaKSKcG9SSM">
             <p:NodeReference LastCategoryFullName="Elementa.Core" LastSymbolSource="Elementa.Core.vl">
@@ -272,7 +275,6 @@
           <Fragment Id="UweQtzBpgRFPXLrtz8fLgv" Patch="HwnAQw7XXpHPzkJ3LoSazd" Enabled="true" />
           <Fragment Id="R27BiFgg9MTNtXytVIXJCa" Patch="HFVKRsatuGfNuRqSXLU6rW" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="QRluZ3sFGqFLMGfqscateB" Ids="Qd9EzZOBsloLgv3qvOCCYL,J2sI3LUy3FqMkz8IjJTANY" />
         <Link Id="PGDxvadik1dP4vvYOnk8li" Ids="BIX2lJL066gLC2SVNF7acS,LOs9OZbtW0zPXgJMYWTFqZ" />
         <Link Id="Dg1UyhfGOctP3fV2Wx52gi" Ids="I8UDsVYppOjNngHo55fvHJ,QkgQJWAbTeMOjoTWp35ST3" />
         <Link Id="Jy5IMvKpQGVMu5tQz5sw5J" Ids="BbgMXXN99jSMYtr32lJW1M,Ubudbff1RJxPD31Mklj7CU" />
@@ -307,6 +309,6 @@
   <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
   <PlatformDependency Id="K64ryp4dCPjMiaoJUlLwPn" Location="System.Drawing" />
   <DocumentDependency Id="TGt8NV9XGziPZMAPriVIDg" Location="../VL.RCP.vl" />
-  <NugetDependency Id="HvNelywau3JNrgfgpRIfXV" Location="Elementa" Version="1.1.1-CI-20190617-164132" />
   <PlatformDependency Id="UBiOHmdHidlOyyul0fvAK5" Location="System.Numerics.Vectors" />
+  <NugetDependency Id="S0O2r3NN5txPgCTGvqq5SR" Location="Elementa" Version="1.2.0-CI-20191022-150925" />
 </Document>

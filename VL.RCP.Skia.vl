@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0701-g2f74b497b0" Version="0.128">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0944-g55db11b013" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="IO.RCP" CanvasType="FullCategory">
@@ -23,13 +23,16 @@
               </p:NodeReference>
               <Pin Id="VfPDeuDDgiyP29wlA5uDkn" Name="Input" Kind="InputPin" />
               <Pin Id="RdLx7LMuGlCOAc6d5IvZG2" Name="Input 2" Kind="InputPin" />
-              <Pin Id="P3a6qO7dtATNRLmfWpnqMk" Name="Bounds" Kind="InputPin" />
+              <Pin Id="PtrQU7u8fI6MOf0oA3nFFb" Name="Position" Kind="InputPin" />
+              <Pin Id="U0qx4rBgFteQdHyiGD6lP9" Name="Size" Kind="InputPin" />
               <Pin Id="TC3445ZuNEWPBMOuveCxXI" Name="Spacing" Kind="InputPin" DefaultValue="0.09999999">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="IV1b5ZS4ikDLwipXnZ9Vh8" Name="Output" Kind="OutputPin" />
+              <Pin Id="SEmgkc0R8IxMx0xNBEs01e" Name="Dirty Layout" Kind="OutputPin" />
+              <Pin Id="TXBEzwgbWIWMmuXXfiSmtV" Name="Dirty Graph" Kind="OutputPin" />
             </Node>
             <Node Bounds="502,309,72,19" Id="SsUXn8SQlmYMpeLlAgwM41">
               <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
@@ -582,16 +585,15 @@
               <Pin Id="TVzzW7NpD19Pal5639BNc1" Name="Style Sheet" Kind="InputPin" />
               <Pin Id="KBIDWFZVGs8MMLMpiXD115" Name="Enable Selection" Kind="InputPin" />
               <Pin Id="FWIUHrrlcgpMBcbRMbDIRp" Name="Output" Kind="OutputPin" />
-              <Pin Id="QeUkAtUk31aPTBocDFOVKX" Name="Mouse State" Kind="OutputPin" />
               <Pin Id="UCh0HHaHjGANJUUtx2gMew" Name="Layout Rebuild" Kind="OutputPin" />
+              <Pin Id="QeUkAtUk31aPTBocDFOVKX" Name="Mouse State" Kind="OutputPin" />
               <Pin Id="ReaZ7UdweLSMPIONzPOvAh" Name="Keyboard State" Kind="OutputPin" />
-              <Pin Id="T1Bh3Z6yg8UN8y1rVPmdUm" Name="Selected Elementa" Kind="OutputPin" />
-              <Pin Id="JImTss77vf2Lhlmz27cqRw" Name="Stream" Kind="OutputPin" />
+              <Pin Id="AhdhpxdLZLdNId4qC0vpMJ" Name="Component Processor Context" Kind="OutputPin" />
             </Node>
             <Node Bounds="271,913,65,19" Id="LNx7RgWbBc5LgrTJ7PD2Pj">
               <p:NodeReference LastCategoryFullName="Elementa.Core.Layout" LastSymbolSource="Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="ScrollGroup (Spectral)" />
+                <Choice Kind="ProcessAppFlag" Name="ScrollGroup (Bounds Spectral)" />
               </p:NodeReference>
               <Pin Id="E7uDIRQPfHsQbZAJkUgHnX" Name="Panel Enable" Kind="InputPin" />
               <Pin Id="OvCOuhuv1CqPp9IC7CAgZc" Name="Input" Kind="InputPin" />
@@ -2923,9 +2925,12 @@
                   <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
                 </p:NodeReference>
                 <Pin Id="OGwTvWxMDpZMqOUSukN6yZ" Name="Input" Kind="InputPin" />
-                <Pin Id="LDw4V2QQ2ajM0RxAiI790N" Name="Bounds" Kind="InputPin" />
+                <Pin Id="P9WJYoh1icVM8Oase4KUCY" Name="Position" Kind="InputPin" />
+                <Pin Id="URavIfruFmcNkZilHxplBs" Name="Size" Kind="InputPin" />
                 <Pin Id="Shm2L9THNxYQPGi6yPUDnQ" Name="Spacing" Kind="InputPin" />
                 <Pin Id="LM21XhaMaWxLGVdiZB35Cp" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="TJ4xjqLP4dwPstZOUhzmds" Name="Dirty Layout" Kind="OutputPin" />
+                <Pin Id="JqCOkGPEJMkNvgXnAeweXe" Name="Dirty Graph" Kind="OutputPin" />
               </Node>
               <Node Bounds="612,437,48,19" Id="UvZNyzXPkVQQHUOSqzZCpd">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -3142,13 +3147,16 @@
                   <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
                 </p:NodeReference>
                 <Pin Id="M9RT9bqBv39MxTqRbn7kbK" Name="Input" Kind="InputPin" />
-                <Pin Id="AoMommzkEN9NKpZvqlj9RK" Name="Bounds" Kind="InputPin" />
+                <Pin Id="KlnSSlFkaTvNAeAamODM1w" Name="Position" Kind="InputPin" />
+                <Pin Id="AqC3vJSia8uOBZKHxYuNxC" Name="Size" Kind="InputPin" />
                 <Pin Id="VCMMXmEUC8eNyRzvXpfhmv" Name="Spacing" Kind="InputPin">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="GNc3YaVUicEOFPgC29hDl1" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="BVSfDWY8lvzP8t9JUNitHv" Name="Dirty Layout" Kind="OutputPin" />
+                <Pin Id="NAv2PmKiD8eO21MObKIitL" Name="Dirty Graph" Kind="OutputPin" />
               </Node>
               <Node Bounds="612,437,48,19" Id="Qs8koTHPkM9OxrguquTFn0">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -3417,9 +3425,12 @@
                   <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
                 </p:NodeReference>
                 <Pin Id="B7BVdepegEwObkkW1wAgdD" Name="Input" Kind="InputPin" />
-                <Pin Id="FAAUqFZUj1XPzMp0Q3L24n" Name="Bounds" Kind="InputPin" />
+                <Pin Id="QdjDQbZcfQYM3bkuy9I8Yh" Name="Position" Kind="InputPin" />
+                <Pin Id="HeNALfTyEf3QNo2Nf9yAM4" Name="Size" Kind="InputPin" />
                 <Pin Id="Tuks9eHIOWNQSS1DDAuMHD" Name="Spacing" Kind="InputPin" />
                 <Pin Id="QYulFAxmcViLYXWIbQUsgU" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="L3zS57unnNDOT7E17nM3VU" Name="Dirty Layout" Kind="OutputPin" />
+                <Pin Id="SUp4IIlAgi1PmXjw3DV5uK" Name="Dirty Graph" Kind="OutputPin" />
               </Node>
               <Node Bounds="496,412,82,26" Id="ReGDhLnYmjeL17PMwegIEx">
                 <p:NodeReference LastCategoryFullName="IO.RCP.Parameters.INumberDefinition" LastSymbolSource="VL.RCP.vl">
@@ -3851,9 +3862,12 @@
                   <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
                 </p:NodeReference>
                 <Pin Id="RdSB9usDaAwPYR7YdiGQJ0" Name="Input" Kind="InputPin" />
-                <Pin Id="EaYDMCMHywZPTtFLLUKaPa" Name="Bounds" Kind="InputPin" />
+                <Pin Id="OytBTIGKvZtPjEjGkXn4rb" Name="Position" Kind="InputPin" />
+                <Pin Id="JbThW9pl1boMU5sUE9hSpa" Name="Size" Kind="InputPin" />
                 <Pin Id="QpvLeQ8iqg1N7kLozbAHwy" Name="Spacing" Kind="InputPin" />
                 <Pin Id="RuMJawanRKsOIURryeOEUJ" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="EJSPsib7CIzPioY86ejGxr" Name="Dirty Layout" Kind="OutputPin" />
+                <Pin Id="UPldApNHUMQOd3WNwsz0L5" Name="Dirty Graph" Kind="OutputPin" />
               </Node>
               <Node Bounds="558,431,82,26" Id="IaGfgNeYMpiO5hq5uJQPlJ">
                 <p:NodeReference LastCategoryFullName="IO.RCP.Parameters.INumberDefinition" LastSymbolSource="VL.RCP.vl">
@@ -4114,13 +4128,16 @@
                   <Choice Kind="ProcessAppFlag" Name="StackY (Spectral)" />
                 </p:NodeReference>
                 <Pin Id="HoIvf3rEANxMjDBMLvTwrJ" Name="Input" Kind="InputPin" />
-                <Pin Id="K52Smo7yqtYQRYGVt0x6jp" Name="Bounds" Kind="InputPin" />
+                <Pin Id="T0JCs2Uq4qQNrzlh4y5ue2" Name="Position" Kind="InputPin" />
+                <Pin Id="BSQnwTv8DEZOQB5qQMdXJ1" Name="Size" Kind="InputPin" />
                 <Pin Id="SiSyvyx6HKBPG5U9jyCW1n" Name="Spacing" Kind="InputPin">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="FOB8gTybyjlPkJiUB2CJsU" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="LVzdPYOlNElQIED9Uoz7Fo" Name="Dirty Layout" Kind="OutputPin" />
+                <Pin Id="Uc9J9bgL0evMJ7MZN0Nhq4" Name="Dirty Graph" Kind="OutputPin" />
               </Node>
               <Node Bounds="612,437,48,19" Id="OGFpxY1cLcoO46QhsjSpgH">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -4258,6 +4275,6 @@
   <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
   <PlatformDependency Id="K64ryp4dCPjMiaoJUlLwPn" Location="System.Drawing" />
   <DocumentDependency Id="TGt8NV9XGziPZMAPriVIDg" Location="./VL.RCP.vl" />
-  <NugetDependency Id="HvNelywau3JNrgfgpRIfXV" Location="Elementa" Version="1.1.1-CI-20190617-164132" />
   <PlatformDependency Id="UBiOHmdHidlOyyul0fvAK5" Location="System.Numerics.Vectors" />
+  <NugetDependency Id="Pf8ttKyD6YNLxRYg2Wn4rf" Location="Elementa" Version="1.2.0-CI-20191022-150925" />
 </Document>
