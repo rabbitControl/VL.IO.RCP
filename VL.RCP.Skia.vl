@@ -1213,7 +1213,7 @@
               <Node Bounds="360,482,72,19" Id="KF2Ea3Jf4dxMJKWEts6iGj">
                 <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="StylableText" />
+                  <Choice Kind="ProcessAppFlag" Name="StyleableText" />
                 </p:NodeReference>
                 <Pin Id="Ltn1kgZ49UyPYXE2yZFHQL" Name="Position" Kind="InputPin" />
                 <Pin Id="NML7uFvls7gNztp1hjmUMK" Name="Size" Kind="InputPin" />
@@ -4816,7 +4816,7 @@
               <Node Bounds="360,482,72,19" Id="VwdyAEwXvwhLoz1q34cg1m">
                 <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="ProcessAppFlag" Name="StylableText" />
+                  <Choice Kind="ProcessAppFlag" Name="StyleableText" />
                 </p:NodeReference>
                 <Pin Id="LFAQksPmAQgLwWfrjR7755" Name="Position" Kind="InputPin" />
                 <Pin Id="SW3AwP2WgtYO89kzlqPN56" Name="Size" Kind="InputPin" />
