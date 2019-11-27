@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0968-gbde4407418" Version="0.128">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0975-gbe94390fc5" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="IO.RCP" CanvasType="FullCategory">
@@ -37,7 +37,7 @@
             <Node Bounds="502,309,72,19" Id="SsUXn8SQlmYMpeLlAgwM41">
               <p:NodeReference LastCategoryFullName="Elementa.Widgets" LastSymbolSource="Elementa.Widgets.StylableObject.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="ProcessAppFlag" Name="StylableText" />
+                <Choice Kind="ProcessAppFlag" Name="StyleableText" />
               </p:NodeReference>
               <Pin Id="DoZcjw2kXpCLm5MBB8F9iH" Name="Position" Kind="InputPin" />
               <Pin Id="DbDamAFS0d0MNzJzetGY4l" Name="Size" Kind="InputPin" />
