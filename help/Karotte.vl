@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0968-gbde4407418" Version="0.128">
-  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0975-gbe94390fc5" Version="0.128">
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -25,7 +24,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
-            <Pin Id="VzISHw2Sf2oPggkyDl8uiS" Name="Bounds" Kind="InputPin" DefaultValue="1155, 70, 325, 441">
+            <Pin Id="VzISHw2Sf2oPggkyDl8uiS" Name="Bounds" Kind="InputPin" DefaultValue="1426, 31, 448, 749">
               <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -251,6 +250,48 @@
           </Node>
           <Pad Id="JPQRscSoYpWMJwGPdLjw3q" SlotId="Uu71lgHGkXgPnFR6yde9rP" Bounds="331,806" />
           <Pad Id="PHi3cpfzUuXPs9oXu5C2Za" SlotId="Uu71lgHGkXgPnFR6yde9rP" Bounds="514,482" />
+          <Node Bounds="175,814,80,80" Id="Mob3Ni6Nq5WOprDdV5QB2K">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="If" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <Pin Id="A1zyxN4HwPELkI8C61OcFp" Name="Condition" Kind="InputPin" />
+            <Patch Id="JMslJTZrA4aP4J12I0r2gw" ManuallySortedPins="true">
+              <Patch Id="BgM6uzDpJZRLWSdWqHLwI9" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="MHlE4UuviwwMPtPpKNCXDl" Name="Then" ManuallySortedPins="true" />
+              <Node Bounds="213,850" Id="DrZFJUYwxNdOepBHSB2FoY">
+                <p:NodeReference LastCategoryFullName="System.Windows.Forms.Form" LastSymbolSource="System.Windows.Forms.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="SetText" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Form" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="Em56SasRkqYQcV65UIpZc1" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SAMOR9WrUeINi0VfNDbEcl" Name="Value" Kind="InputPin" DefaultValue="Karotte RCP Client">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="EYAJCxCHRqXPUgAIUVtdP9" Name="Output" Kind="StateOutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Node Bounds="175,759,54,19" Id="I9GtAI56RweOII4NwqeHTE">
+            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="OnOpen" />
+            </p:NodeReference>
+            <Pin Id="Gt5KYuOs24aOR43GV6TK5t" Name="Simulate" Kind="InputPin" />
+            <Pin Id="DwWP3iV8pA2OTpLpWOfkHQ" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SXzSMLyXlXbOlcVRLADzPB" Comment="Simulate" Bounds="143,708,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="HwnAQw7XXpHPzkJ3LoSazd" Name="Create" />
         <Patch Id="HFVKRsatuGfNuRqSXLU6rW" Name="Update" />
@@ -284,13 +325,16 @@
         <Slot Id="Uu71lgHGkXgPnFR6yde9rP" Name="Size" />
         <Link Id="FUH7LTO3oXMMbQWclyhP4k" Ids="CjIk1MrLXsrPdX0EpyJOr1,JPQRscSoYpWMJwGPdLjw3q" />
         <Link Id="TY58gkUisYdL8PmBMKh3uM" Ids="PHi3cpfzUuXPs9oXu5C2Za,VSYXE37HHU8QVRjBCatQpv" />
+        <Link Id="M6oselrCJCtLxAo3riBd9j" Ids="USnCYtqjF7EPItzFgoVlCT,Em56SasRkqYQcV65UIpZc1" />
+        <Link Id="JKKgLMkfhRgL2m4OptIzMy" Ids="DwWP3iV8pA2OTpLpWOfkHQ,A1zyxN4HwPELkI8C61OcFp" />
+        <Link Id="Ui1WjuMHgiAO85gagAFup3" Ids="SXzSMLyXlXbOlcVRLADzPB,Gt5KYuOs24aOR43GV6TK5t" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="0.94.62-g2cf6e985bb" />
   <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
-  <PlatformDependency Id="K64ryp4dCPjMiaoJUlLwPn" Location="System.Drawing" />
-  <DocumentDependency Id="TGt8NV9XGziPZMAPriVIDg" Location="../VL.RCP.vl" />
-  <PlatformDependency Id="UBiOHmdHidlOyyul0fvAK5" Location="System.Numerics.Vectors" />
   <NugetDependency Id="S0O2r3NN5txPgCTGvqq5SR" Location="Elementa" Version="1.2.0-CI-20191022-150925" />
+  <PlatformDependency Id="DnWBoO2QYFVN3nluUG5C7p" Location="System.Windows.Forms" />
+  <NugetDependency Id="DPnDPs6TB3oPXwtztgtC6u" Location="VL.CoreLib" Version="2019.1.0-0975-gbe94390fc5" />
+  <NugetDependency Id="CcdNDjK8dybOKIEy8cp8v0" Location="VL.RCP" Version="0.0.0.0" />
 </Document>

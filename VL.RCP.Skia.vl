@@ -571,7 +571,7 @@
               <ControlPoint Id="GK8YcRIkhrWQdAQQxu17sn" Bounds="128,1232" Alignment="Top" />
               <ControlPoint Id="HST8nevzgixONCVuPHYbQ2" Bounds="188,1378" Alignment="Bottom" />
             </Node>
-            <Node Bounds="624,426,59,19" Id="HBdA7Bkcpn1LWNDEraMh7W">
+            <Node Bounds="621,588,59,19" Id="HBdA7Bkcpn1LWNDEraMh7W">
               <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="OfType" />
@@ -592,7 +592,7 @@
               <Pin Id="CI4p5qqvT24NqbWpcQSryS" Name="Apply" Kind="InputPin" />
               <Pin Id="OHWD9kOitSgMAp064EyrtN" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Pad Id="CCCwHciENwzP4WpFcXyMqU" Comment="Changed" Bounds="679,467,40,19" ShowValueBox="true" isIOBox="true" />
+            <Pad Id="CCCwHciENwzP4WpFcXyMqU" Comment="Changed" Bounds="676,629,40,19" ShowValueBox="true" isIOBox="true" />
             <Node Bounds="165,1592,105,19" Id="RPcFayzr9kHQWZeCM4XRbK">
               <p:NodeReference LastCategoryFullName="Elementa" LastSymbolSource="Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -746,7 +746,7 @@
               <Pin Id="IOEwymniWYDPYaSUrvqnUK" Name="Dirty Layout" Kind="OutputPin" />
               <Pin Id="MYoJkD8Y1iSO4xlnLXj2tr" Name="Dirty Graph" Kind="OutputPin" />
             </Node>
-            <Node Bounds="120,893,121,109" Id="ToYJDDinOFKQAkYas05uMa">
+            <Node Bounds="120,893,128,111" Id="ToYJDDinOFKQAkYas05uMa">
               <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
                 <Choice Kind="OperationCallFlag" Name="Where" />
                 <CategoryReference Kind="MutableInterfaceType" Name="Sequence" NeedsToBeDirectParent="true" />
@@ -760,7 +760,7 @@
                 <Pin Id="BmW2xMlQu1uMr0TkVV7OZy" Name="Result" Kind="OutputPin" />
                 <ControlPoint Id="Aela7SBh29fOml5sRzU3CF" Bounds="133,902" />
                 <ControlPoint Id="Szkz7nyt5mTMTlAje2WsBs" Bounds="193,902" />
-                <ControlPoint Id="TG5TSbl8UxHNY6NZHLZf4V" Bounds="163,995" />
+                <ControlPoint Id="TG5TSbl8UxHNY6NZHLZf4V" Bounds="197,997" />
                 <Node Bounds="132,916,69,26" Id="V0BqHGmMo0NMggQxd5IVY8">
                   <p:NodeReference LastCategoryFullName="IO.RCP.Widgets.IRCPWidget" LastSymbolSource="VL.RCP.Skia.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
