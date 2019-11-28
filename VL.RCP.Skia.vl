@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0975-gbe94390fc5" Version="0.128">
+<Document xmlns:p="property" Id="IIvdJ82a0CvPHiSulkmjIW" LanguageVersion="2019.1.0-1009.roslyn-7f03292348" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="IO.RCP" CanvasType="FullCategory">
@@ -100,6 +100,8 @@
               <Pin Id="TwJTPQeQXV1LuDF2w6qOF5" Name="Is Connected" Kind="OutputPin" />
               <Pin Id="NDhKRQPeUXjN0kgWfr7oAS" Name="Parameter Added" Kind="OutputPin" />
               <Pin Id="CfAlOdSwGqEQBQ5Wpq8jOt" Name="Parameter Removed" Kind="OutputPin" />
+              <Pin Id="ShdpxxFM0UPNF2ZdRtvUA8" Name="Server Version" Kind="OutputPin" />
+              <Pin Id="L306KrqC7TKNHB8YuTK4nB" Name="Server Application" Kind="OutputPin" />
             </Node>
             <Pad Id="Bq6hBIc654cMpB6JmdJ5j9" Comment="Is Connected" Bounds="594,195,40,19" ShowValueBox="true" isIOBox="true" />
             <Node Bounds="623,708,1286,587" Id="L9tB5ibcxA2OeaLw11vW08">
@@ -690,7 +692,7 @@
               <Pin Id="VFsEOZ8JBvILZakFwC3VCY" Name="Input 2" Kind="InputPin" />
               <Pin Id="DCvXZDBnH9qLXDnnUgHNrd" Name="Output" Kind="OutputPin" />
             </Node>
-            <Pad Id="THt0fnfrMCcNyEETV6P4Dp" Comment="" Bounds="433,1370,35,28" ShowValueBox="true" isIOBox="true" Value="0, 1.35">
+            <Pad Id="THt0fnfrMCcNyEETV6P4Dp" Comment="" Bounds="433,1370,35,28" ShowValueBox="true" isIOBox="true" Value="0, 1.5">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Vector2" />
               </p:TypeAnnotation>
@@ -827,7 +829,7 @@
                 <CategoryReference Kind="Vector2Type" Name="Vector2" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="TTrriZfwTfrNyCam5SEXXQ" Name="X" Kind="InputPin" />
-              <Pin Id="GXXaQ61bSkINKJM5nq4T5v" Name="Y" Kind="InputPin" DefaultValue="1">
+              <Pin Id="GXXaQ61bSkINKJM5nq4T5v" Name="Y" Kind="InputPin" DefaultValue="1.1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
@@ -901,6 +903,8 @@
               <ControlPoint Id="DexYBywXPHKLr00USTSj3Q" Bounds="296,603" Alignment="Bottom" />
               <ControlPoint Id="K4ImYgbGcaHLnuv1zzpzfR" Bounds="380,603" Alignment="Bottom" />
             </Node>
+            <ControlPoint Id="NkqCTzOO6XFQNH9JFsoRvU" Bounds="664,230" />
+            <ControlPoint Id="V4IA5Nnci4AMo3YYhZfKvC" Bounds="782,220" />
           </Canvas>
           <Patch Id="LBixKlufS4uLM0eOccVTAF" Name="Create" />
           <Patch Id="JP8ysTc8FC1Oea1b6TI8js" Name="Update">
@@ -912,6 +916,8 @@
             <Pin Id="TRDvAJ35Tg1LiyyiO8O0UU" Name="Size" Kind="InputPin" Bounds="413,772" />
             <Pin Id="AJeYE8wGoBeOAXguqZ4HeN" Name="Output" Kind="OutputPin" Bounds="249,1383" />
             <Pin Id="PMtGZx8XGhHPDEoMKZTjYf" Name="Is Connected" Kind="OutputPin" Bounds="611,525" />
+            <Pin Id="VeQuur1r6BEOGm0RtOnvHq" Name="Server Version" Kind="OutputPin" Bounds="664,232" />
+            <Pin Id="SPv9uRz76RHMQh7K9TIoMH" Name="Server Application" Kind="OutputPin" Bounds="782,221" />
           </Patch>
           <ProcessDefinition Id="JYvKgvnF5YnMJ8JHR1M4nM">
             <Fragment Id="QlxEoMLJUIaLwGHO3MtC63" Patch="LBixKlufS4uLM0eOccVTAF" Enabled="true" />
@@ -1088,6 +1094,10 @@
           <Link Id="JCJA775KnxnNeT4yt96UpB" Ids="K4ImYgbGcaHLnuv1zzpzfR,NwxcZmRg9LfO3hrhVvO1zf" />
           <Link Id="EX4r4RrHnYEOj5fitNcqoa" Ids="N10fr8e1HZnO39R7JoA3yu,ErRS00SyXkgLBaYdDRlEGc" />
           <Link Id="Gz9Z2AjLzCpMw64xeruUwv" Ids="NkoABqSdSsYOz7dJp6SI9j,GK8YcRIkhrWQdAQQxu17sn" />
+          <Link Id="KVogGAxTNZILrrQUfIJcdW" Ids="ShdpxxFM0UPNF2ZdRtvUA8,NkqCTzOO6XFQNH9JFsoRvU" />
+          <Link Id="Nrpaga4vNqeQJ0oxhDv7WL" Ids="NkqCTzOO6XFQNH9JFsoRvU,VeQuur1r6BEOGm0RtOnvHq" IsHidden="true" />
+          <Link Id="OzCcdF8EkWgMTmiH9CNjrY" Ids="L306KrqC7TKNHB8YuTK4nB,V4IA5Nnci4AMo3YYhZfKvC" />
+          <Link Id="PTkt2hpHWDAMhAYxUdSBsc" Ids="V4IA5Nnci4AMo3YYhZfKvC,SPv9uRz76RHMQh7K9TIoMH" IsHidden="true" />
         </Patch>
       </Node>
       <Canvas Id="CPYwaPL8vQ3LYbRQSnBCm8" Name="Advanced.Widgets" Position="463,137">
