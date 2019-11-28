@@ -19,7 +19,7 @@
     <Content Include="**/*.vl" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="RCPSharp" Version="0.1.10+2532ba0a2d" />
+    <PackageReference Include="RCPSharp" Version="0.1.10-g2532ba0a2d" />
 	<PackageReference Include="Elementa" Version="1.2.0-CI-20191118-120353" />
     <PackageReference Include="Nerdbank.GitVersioning" Version="2.3.138">
       <PrivateAssets>all</PrivateAssets>
