@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="KMNw2h8rVqBPw8wLj5oqH2" LanguageVersion="2019.2.0-0005-a29136e371" Version="0.128">
-  <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="0.93.12-g6fa24bb419" />
+<Document xmlns:p="property" Id="KMNw2h8rVqBPw8wLj5oqH2" LanguageVersion="2019.2.0-0220-55f957dbb8" Version="0.128">
+  <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="2019.2.0-0203-ga90abc7861" />
   <Patch Id="PplcvdvtWupLrsERG0V91V">
     <Canvas Id="ExGrqi5W2YCO3GKnTiJ7o7" DefaultCategory="IO.RCP" CanvasType="FullCategory">
       <!--
@@ -5065,6 +5065,6 @@
   </Patch>
   <PlatformDependency Id="St3iFYFQrCSL823QHkcnJe" Location="System.Drawing" />
   <PlatformDependency Id="NTMEKBdDuWkMZJdybS2Ve3" Location="System.Numerics.Vectors" />
-  <NugetDependency Id="Q1a7oAZWtI8NfWw5UTpIP9" Location="RCPSharp" Version="0.1.9-g46a92030b7" />
   <DocumentDependency Id="KnBoAdcxF8XQcBLntm7HRM" Location="./VL.RCP.Skia.vl" IsForward="true" />
+  <NugetDependency Id="JAZbXWN4I8SMZ5zmqDBQC0" Location="RCPSharp" Version="0.1.11-gf03d412ef7" />
 </Document>

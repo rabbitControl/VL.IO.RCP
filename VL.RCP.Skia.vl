@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="IIvdJ82a0CvPHiSulkmjIW" LanguageVersion="2019.1.0-1009.roslyn-7f03292348" Version="0.128">
-  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
+<Document xmlns:p="property" Id="IIvdJ82a0CvPHiSulkmjIW" LanguageVersion="2019.2.0-0193-9027aa298e" Version="0.128">
+  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="2019.2.0-0193-g9027aa298e" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="IO.RCP" CanvasType="FullCategory">
       <!--
@@ -453,7 +453,6 @@
                     <Choice Kind="TypeFlag" Name="Boolean" />
                     <FullNameCategoryReference ID="Primitive" />
                   </p:TypeAnnotation>
-                  <p:ValueBoxSettings />
                 </Pad>
                 <Node Bounds="1300,600,81,26" Id="JacoaZ744MyMFayBDMrkKq">
                   <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableDictionary" LastSymbolSource="VL.Collections.vl">
@@ -1145,27 +1144,6 @@
                 </p:TypeAnnotation>
               </Pin>
             </Patch>
-            <Pin Id="E5SEikswSLUOL8hvbjqyRh" Name="Bounds" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="Rectangle" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="IYeSYsd24X0MI4ezo5FPGn" Name="Mouse" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="MouseDevice" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="SMHMgR0Ey3sLWQFMz3Ty1M" Name="Parameter" Kind="InputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="IValueParameter" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RoYGqYVcjHfNRkpPh9RdLL" Name="Order" Kind="OutputPin">
-              <p:TypeAnnotation>
-                <Choice Kind="TypeFlag" Name="Integer32" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="T7Gw57DLR28M9R7CwN1B0l" Name="Layer" Kind="OutputPin" />
             <Patch Id="SHWlgBxMkj0MkRsRv6qj1z" Name="GetParentId">
               <Pin Id="C1MXHn2L0EQLdhveZz30yU" Name="Parent Id" Kind="OutputPin">
                 <p:TypeAnnotation>
@@ -1193,9 +1171,7 @@
           </p:Interfaces>
           <Patch Id="APX2I59nyYzLbTywydM6eA">
             <Canvas Id="DydGJDdjwk4LSysokWn121" CanvasType="Group">
-              <Pad Id="PYvHdbNrKFKOdIlm06oPU4" SlotId="EaDTU3GzVfPPA8nIsEWAO7" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="PYvHdbNrKFKOdIlm06oPU4" SlotId="EaDTU3GzVfPPA8nIsEWAO7" Bounds="452,141" />
               <ControlPoint Id="RCrZ1kmorRWPQSs4WyvCO5" Bounds="452,111" />
               <Node Bounds="398,372,47,22" Id="JmTtNh2YPb6Lr83sRDoCic">
                 <p:NodeReference LastCategoryFullName="IO.RCP.Parameters.IParameter" LastSymbolSource="VL.RCP.vl">
@@ -1302,9 +1278,7 @@
           </p:Interfaces>
           <Patch Id="CiVqbWVxU2VPO4gvczPWEQ">
             <Canvas Id="KfiDPCwRFDHLtG0Z5615PN" CanvasType="Group">
-              <Pad Id="PGqxnO4rJfBPXsWStsA3T0" SlotId="HyOeLXYcgqfMisyemfdS5U" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="PGqxnO4rJfBPXsWStsA3T0" SlotId="HyOeLXYcgqfMisyemfdS5U" Bounds="452,141" />
               <ControlPoint Id="D71cNwtzaipLH0DpKtpXh9" Bounds="451,99" />
               <Node Bounds="315,294,74,26" Id="IDQj0JRL2BZMZ1sS0WtWie">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -1548,9 +1522,7 @@
                 <Pin Id="LVjSablXu9YO68eumAG6kw" Name="Order" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="UduxvJfMkteO0B3Opgb7D3" Bounds="760,306" />
-              <Pad Id="ImfbRmyKnkoOJWIRDQuguc" SlotId="KL6F7NBvF91NQfrKmawArv" Bounds="579,214">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="ImfbRmyKnkoOJWIRDQuguc" SlotId="KL6F7NBvF91NQfrKmawArv" Bounds="579,214" />
               <ControlPoint Id="U5ppd2WOANzQNeUUJevEtB" Bounds="578,172" />
               <Node Bounds="537,363,48,19" Id="PLwl8HP6XuNPnWzlnTj6Lu">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -1726,9 +1698,7 @@
                 <Pin Id="Jy8O4NzinVWOF0bj9C2SZ2" Name="Order" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="QuHGIMYWmJsOZnKy2wFwcL" Bounds="818,379" />
-              <Pad Id="Bjr3CefmQpeNG8QQKJGfqn" SlotId="RrK56pSpdtwOENasEOxHWa" Bounds="646,287">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="Bjr3CefmQpeNG8QQKJGfqn" SlotId="RrK56pSpdtwOENasEOxHWa" Bounds="646,287" />
               <ControlPoint Id="EHSG9mkphqmNsP7VD7FB9U" Bounds="645,245" />
               <Node Bounds="614,445,48,19" Id="JAWnNac2ZiTLBSO7fjLiQj">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -1910,9 +1880,7 @@
                 <Pin Id="AwNPmnuFpHbLQX7lRJ7Nhc" Name="Order" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="Fg6mDCNh2IzLyBZ6H0glDl" Bounds="712,339" />
-              <Pad Id="QY4KFtKAdjZL3eaV2bGAwB" SlotId="ESRIwap3NrWLFaCSE9MUDe" Bounds="540,247">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="QY4KFtKAdjZL3eaV2bGAwB" SlotId="ESRIwap3NrWLFaCSE9MUDe" Bounds="540,247" />
               <ControlPoint Id="NC7jTLS2rRtPYMCQdpqSb5" Bounds="539,205" />
               <Node Bounds="595,488,48,19" Id="AoO38uY1ZmbNIdGhiigQxV">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -2071,9 +2039,7 @@
           </p:Interfaces>
           <Patch Id="OY9TsMGGAAVOGV5AqN3WgY">
             <Canvas Id="HGTUrc6OZ3dOwMfJxjmydR" CanvasType="Group">
-              <Pad Id="SC43ZzL7rinQOUD1WGfBeI" SlotId="RIJQdrl7zZVORItw40hrT7" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="SC43ZzL7rinQOUD1WGfBeI" SlotId="RIJQdrl7zZVORItw40hrT7" Bounds="452,141" />
               <ControlPoint Id="MrDDb4ROBaeOc1yGMA8gOC" Bounds="451,99" />
               <Node Bounds="316,265,74,26" Id="EHOShThj0XIN8lUphgKhOQ">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -2298,9 +2264,7 @@
           </p:Interfaces>
           <Patch Id="A2iIymh9yKlN07aPz4syaV">
             <Canvas Id="Oh1BDPn19lvQU6RhzpPKEt" CanvasType="Group">
-              <Pad Id="H1pj82IhKo4L94sD5Ww6xw" SlotId="Oz2knvX3jheMwAYLF76uRF" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="H1pj82IhKo4L94sD5Ww6xw" SlotId="Oz2knvX3jheMwAYLF76uRF" Bounds="452,141" />
               <ControlPoint Id="NuwycQfSqypNEk5MzI0Ft3" Bounds="451,99" />
               <Node Bounds="439,323,74,26" Id="JCZBdHnQxbqMYDa5nbzLzw">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -2515,9 +2479,7 @@
           </p:Interfaces>
           <Patch Id="Tb4xaxkNitmMTOaMv78Qsh">
             <Canvas Id="KVWJw84BqZYMkcKUrtuz6F" CanvasType="Group">
-              <Pad Id="Jwmt25Y429ILWZic5hMwEu" SlotId="UXVRnMUmgUnLZp1msE4qIG" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="Jwmt25Y429ILWZic5hMwEu" SlotId="UXVRnMUmgUnLZp1msE4qIG" Bounds="452,141" />
               <ControlPoint Id="Qm7LbGt7pAvPA2GnUb0eC7" Bounds="451,99" />
               <Node Bounds="348,320,74,26" Id="GFfbzVb7w6CPyWptazi9EU">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -2770,9 +2732,7 @@
           </p:Interfaces>
           <Patch Id="CEjZlp9I2JRQFfF4MGz9Us">
             <Canvas Id="LSzTi1VNDxbPDSZByiYwvc" CanvasType="Group">
-              <Pad Id="D8Oq1Y0MasXLZn9eWomsDe" SlotId="UsqKF7XZM8FQApzpzK2ZS0" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="D8Oq1Y0MasXLZn9eWomsDe" SlotId="UsqKF7XZM8FQApzpzK2ZS0" Bounds="452,141" />
               <ControlPoint Id="EXk5l85x8x4QKF1lk1zw8z" Bounds="451,99" />
               <Node Bounds="368,346,74,26" Id="OlM0XHaBq6dOj1ZhdXAEVF">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -3023,9 +2983,7 @@
           </p:Interfaces>
           <Patch Id="NOrDBdpVDRVNLk3zzY4n6U">
             <Canvas Id="LJ9AahgAVOtPSznkjKwMdN" CanvasType="Group">
-              <Pad Id="FhwCjjEGwZQQIzEBGuc2Zn" SlotId="OTF8HNUDAlPLuE3ymV2vcG" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="FhwCjjEGwZQQIzEBGuc2Zn" SlotId="OTF8HNUDAlPLuE3ymV2vcG" Bounds="452,141" />
               <ControlPoint Id="MBaoDw1OeuSLDuS3xx9rd7" Bounds="451,99" />
               <Node Bounds="362,349,74,26" Id="Dw1W2lIHC2IQDWUAr6TvBa">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -3279,9 +3237,7 @@
                 <Pin Id="TJxVuEjls13QYYb3MzPdxr" Name="Order" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="NyaI1N7wwPdLB1z7xCfUjV" Bounds="818,379" />
-              <Pad Id="U5nbWsYME8QNw4N1Z0nqUa" SlotId="K8fL0GJoYUBP5P5QyNR4Ny" Bounds="646,287">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="U5nbWsYME8QNw4N1Z0nqUa" SlotId="K8fL0GJoYUBP5P5QyNR4Ny" Bounds="646,287" />
               <ControlPoint Id="ULqVbuMbHkHQaFwVx1MYlM" Bounds="645,245" />
               <Node Bounds="373,482,55,26" Id="VOkvzjLOO9mMZmnbJVce8s">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IParameter" LastSymbolSource="VL.RCP.vl">
@@ -3519,9 +3475,7 @@
                 <Pin Id="MLW4P4q6Lz5QNRPTtuSL6B" Name="Order" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="JcJtkp7lgHyO4DXuHx7Pps" Bounds="818,379" />
-              <Pad Id="IicEQglWrc3LvDRnrIVzfE" SlotId="A3S8S8WW9bVNpeO56jt2Or" Bounds="646,287">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="IicEQglWrc3LvDRnrIVzfE" SlotId="A3S8S8WW9bVNpeO56jt2Or" Bounds="646,287" />
               <ControlPoint Id="S6c8f55vr5cOpnFTRNFSH9" Bounds="645,245" />
               <Node Bounds="373,482,55,26" Id="SBGYW1HEpWnLrN2DEc9qXJ">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IParameter" LastSymbolSource="VL.RCP.vl">
@@ -3740,9 +3694,7 @@
           </p:Interfaces>
           <Patch Id="LbjHdpVo0HZPNO0e6guCbq">
             <Canvas Id="EpYLZbfa0pDLQaiaqV7NLW" CanvasType="Group">
-              <Pad Id="QoRWCT1jGosOwtrwKGfCbK" SlotId="P7yN6si8qLzPmlpawCLrsn" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="QoRWCT1jGosOwtrwKGfCbK" SlotId="P7yN6si8qLzPmlpawCLrsn" Bounds="452,141" />
               <ControlPoint Id="AtPSYuBT8XHPJ99zuaVyGZ" Bounds="451,99" />
               <Node Bounds="315,294,74,26" Id="SIDTkEPIRutNRhJ3yCjfBP">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -4061,9 +4013,7 @@
           </p:Interfaces>
           <Patch Id="K28eOCgm0isPsoJDRPBTDn">
             <Canvas Id="JyDZX8I3aNzPaNapJPRwmm" CanvasType="Group">
-              <Pad Id="UzV9E3j3EEnNFThDKNi56e" SlotId="NoKZJHvuyt3Mn9aGSW9eGy" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="UzV9E3j3EEnNFThDKNi56e" SlotId="NoKZJHvuyt3Mn9aGSW9eGy" Bounds="452,141" />
               <ControlPoint Id="D41Max106BWMV2zD0A849K" Bounds="451,99" />
               <Node Bounds="316,265,74,26" Id="B93WmIX1EH7Mov7t0RX3fB">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -4209,9 +4159,7 @@
           </p:Interfaces>
           <Patch Id="B8igIsh0GRlMPqPgDjOnwN">
             <Canvas Id="KC6xFtwX3INQWJUYjB5cgC" CanvasType="Group">
-              <Pad Id="ID1IHTlpo63MFq2uWy6MDA" SlotId="CpicVsT8ARaQBdCWIX1D4n" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="ID1IHTlpo63MFq2uWy6MDA" SlotId="CpicVsT8ARaQBdCWIX1D4n" Bounds="452,141" />
               <ControlPoint Id="DKBuH7A1SmMLioR6mliVfq" Bounds="451,99" />
               <Node Bounds="315,294,74,26" Id="BrGSo5ssdKmQW3UsWva67X">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IValueParameter" LastSymbolSource="VL.RCP.vl">
@@ -4557,9 +4505,7 @@
                 <Pin Id="TmM8S9uzlKbNjwS4frRqCN" Name="Order" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="HzQaIc5XFULN6GCMWqV5zX" Bounds="818,379" />
-              <Pad Id="NLO9BAkkBSJO0WdS5ux3jE" SlotId="ThnbpJuuQlDMcN5xXGqYeo" Bounds="646,287">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="NLO9BAkkBSJO0WdS5ux3jE" SlotId="ThnbpJuuQlDMcN5xXGqYeo" Bounds="646,287" />
               <ControlPoint Id="AfY89Q6kNFgQG1qxbxKmob" Bounds="645,245" />
               <Node Bounds="373,482,55,26" Id="OyJVP2GSfvUQUAuLAAG43k">
                 <p:NodeReference LastCategoryFullName="IO.RCP.IParameter" LastSymbolSource="VL.RCP.vl">
@@ -4796,9 +4742,7 @@
           </p:Interfaces>
           <Patch Id="E5qVn1cXX22QZhiOdaspAR">
             <Canvas Id="A6Fv3iQBOMpMcaM8nH1zbi" CanvasType="Group">
-              <Pad Id="Bq66RRIBjyBLoAvK5R39Mm" SlotId="RxSuODIEb3EQSf4vnqvBw4" Bounds="452,141">
-                <p:ValueBoxSettings />
-              </Pad>
+              <Pad Id="Bq66RRIBjyBLoAvK5R39Mm" SlotId="RxSuODIEb3EQSf4vnqvBw4" Bounds="452,141" />
               <ControlPoint Id="K28vrP9vaIzP8W9BDSh7we" Bounds="452,111" />
               <Node Bounds="422,257,55,26" Id="HdVmOZOyA0DPfl0wp6QENd">
                 <p:NodeReference LastCategoryFullName="IO.RCP.Parameters.IParameter" LastSymbolSource="VL.RCP.vl">
@@ -4941,8 +4885,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="0.94.62-g2cf6e985bb" />
-  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
+  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2019.2.0-0193-g9027aa298e" />
+  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2019.2.0-0193-g9027aa298e" />
   <PlatformDependency Id="K64ryp4dCPjMiaoJUlLwPn" Location="System.Drawing" />
   <DocumentDependency Id="TGt8NV9XGziPZMAPriVIDg" Location="./VL.RCP.vl" />
   <PlatformDependency Id="UBiOHmdHidlOyyul0fvAK5" Location="System.Numerics.Vectors" />
