@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="IIvdJ82a0CvPHiSulkmjIW" LanguageVersion="2020.1.2.135" Version="0.128">
-  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="2020.1.2" />
+<Document xmlns:p="property" Id="IIvdJ82a0CvPHiSulkmjIW" LanguageVersion="2020.1.3.147" Version="0.128">
+  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="2020.1.3" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="IO.RCP" CanvasType="FullCategory">
       <!--
@@ -97,13 +97,12 @@
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="TwJTPQeQXV1LuDF2w6qOF5" Name="Is Connected" Kind="OutputPin" />
               <Pin Id="NDhKRQPeUXjN0kgWfr7oAS" Name="Parameter Added" Kind="OutputPin" />
               <Pin Id="CfAlOdSwGqEQBQ5Wpq8jOt" Name="Parameter Removed" Kind="OutputPin" />
               <Pin Id="ShdpxxFM0UPNF2ZdRtvUA8" Name="Server Version" Kind="OutputPin" />
               <Pin Id="L306KrqC7TKNHB8YuTK4nB" Name="Server Application" Kind="OutputPin" />
+              <Pin Id="TwJTPQeQXV1LuDF2w6qOF5" Name="Is Connected" Kind="OutputPin" />
             </Node>
-            <Pad Id="Bq6hBIc654cMpB6JmdJ5j9" Comment="Is Connected" Bounds="594,195,40,19" ShowValueBox="true" isIOBox="true" />
             <Node Bounds="623,708,1286,587" Id="L9tB5ibcxA2OeaLw11vW08">
               <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
                 <Choice Kind="ProcessAppFlag" Name="ForEach" />
@@ -650,7 +649,7 @@
               <Pin Id="Ptfkl1iemgdN3YE40mQjcD" Name="Output" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="JgZfdptpu7XPnegElREBDv" Bounds="-2,1424" />
-            <ControlPoint Id="LkjB9O9SuqeNA1Uc9kVG8c" Bounds="515,237" />
+            <ControlPoint Id="LkjB9O9SuqeNA1Uc9kVG8c" Bounds="841,215" />
             <ControlPoint Id="FP9GsOdu9wbPz3ECXqDZzJ" Bounds="502,718" />
             <Node Bounds="387,1411,25,19" Id="J4gJxbBXqxQO46TzegDpXe">
               <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
@@ -874,8 +873,8 @@
               <ControlPoint Id="DexYBywXPHKLr00USTSj3Q" Bounds="296,603" Alignment="Bottom" />
               <ControlPoint Id="K4ImYgbGcaHLnuv1zzpzfR" Bounds="380,603" Alignment="Bottom" />
             </Node>
-            <ControlPoint Id="NkqCTzOO6XFQNH9JFsoRvU" Bounds="664,230" />
-            <ControlPoint Id="V4IA5Nnci4AMo3YYhZfKvC" Bounds="782,220" />
+            <ControlPoint Id="NkqCTzOO6XFQNH9JFsoRvU" Bounds="635,220" />
+            <ControlPoint Id="V4IA5Nnci4AMo3YYhZfKvC" Bounds="721,219" />
             <Node Bounds="195,1490,125,19" Id="BLos0mWvUX2NXG4T7JKxLc">
               <p:NodeReference LastCategoryFullName="VL.Elementa.Layout" LastSymbolSource="VL.Elementa.Core.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -928,7 +927,6 @@
               </p:TypeArguments>
             </p:TypeAnnotation>
           </Slot>
-          <Link Id="MMQEsTGqt9WO2qkKK80IDk" Ids="TwJTPQeQXV1LuDF2w6qOF5,Bq6hBIc654cMpB6JmdJ5j9" />
           <Link Id="K2kjF59WAjTNtgTRMbTQrJ" Ids="T5bRA9LlD5JLXGhZgibVKx,IcQkiRI9mC2P8m3bl32oVF" IsHidden="true" />
           <Link Id="Gt8C4SDeOInMUQur5TbjgK" Ids="PdcjE1n8gBVNiZPcZWGBiy,LtQIo1PP0KzP0fhGI7Q3RY" IsHidden="true" />
           <Link Id="CWIsZSurNbJLClGchpovlm" Ids="NDhKRQPeUXjN0kgWfr7oAS,LjRwdpIwjTAQDCaaaKg0IO" />
@@ -4933,8 +4931,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2020.1.2" />
-  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2020.1.2" />
+  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2020.1.3" />
+  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2020.1.3" />
   <PlatformDependency Id="K64ryp4dCPjMiaoJUlLwPn" Location="System.Drawing" />
   <DocumentDependency Id="TGt8NV9XGziPZMAPriVIDg" Location="./VL.RCP.vl" />
   <PlatformDependency Id="UBiOHmdHidlOyyul0fvAK5" Location="System.Numerics.Vectors" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2020.1.2.135" Version="0.128">
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2020.1.3.147" Version="0.128">
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -184,9 +184,9 @@
             <Pin Id="QjeQSko3Fq8NLs8E5FqEhI" Name="Initialize" Kind="InputPin" />
             <Pin Id="KcuG9Q3bCSPORI9lLVoTTz" Name="Enabled" Kind="InputPin" />
             <Pin Id="Aa3ziRloUEXQAPT4q3D7vM" Name="Output" Kind="OutputPin" />
-            <Pin Id="MDtV16ak7muNhOxsBlFNjP" Name="Is Connected" Kind="OutputPin" />
             <Pin Id="H6InPKQWE1OOfPXqsy2Gym" Name="Server Version" Kind="OutputPin" />
             <Pin Id="AFoGBwRsLuNPn8kcrsmWXy" Name="Server Application" Kind="OutputPin" />
+            <Pin Id="MDtV16ak7muNhOxsBlFNjP" Name="Is Connected" Kind="OutputPin" />
           </Node>
           <Node Bounds="289,677,213,19" Id="UI27WixXui2Ph4hfZnURcJ">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
@@ -415,6 +415,14 @@
             <Pin Id="ByzpDZrxA1nNufQxobwAcL" Name="Input 2" Kind="InputPin" />
             <Pin Id="SMy4ocBM7JAOBwnoaF45Jt" Name="Output" Kind="OutputPin" />
           </Node>
+          <Node Bounds="332,228,38,26" Id="JxBkvCO0sUGLBmlefpdojr">
+            <p:NodeReference LastCategoryFullName="Primitive.String" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Trim" />
+            </p:NodeReference>
+            <Pin Id="AGyFCFUq514NIBuBZsppuZ" Name="Input" Kind="StateInputPin" />
+            <Pin Id="RyZKwY8U9h9NlMiy8euM9R" Name="Output" Kind="StateOutputPin" />
+          </Node>
         </Canvas>
         <Patch Id="HwnAQw7XXpHPzkJ3LoSazd" Name="Create" />
         <Patch Id="HFVKRsatuGfNuRqSXLU6rW" Name="Update" />
@@ -422,10 +430,9 @@
           <Fragment Id="UweQtzBpgRFPXLrtz8fLgv" Patch="HwnAQw7XXpHPzkJ3LoSazd" Enabled="true" />
           <Fragment Id="R27BiFgg9MTNtXytVIXJCa" Patch="HFVKRsatuGfNuRqSXLU6rW" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="PGDxvadik1dP4vvYOnk8li" Ids="BIX2lJL066gLC2SVNF7acS,LOs9OZbtW0zPXgJMYWTFqZ" />
+        <Link Id="PGDxvadik1dP4vvYOnk8li" Ids="BIX2lJL066gLC2SVNF7acS,AGyFCFUq514NIBuBZsppuZ" />
         <Link Id="Dg1UyhfGOctP3fV2Wx52gi" Ids="I8UDsVYppOjNngHo55fvHJ,QkgQJWAbTeMOjoTWp35ST3" />
         <Link Id="Jy5IMvKpQGVMu5tQz5sw5J" Ids="BbgMXXN99jSMYtr32lJW1M,Ubudbff1RJxPD31Mklj7CU" />
-        <Link Id="DHjRKQzlQ90QJ9FZlWbxHx" Ids="BIX2lJL066gLC2SVNF7acS,GspGaA9jAAWNMqJoEuNDUo" />
         <Link Id="FhzUM6I3a7UMmIvUQHDuHL" Ids="BbgMXXN99jSMYtr32lJW1M,IdLwzmtIO71M2IJHjNbjok" />
         <Link Id="VchFNpIPOizOAXwU9HdBjE" Ids="LGjZfq7ZrPSPndxpBRC6Fu,BZHz4ZQyhYfNe0ZpZYh2C1" />
         <Link Id="K2Zh7Yg8xIwP2RbtWaw2ce" Ids="Mm6tLPZ3kSrMpah3WzZyml,Nj1IVQL1xuWPx2exezF7Fh" />
@@ -460,13 +467,15 @@
         <Link Id="KtZWlhEBTCvMWAq8TAU3C3" Ids="MQ967FCE96jOh4fXCZwCE2,CAPxPoiBaGWQGUbym23Na9" />
         <Link Id="DGed68uZBbaPYdy434DybW" Ids="SMy4ocBM7JAOBwnoaF45Jt,Ng3hCiFiMhhQEhefsi1VCb" />
         <Link Id="EppEi0bLVrzMwI6SovXBZy" Ids="H6InPKQWE1OOfPXqsy2Gym,ByzpDZrxA1nNufQxobwAcL" />
+        <Link Id="KAkavajWEmLMn1NqsTCUjl" Ids="RyZKwY8U9h9NlMiy8euM9R,LOs9OZbtW0zPXgJMYWTFqZ" />
+        <Link Id="VTBESXxXSc8M0fYMjvQRLi" Ids="RyZKwY8U9h9NlMiy8euM9R,GspGaA9jAAWNMqJoEuNDUo" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2020.1.2" />
-  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2020.1.2" />
+  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2020.1.3" />
+  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2020.1.3" />
   <PlatformDependency Id="DnWBoO2QYFVN3nluUG5C7p" Location="System.Windows.Forms" />
-  <NugetDependency Id="DPnDPs6TB3oPXwtztgtC6u" Location="VL.CoreLib" Version="2020.1.2" />
+  <NugetDependency Id="DPnDPs6TB3oPXwtztgtC6u" Location="VL.CoreLib" Version="2020.1.3" />
   <NugetDependency Id="CcdNDjK8dybOKIEy8cp8v0" Location="VL.RCP" Version="0.0.0.0" />
   <NugetDependency Id="NRTCcFxe900PSgcAW3OzF2" Location="VL.Elementa" Version="2.2.3" />
 </Document>
