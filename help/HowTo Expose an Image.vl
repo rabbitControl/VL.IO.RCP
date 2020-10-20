@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2019.1.0-0703-g2ca4a704b6" Version="0.128">
-  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="0.94.62" />
+<Document xmlns:p="property" Id="REHYdaoFMkGNpoclkzPxKg" LanguageVersion="2020.2.2.281" Version="0.128">
+  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="2020.2.2" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="GfkwiOQeH7KLHgYztH71Zy">
         <Canvas Id="UhyIkER3ywNMS7mpScj8AC" CanvasType="Group">
-          <Node Bounds="159,330,55,19" Id="KRvj5w3M3GiMTD67Mj68TQ">
+          <Node Bounds="462,303,55,19" Id="KRvj5w3M3GiMTD67Mj68TQ">
             <p:NodeReference LastCategoryFullName="IO.RCP" LastSymbolSource="VL.RCP.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Name="RCP" />
@@ -27,12 +27,13 @@
                 <Choice Kind="TypeFlag" Name="Integer32" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="PD6ibtcBBOELcA98AARiIF" Name="Application Id" Kind="InputPin" />
             <Pin Id="G7qVKx4Nes2M674JhzpOzJ" Name="RCPServer" Kind="OutputPin" />
             <Pin Id="BtOj6i9Iv2gMW6XgZj00cE" Name="Connection Count" Kind="OutputPin" />
           </Node>
-          <Pad Id="T5ZRc4fvKArPYMTI5w4LCh" Comment="Connection Count" Bounds="212,366,20,19" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="162,815,165,19" Id="IWNGa56SRGnMGTxWyrUOnm">
-            <p:NodeReference LastCategoryFullName="IO.RCP.Parameters" LastSymbolSource="VL.RCP.vl">
+          <Pad Id="T5ZRc4fvKArPYMTI5w4LCh" Comment="Connection Count" Bounds="514,346,20,19" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="462,751,165,19" Id="IWNGa56SRGnMGTxWyrUOnm">
+            <p:NodeReference LastCategoryFullName="IO.RCP.Parameters" LastSymbolSource="VL.IO.RCP.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ImageParam" />
             </p:NodeReference>
@@ -51,7 +52,7 @@
             <Pin Id="JDOVqYBQhAsOUtbTAvzZ16" Name="Enabled" Kind="InputPin" />
             <Pin Id="Oodwcr6h76ZPuGgdJMXQt2" Name="Value" Kind="OutputPin" />
           </Node>
-          <Node Bounds="245,563,71,19" Id="DXNUed1BoKaQPAqx1yiBS0">
+          <Node Bounds="545,499,71,19" Id="DXNUed1BoKaQPAqx1yiBS0">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Rectangle (Bounds)" />
@@ -61,22 +62,23 @@
             <Pin Id="LKNmK6KESReNXTNjGj5aSH" Name="Enabled" Kind="InputPin" />
             <Pin Id="PnZ80QecksQPEC620TG8eK" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="245,668,145,19" Id="MHZw2rsBzG3PI6vK1l7Ipn">
+          <Node Bounds="545,589,165,19" Id="MHZw2rsBzG3PI6vK1l7Ipn">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer (OffScreen)" />
             </p:NodeReference>
             <Pin Id="RJpohG9651HP1kPH1w1fwu" Name="Layer" Kind="InputPin" />
             <Pin Id="MpcwtM4PeQjOvjenUQd02r" Name="Color" Kind="InputPin" />
-            <Pin Id="KSRPMkdYmO9Ni88A1nmRoF" Name="Mouse" Kind="InputPin" />
-            <Pin Id="J52xCiVvtxlOUEjzeey8ZD" Name="Keyboard" Kind="InputPin" />
+            <Pin Id="FmnOIK1PjdWMPIjeVoumxl" Name="Clear" Kind="InputPin" />
             <Pin Id="BG8XsEp92DTPin7bRAHZMI" Name="Space" Kind="InputPin" />
             <Pin Id="CpVaA4pvA2UNksjEAcyndN" Name="Width" Kind="InputPin" />
             <Pin Id="Dhdi8kjYNM5PJ7i3cE2hiu" Name="Height" Kind="InputPin" />
+            <Pin Id="KSRPMkdYmO9Ni88A1nmRoF" Name="Mouse" Kind="InputPin" />
+            <Pin Id="J52xCiVvtxlOUEjzeey8ZD" Name="Keyboard" Kind="InputPin" />
             <Pin Id="IIZFRbqO5khN3d5U2fLZ6n" Name="Enabled" Kind="InputPin" />
             <Pin Id="KDXJCoWAOXlNatSe5x8maP" Name="Result" Kind="OutputPin" />
           </Node>
-          <Node Bounds="245,700,91,19" Id="BCoqQHGWNJSOl99ADOjvwQ">
+          <Node Bounds="545,636,91,19" Id="BCoqQHGWNJSOl99ADOjvwQ">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Imaging" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="ImageEncoder" />
@@ -86,12 +88,12 @@
             <Pin Id="Rf7M1U7FzZgPzfVWsofBGJ" Name="Quality" Kind="InputPin" />
             <Pin Id="Agh7fijknrxN71eUYsu7z2" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="DKvc5M9bAOxObU9v0YkctH" Comment="Enabled" Bounds="323,781,40,19" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="DKvc5M9bAOxObU9v0YkctH" Comment="Enabled" Bounds="623,717,40,19" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="245,606,91,19" Id="IgPkqB1HvMqQUfGOoiFxeg">
+          <Node Bounds="545,542,91,19" Id="IgPkqB1HvMqQUfGOoiFxeg">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Transform" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TransformSRT" />
@@ -109,7 +111,7 @@
             <Pin Id="Ast3VZPUTU0MdzFm3oCcep" Name="Translation" Kind="InputPin" />
             <Pin Id="RGUtqrmC83QO5iww7wykfG" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="395,457,65,19" Id="V7D37v989IMNtY9A1nr5Cg">
+          <Node Bounds="695,393,65,19" Id="V7D37v989IMNtY9A1nr5Cg">
             <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="LFO" />
@@ -126,25 +128,7 @@
             <Pin Id="AqI69LmW3w8QZj9aGEluM0" Name="On New Cycle" Kind="OutputPin" />
             <Pin Id="D0ItLpn6CrYLkIE3j8umd8" Name="Cycles" Kind="OutputPin" />
           </Node>
-          <Pad Id="H1LEh710SrFNUBkhPvFWf5" Bounds="142,96,299,100" ShowValueBox="true" isIOBox="true" Value="To expose parameters from vl, create a Rabbit node and connect FloatParam, IntParam,.... nodes to it.&#xD;&#xA;&#xD;&#xA;then use e.g. this web-client to connect to it:">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Pad Id="HstESibevS3LDyipeShoFe" Bounds="142,197,239,22" ShowValueBox="true" isIOBox="true" Value="http://rabbitcontrol.github.io/client/">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Node Bounds="278,526,45,19" Id="QDc09DKMtzdNp2lIdQ8eDz">
+          <Node Bounds="578,462,45,19" Id="QDc09DKMtzdNp2lIdQ8eDz">
             <p:NodeReference LastCategoryFullName="Graphics.Skia.Paint" LastSymbolSource="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Fill" />
@@ -154,7 +138,7 @@
             <Pin Id="QmzJIjbmpMYQBUWEbjfx2Z" Name="Shader" Kind="InputPin" />
             <Pin Id="SzBFunKYu8AQOo1Z9ze3b3" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="298,491,65,19" Id="P6k1xcDZ4oWMiEdb8caG0n">
+          <Node Bounds="598,427,65,19" Id="P6k1xcDZ4oWMiEdb8caG0n">
             <p:NodeReference LastCategoryFullName="Color.RGBA" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FromHSL" />
@@ -169,14 +153,55 @@
             <Pin Id="AdaBAZa7zBaNwHnha91ZO7" Name="Alpha" Kind="InputPin" />
             <Pin Id="KKuZ6bN1BOWLdTRVqWlE89" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="UWtgSLRHLt6MAbjKThl5TD" Comment="Label" Bounds="204,748,63,15" ShowValueBox="true" isIOBox="true" Value="Rendering">
+          <Pad Id="UWtgSLRHLt6MAbjKThl5TD" Comment="Label" Bounds="504,684,63,15" ShowValueBox="true" isIOBox="true" Value="Rendering">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="SSLi0ZJmpm1MOpDxC6wnEK" Comment="Port" Bounds="212,300,35,15" ShowValueBox="true" isIOBox="true" Value="9999">
+          <Pad Id="SSLi0ZJmpm1MOpDxC6wnEK" Comment="Port" Bounds="489,277,43,15" ShowValueBox="true" isIOBox="true" Value="10000">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="H92otb0RALBMJLE9IRBuvu" Bounds="79,112,299,100" ShowValueBox="true" isIOBox="true" Value="To expose parameters from vl, create a Rabbit node and connect FloatParam, IntParam,.... nodes to it.&#xD;&#xA;&#xD;&#xA;Then use e.g. this web-client to connect to it:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EVxTKXIMXCsO1ChuUVfEAY" Bounds="79,204,188,19" ShowValueBox="true" isIOBox="true" Value="http://client.rabbitcontrol.cc">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Ti7ZrUOYIiLNeV9hbYrq2X" Bounds="79,254,294,19" ShowValueBox="true" isIOBox="true" Value="http://client.rabbitcontrol.cc/#localhost:10000">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Hge4l3P5juIMHIxh1ZLTnn" Bounds="79,235,332,19" ShowValueBox="true" isIOBox="true" Value="You can also directly connect to a given ip:port like so:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KBWh5X6hxxxPkTPqct0XhP" Comment="Remote Host" Bounds="464,240,41,15" ShowValueBox="true" isIOBox="true" Value="0.0.0.0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
         </Canvas>
@@ -199,10 +224,11 @@
         <Link Id="RP2h455QF4uPRMCpqCptKX" Ids="JeRYXNLR6lgPmsJEf4P1jl,OAbXDMRiygBMqJsCjIOGz8" />
         <Link Id="A5Gydu9WMCCNoG30bGVdne" Ids="UWtgSLRHLt6MAbjKThl5TD,TcLqbhX7iKWOaAI72uGwCR" />
         <Link Id="BNrGpEBOWGgLf8FpmYtSpU" Ids="SSLi0ZJmpm1MOpDxC6wnEK,UQAWFZeWPC4NbkL8h3WwgM" />
+        <Link Id="GxIaYCPTti7NcbtlHRiyKS" Ids="KBWh5X6hxxxPkTPqct0XhP,HLVnL3IFsDpL5WS778Cq2k" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="0.94.62-g2cf6e985bb" />
-  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="0.94.164-g00f8c2c007" />
-  <NugetDependency Id="GE1SfW1GuFyMBeA9kSLgW4" Location="VL.RCP" Version="0.0.0.0" />
+  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2020.2.2" />
+  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2020.2.2" />
+  <NugetDependency Id="URPrrQ1tMUVOs2nkU1LDmn" Location="VL.IO.RCP" Version="0.0.0.0" />
 </Document>
