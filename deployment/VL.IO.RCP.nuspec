@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.IO.RCP</id>
-    <version>0.3.0-alpha</version>
+    <version>0.4.0-alpha</version>
     <title>VL.RCP</title>
     <authors>RabbitControl</authors>
     <owners>RabbitControl</owners>
@@ -10,10 +10,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Set of nodes to use RCP with VL</summary>
     <description>RCP for VL</description>
-    <tags>VL, rcp, rabbitcontrol, remotecontrol, UI</tags>
+    <tags>VL, rcp, rabbitcontrol, remotecontrol, rabbithole, UI</tags>
     <license type="expression">LGPL-3.0-only</license>
 	<dependencies>
-	  <dependency id="RCPSharp" version="0.2.11-alpha" />
+	  <dependency id="RCPSharp" version="0.2.17-alpha" />
     </dependencies>
     <icon>icon\nugeticon.png</icon>
   </metadata>

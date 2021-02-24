@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="CLyieioMmR2MqyjaGIjoHT" LanguageVersion="2021.3.0.70" Version="0.128">
+  <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="2021.3.0" />
+  <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
+    <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="OoEy6Dt9JtwLGvEFegbXO9">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="GfkwiOQeH7KLHgYztH71Zy">
+        <Canvas Id="UhyIkER3ywNMS7mpScj8AC" CanvasType="Group">
+          <Node Bounds="226,459,85,19" Id="KRvj5w3M3GiMTD67Mj68TQ">
+            <p:NodeReference LastCategoryFullName="IO.RCP" LastSymbolSource="VL.RCP.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Name="RCP" />
+              <Choice Kind="ProcessAppFlag" Name="Rabbit" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="FqcBFguVY1aMG5VUq9L9W0" Name="Enabled" Kind="InputPin" />
+            <Pin Id="HLVnL3IFsDpL5WS778Cq2k" Name="Remote Host" Kind="InputPin" />
+            <Pin Id="UQAWFZeWPC4NbkL8h3WwgM" Name="Port" Kind="InputPin" />
+            <Pin Id="P8S7KnyrAmqOmPeerZeOkT" Name="Application Id" Kind="InputPin" />
+            <Pin Id="NpxENYvUuQkOAg35VT58UB" Name="Transporter" Kind="InputPin" />
+            <Pin Id="G7qVKx4Nes2M674JhzpOzJ" Name="RCPServer" Kind="OutputPin" />
+            <Pin Id="BtOj6i9Iv2gMW6XgZj00cE" Name="Connection Count" Kind="OutputPin" />
+          </Node>
+          <Pad Id="T5ZRc4fvKArPYMTI5w4LCh" Comment="Connection Count" Bounds="308,505,20,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="389,577,65,19" Id="V7D37v989IMNtY9A1nr5Cg">
+            <p:NodeReference LastCategoryFullName="Animation" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="LFO" />
+            </p:NodeReference>
+            <Pin Id="GAmMYPR2MW8OQBVPTWqoMb" Name="Clock" Kind="InputPin" />
+            <Pin Id="Ps3nR8IVkwDMtdMmkqQkzy" Name="Period" Kind="InputPin" DefaultValue="5">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="MYukA6iPevGMHu9TB42RlI" Name="Pause" Kind="InputPin" />
+            <Pin Id="GKHizMWtdKvOPwt3lvnipG" Name="Reset" Kind="ApplyPin" />
+            <Pin Id="JeRYXNLR6lgPmsJEf4P1jl" Name="Phase" Kind="OutputPin" />
+            <Pin Id="AqI69LmW3w8QZj9aGEluM0" Name="On New Cycle" Kind="OutputPin" />
+            <Pin Id="D0ItLpn6CrYLkIE3j8umd8" Name="Cycles" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="216,671,365,110" Id="Gwb0rc4v6dYMZsK31iyzUe">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <FullNameCategoryReference ID="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <Pin Id="LjxqdoZkxkfOSZx2BScWq7" Name="Break" Kind="OutputPin" />
+            <ControlPoint Id="Lik6mITGgiIPXR0HL4Y76H" Bounds="330,677" Alignment="Top" />
+            <Patch Id="R10DRVubCyDOLUIo30G5Yv" ManuallySortedPins="true">
+              <Patch Id="VrpP2TBIUKeModLO4eaPZV" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="Ln6ofVFaoQmMQd7EO49Xc7" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="CVX97EXu8fcNToSob9Ufss" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="228,741,245,19" Id="ANByAcdmtzUMYGwHRL9m1j">
+                <p:NodeReference LastCategoryFullName="IO.RCP.Parameters" LastSymbolSource="VL.IO.RCP.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="FloatParam" />
+                </p:NodeReference>
+                <Pin Id="Os7ukE3ERqHNq8Rry2Qy5R" Name="RCPServer" Kind="InputPin" />
+                <Pin Id="JVUvOOoBY6mOVPuXmvIoud" Name="Group" Kind="InputPin" />
+                <Pin Id="KhKN54UuYqqOm4YtF1bqnC" Name="Label" Kind="InputPin" DefaultValue="MyFloatParam">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="FPJ1cTSk5RtPgkFg0qWA5a" Name="Description" Kind="InputPin" />
+                <Pin Id="CpOt8nrrBNtNq2WwK6weY1" Name="Unit" Kind="InputPin" />
+                <Pin Id="QaBSkJ1UMGaNgwnXE2f5tb" Name="Value" Kind="InputPin" />
+                <Pin Id="MVgsMJokabVPZgYQ3fftff" Name="Minimum" Kind="InputPin" />
+                <Pin Id="AqfZiiZ2NnCP9GCZ3hqSIn" Name="Maximum" Kind="InputPin" />
+                <Pin Id="DWfDQ5Fzoa8Md9EnmfMNso" Name="Multiple Of" Kind="InputPin" />
+                <Pin Id="NI591hebhddNNcPPIixPDI" Name="Readonly" Kind="InputPin" />
+                <Pin Id="H2Mg7xYDMdOPKgsm6RrSB2" Name="Needs Confirmation" Kind="InputPin" />
+                <Pin Id="EQNkgBre6PXNASKmuArUfG" Name="User ID" Kind="InputPin" />
+                <Pin Id="UQ7y0ovHm1pK9wgH3jNmkX" Name="Enabled" Kind="InputPin" />
+                <Pin Id="TWOwAoOj4wAQJnIPVjyiJ3" Name="Value" Kind="OutputPin" />
+              </Node>
+              <Pad Id="BK30r2tSNkeOIML9LfpRQj" Comment="Enabled" Bounds="471,711,40,19" ShowValueBox="true" isIOBox="true" Value="True">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="327,707,46,19" Id="I8AULROfjE9Mf6Wme9OUAo">
+                <p:NodeReference LastCategoryFullName="2D.Vector2" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Vector (Split)" />
+                  <CategoryReference Kind="Vector2Type" Name="Vector2" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="NzWLXnca1EoQYMtqcsudN8" Name="Input" Kind="StateInputPin" />
+                <Pin Id="K64ESrs7g4sP6Rcinum1UY" Name="X" Kind="OutputPin" />
+                <Pin Id="IkCZcunbEYPNAf0mFBcfju" Name="Y" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Node Bounds="328,625,85,19" Id="G66reUiacIcQZ7qezaUinV">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="CircleSpread" />
+            </p:NodeReference>
+            <Pin Id="SH1iMNudaWvQNYDJARKLur" Name="Center" Kind="InputPin" DefaultValue="0.5, 0">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="BI3SMqZ0P3ILjD30Yl3fbG" Name="Width" Kind="InputPin" />
+            <Pin Id="IcEjTog21YYPce0j5pmCjY" Name="Factor" Kind="InputPin" />
+            <Pin Id="G7K3DQG3HulPztJ2wpthUF" Name="Phase" Kind="InputPin" />
+            <Pin Id="R7kq9m8BvmjO8YdkEkA9Xn" Name="Count" Kind="InputPin" />
+            <Pin Id="B3ZKKZyL4RfO03GdqjZDTq" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="BMie0ycpBdMPjQIzy8cXP5" Comment="Count" Bounds="478,579,20,19" ShowValueBox="true" isIOBox="true" Value="2">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="H1LEh710SrFNUBkhPvFWf5" Bounds="62,155,306,116" ShowValueBox="true" isIOBox="true" Value="To expose parameters from vl, create a Rabbit node and connect FloatParam, IntParam,.... nodes to it.&#xD;&#xA;&#xD;&#xA;Then use the Rabbithole service to get a private project-url or public tunnel-url:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Vv16uDI5TZXLMbKUR5NDyl" Comment="Remote Host" Bounds="241,373,41,15" ShowValueBox="true" isIOBox="true" Value="0.0.0.0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SQDA78iGwmcMA52MRJHc2L" Comment="Port" Bounds="266,402,38,15" ShowValueBox="true" isIOBox="true" Value="10000">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HaOoGK2gwUMLvBxfJqNnuW" Comment="Application Id" Bounds="292,433,35,15" ShowValueBox="true" isIOBox="true" Value="vvvv">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="MUqWQEQuHhhLBc94z3e55H" Comment="Server Url" Bounds="466,354,356,15" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="464,378,65,19" Id="NAQvFn4Tg1uLNIu2yKvdft">
+            <p:NodeReference LastCategoryFullName="IO.RCP" LastSymbolSource="VL.IO.RCP.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Rabbithole" />
+            </p:NodeReference>
+            <Pin Id="G95VY8MH3L0PwdpbJeyabx" Name="Server Url" Kind="InputPin" />
+            <Pin Id="UjYv8CYvQ0oNnoJykz7m7P" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="OmGjKUzdcIcLV8U9L7Uf76" Bounds="60,271,236,19" ShowValueBox="true" isIOBox="true" Value="https://rabbithole.rabbitcontrol.cc">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="464,418,65,19" Id="HRBw4irFfjHPQ0R1pmQhYD">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="FromValue" />
+              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="DyCHUCPKXxoPz0csgGGwmJ" Name="Input" Kind="InputPin" />
+            <Pin Id="QFgGLjDV5rZPqFnNoLk8uO" Name="Result" Kind="OutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="HwnAQw7XXpHPzkJ3LoSazd" Name="Create" />
+        <Patch Id="HFVKRsatuGfNuRqSXLU6rW" Name="Update" />
+        <ProcessDefinition Id="SrdqY1gKe8yNwcQXMEYN2Q">
+          <Fragment Id="UweQtzBpgRFPXLrtz8fLgv" Patch="HwnAQw7XXpHPzkJ3LoSazd" Enabled="true" />
+          <Fragment Id="R27BiFgg9MTNtXytVIXJCa" Patch="HFVKRsatuGfNuRqSXLU6rW" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="TeuUrcS51s5MmUzJRii2i4" Ids="BtOj6i9Iv2gMW6XgZj00cE,T5ZRc4fvKArPYMTI5w4LCh" />
+        <Link Id="MchSjRgGn2jPbOJsZB9Wyx" Ids="G7qVKx4Nes2M674JhzpOzJ,Os7ukE3ERqHNq8Rry2Qy5R" />
+        <Link Id="PSDED6ZTol7LQcM8hOZBmX" Ids="BK30r2tSNkeOIML9LfpRQj,UQ7y0ovHm1pK9wgH3jNmkX" />
+        <Link Id="RNaf3GNcXrVOaFhrk4MOiV" Ids="B3ZKKZyL4RfO03GdqjZDTq,Lik6mITGgiIPXR0HL4Y76H" />
+        <Link Id="U2NNZzclUIJNTDiiKSzs3i" Ids="Lik6mITGgiIPXR0HL4Y76H,NzWLXnca1EoQYMtqcsudN8" />
+        <Link Id="RNLdlntrvqPMhpc0mFNaZZ" Ids="K64ESrs7g4sP6Rcinum1UY,QaBSkJ1UMGaNgwnXE2f5tb" />
+        <Link Id="UfSH7Dv8DNgOV4rPBDokAl" Ids="BMie0ycpBdMPjQIzy8cXP5,R7kq9m8BvmjO8YdkEkA9Xn" />
+        <Link Id="O5vcladdEqqP1f01kgo0GL" Ids="JeRYXNLR6lgPmsJEf4P1jl,G7K3DQG3HulPztJ2wpthUF" />
+        <Link Id="Jil19rYqdBJOIwOmiqoK3T" Ids="Vv16uDI5TZXLMbKUR5NDyl,HLVnL3IFsDpL5WS778Cq2k" />
+        <Link Id="GS1ChL44wYYPTv7oaGm4o0" Ids="SQDA78iGwmcMA52MRJHc2L,UQAWFZeWPC4NbkL8h3WwgM" />
+        <Link Id="PJrB66fMqFVNQHYvMSs3Zf" Ids="HaOoGK2gwUMLvBxfJqNnuW,P8S7KnyrAmqOmPeerZeOkT" />
+        <Link Id="JoJaHBbnDM6LtDIblJqzMk" Ids="MUqWQEQuHhhLBc94z3e55H,G95VY8MH3L0PwdpbJeyabx" />
+        <Link Id="D3UN4bEEQkMNwZQDQD0qGP" Ids="UjYv8CYvQ0oNnoJykz7m7P,DyCHUCPKXxoPz0csgGGwmJ" />
+        <Link Id="GdEm97qOSQMNPIvBoTPJdO" Ids="QFgGLjDV5rZPqFnNoLk8uO,NpxENYvUuQkOAg35VT58UB" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2021.3.0" />
+  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2021.3.0" />
+  <NugetDependency Id="Drbn7qMg6TJQEQLTVb7QyH" Location="VL.IO.RCP" Version="0.0.0.0" />
+</Document>
