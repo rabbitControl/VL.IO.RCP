@@ -5320,5 +5320,5 @@
   </Patch>
   <PlatformDependency Id="St3iFYFQrCSL823QHkcnJe" Location="System.Drawing" />
   <PlatformDependency Id="NTMEKBdDuWkMZJdybS2Ve3" Location="System.Numerics.Vectors" />
-  <NugetDependency Id="O9r89Q2haujPjwnLtvgvEQ" Location="RCPSharp" Version="0.2.17-alpha" />
+  <NugetDependency Id="O9r89Q2haujPjwnLtvgvEQ" Location="RCPSharp" Version="0.2.18-alpha" />
 </Document>
