@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.IO.RCP</id>
-    <version>0.4.7-alpha</version>
+    <version>0.4.8-alpha</version>
     <title>VL.IO.RCP</title>
     <authors>RabbitControl</authors>
     <owners>RabbitControl</owners>
