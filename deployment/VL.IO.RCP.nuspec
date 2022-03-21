@@ -13,7 +13,7 @@
     <tags>VL, rcp, rabbitcontrol, remotecontrol, rabbithole, UI</tags>
     <license type="expression">LGPL-3.0-only</license>
 	<dependencies>
-	  <dependency id="RCPSharp" version="0.2.20-alpha" />
+	  <dependency id="RCPSharp" version="0.2.21-alpha" />
     </dependencies>
     <icon>icon\nugeticon.png</icon>
   </metadata>

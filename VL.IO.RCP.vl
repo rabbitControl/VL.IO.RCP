@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="KMNw2h8rVqBPw8wLj5oqH2" LanguageVersion="2021.4.0.595" Version="0.128">
-  <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="2021.4.0-0595-g5de64a458f" />
+<Document xmlns:p="property" Id="KMNw2h8rVqBPw8wLj5oqH2" LanguageVersion="2021.4.7.906" Version="0.128">
+  <NugetDependency Id="FPn7jKjRVBSLhm5GIMR7T0" Location="VL.CoreLib" Version="2021.4.7" />
   <Patch Id="PplcvdvtWupLrsERG0V91V">
     <Canvas Id="ExGrqi5W2YCO3GKnTiJ7o7" DefaultCategory="IO.RCP" CanvasType="FullCategory">
       <!--
@@ -5977,5 +5977,5 @@
   <PlatformDependency Id="NTMEKBdDuWkMZJdybS2Ve3" Location="System.Numerics.Vectors" />
   <PlatformDependency Id="RNicYtgZmIuNwri1lL895p" Location="System.Security.Cryptography.Primitives" />
   <PlatformDependency Id="QkWsOOgF5spMAJVUjz3mM8" Location="VL.Lang.dll" />
-  <PlatformDependency Id="Ezq8tsA5sPFMwOZZzoiWE8" Location="../../rcp-csharp/lib/netstandard2.0/RCPSharp.dll" />
+  <NugetDependency Id="IBtwbVkrIheLbGIW4kdORx" Location="RCPSharp" Version="0.2.21-alpha" />
 </Document>
