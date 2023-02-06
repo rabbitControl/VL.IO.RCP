@@ -1,5 +1,5 @@
 # VL.IO.RCP
-Set of nodes to use RCP with VL.
+Set of nodes to use [RCP](https://github.com/rabbitControl/RCP) with VL.
 
 Try it with vvvv, the visual live-programming environment for .NET  
 Download: http://visualprogramming.net
