@@ -1122,7 +1122,7 @@
     ************************ Carrot ************************
 
 -->
-        <Node Name="Carrot" Bounds="393,223" Id="Q41XIgEmtEFNXWG8RejQQp">
+        <Node Name="Carrot" Bounds="140,236" Id="Q41XIgEmtEFNXWG8RejQQp">
           <p:NodeReference>
             <Choice Kind="ContainerDefinition" Name="Process" />
             <FullNameCategoryReference ID="Primitive" />
@@ -1130,7 +1130,7 @@
           <Patch Id="TmEblw0ehTVPnTYqnWgQmy">
             <Canvas Id="PNXOBiUINtyQHuv08cBIkR" CanvasType="Group">
               <Pad Id="MGKlEqkI3lvO7qkUfw4h7C" SlotId="FNHTrqSFeT6NB50sHdhDRx" Bounds="512,326" />
-              <Node Bounds="290,359,51,26" Id="EU8rWFY0h3rO3Ff3FCiyaY">
+              <Node Bounds="290,359,53,26" Id="EU8rWFY0h3rO3Ff3FCiyaY">
                 <p:NodeReference LastCategoryFullName="RCP.RCPClient" LastDependency="RCPSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Dispose" />
@@ -1164,7 +1164,7 @@
               </Node>
               <Pad Id="O6NSGpDlEYAQHAbZi6oqZh" SlotId="ChT9Tecd4ZFLSnYS7A1BVL" Bounds="605,206" />
               <ControlPoint Id="KoAzq9V8KiOPi6h20iFDBL" Bounds="784,263" />
-              <Node Bounds="108,500,86,26" Id="PRznpHPMdzOPKcPKyLu5sc">
+              <Node Bounds="108,500,91,26" Id="PRznpHPMdzOPKcPKyLu5sc">
                 <p:NodeReference LastCategoryFullName="RCP.ClientServerBase" LastDependency="RCPSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="ParameterAdded" />
@@ -1203,7 +1203,7 @@
                   </Node>
                 </Patch>
               </Node>
-              <Node Bounds="287,505,98,26" Id="LjyILxgAyQFPvUn7EZ8SXO">
+              <Node Bounds="287,505,104,26" Id="LjyILxgAyQFPvUn7EZ8SXO">
                 <p:NodeReference LastCategoryFullName="RCP.ClientServerBase" LastDependency="RCPSharp.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="ParameterRemoved" />
@@ -1482,7 +1482,7 @@
                 <Pin Id="IvnxfVlCyXMPUQRmnpIr2E" Name="Input 2" Kind="InputPin" />
                 <Pin Id="FzgTVcdlob3NI2NmIC3dUs" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Node Bounds="23,937,112,90" Id="AzhQs3mTcYZN1S0reVP8H0">
+              <Node Bounds="23,937,122,90" Id="AzhQs3mTcYZN1S0reVP8H0">
                 <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="ProcessAppFlag" Name="ForEach" />
                   <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -1512,7 +1512,7 @@
                   </Node>
                 </Patch>
               </Node>
-              <Node Bounds="218,940,112,88" Id="QYS8ZekqmJLNckJEpoRKRY">
+              <Node Bounds="218,940,122,88" Id="QYS8ZekqmJLNckJEpoRKRY">
                 <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
                   <Choice Kind="ProcessAppFlag" Name="ForEach" />
                   <CategoryReference Kind="Category" Name="Reactive" NeedsToBeDirectParent="true" />
@@ -1691,13 +1691,13 @@
     ************************ GetUniqueRCPId ************************
 
 -->
-        <Node Name="GetUniqueRCPId" Bounds="394,304,278,300" Id="RCkEVqpsYC8MbgjEVhMEw2">
+        <Node Name="GetUniqueRCPId" Bounds="141,317,278,300" Id="RCkEVqpsYC8MbgjEVhMEw2">
           <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
             <Choice Kind="OperationDefinition" Name="Operation" />
             <CategoryReference Kind="Category" Name="Primitive" NeedsToBeDirectParent="true" />
           </p:NodeReference>
           <Patch Id="OhE5ofXSrhXNLCLs84FUFQ">
-            <Node Bounds="531,337,63,26" Id="JuKZ5oZUjlRO5UsfQW3kXc">
+            <Node Bounds="278,350,63,26" Id="JuKZ5oZUjlRO5UsfQW3kXc">
               <p:NodeReference LastCategoryFullName="System.Reflection.NodeContext" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="NodeContext" />
@@ -1706,7 +1706,7 @@
               <Pin Id="JPnI01rCa9XLvVmAy5sXlr" Name="Input" Kind="StateInputPin" />
               <Pin Id="D9wMF9EVrzQNrKJr3BW7Ej" Name="Path" Kind="OutputPin" />
             </Node>
-            <Node Bounds="531,380,55,26" Id="Kar8tHAXuo8O5lEeIVXYkI">
+            <Node Bounds="278,393,55,26" Id="Kar8tHAXuo8O5lEeIVXYkI">
               <p:NodeReference LastCategoryFullName="System.Reflection.NodePath" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="ClassType" Name="NodePath" />
@@ -1716,7 +1716,7 @@
               <Pin Id="IwJq0XWIrWFNpXrvV1Fd46" Name="Output" Kind="StateOutputPin" />
               <Pin Id="Nkyu1FtDz6VLw1mTcWHKKC" Name="Result" Kind="OutputPin" />
             </Node>
-            <Node Bounds="506,450,80,26" Id="R9IlTyabLaBLjIKP8R2NBQ">
+            <Node Bounds="253,463,80,26" Id="R9IlTyabLaBLjIKP8R2NBQ">
               <p:NodeReference LastCategoryFullName="System.Security.Cryptography.HashAlgorithm" LastDependency="System.Security.Cryptography.Primitives.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ComputeHash" />
@@ -1727,7 +1727,7 @@
               <Pin Id="SjbSsojHunqPbZ4cXDjIF4" Name="Output" Kind="StateOutputPin" />
               <Pin Id="MwNwR4s4PsdLc2sOxEiGbR" Name="Result" Kind="OutputPin" />
             </Node>
-            <Node Bounds="408,399,46,19" Id="ErY61sVUTOtPJYWqgRRDuA">
+            <Node Bounds="155,412,46,19" Id="ErY61sVUTOtPJYWqgRRDuA">
               <p:NodeReference LastCategoryFullName="System.Security.Cryptography.HashAlgorithm" LastDependency="System.Security.Cryptography.Primitives.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Create" />
@@ -1737,12 +1737,12 @@
               <Pin Id="R96yolcVQOxNxyB3LUY0oZ" Name="Hash Name" Kind="InputPin" />
               <Pin Id="EoSGPFwqQ2hLdPPDkWY9N9" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="Tt2KGeIocUHOPKfWZHQ84l" Comment="Hash Name" Bounds="410,369,35,15" ShowValueBox="true" isIOBox="true" Value="MD5">
+            <Pad Id="Tt2KGeIocUHOPKfWZHQ84l" Comment="Hash Name" Bounds="157,382,35,15" ShowValueBox="true" isIOBox="true" Value="MD5">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
-            <Node Bounds="581,417,52,19" Id="HCNSs8miZQ6MLBVzTTjFmj">
+            <Node Bounds="328,430,52,19" Id="HCNSs8miZQ6MLBVzTTjFmj">
               <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="ToBytes" />
@@ -1752,7 +1752,7 @@
               <Pin Id="GvnplxPA5cEPE8oS9gNLwI" Name="Encoding" Kind="InputPin" />
               <Pin Id="Jxc6skpDzvcOjjh0fg8npq" Name="Result" Kind="OutputPin" />
             </Node>
-            <Node Bounds="578,544,82,19" Id="KVXgbGnc2H1N03qKnJdDFn">
+            <Node Bounds="325,557,82,19" Id="KVXgbGnc2H1N03qKnJdDFn">
               <p:NodeReference LastCategoryFullName="VL.Model.Internal.GUIDEncoders" LastDependency="VL.Lang.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="GuidTobase62" />
@@ -1761,7 +1761,7 @@
               <Pin Id="MmqF8VaRVpHLM7rZZ4ACEn" Name="Guid" Kind="InputPin" />
               <Pin Id="SktP4LUVDnVNAUL8y0dZnq" Name="Result" Kind="OutputPin" />
             </Node>
-            <Node Bounds="578,504,63,26" Id="DJ5Y1AGFj20O4odwSO2hHG">
+            <Node Bounds="325,517,63,26" Id="DJ5Y1AGFj20O4odwSO2hHG">
               <p:NodeReference LastCategoryFullName="System.GUID" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="GUID" />
@@ -1777,11 +1777,11 @@
             <Link Id="TojkvXhHjc1Mp5IIBOi435" Ids="Jxc6skpDzvcOjjh0fg8npq,VDUEmpU9jMjOoy6yW8vj10" />
             <Link Id="Nfizuzbg5xuNmGn6LRLWcH" Ids="MwNwR4s4PsdLc2sOxEiGbR,GHHoSReaAswP8CVUxpQsHy" />
             <Link Id="PKRusID2VF9O36gJ2IKCFY" Ids="BBeD210K4trPpJmzN1V8x4,MmqF8VaRVpHLM7rZZ4ACEn" />
-            <ControlPoint Id="QvFbq1vTEvcOBmQw4e9Njv" Bounds="532,322" />
+            <ControlPoint Id="QvFbq1vTEvcOBmQw4e9Njv" Bounds="279,335" />
             <Link Id="FoF2MO0QUtQL7PE0QWctZh" Ids="QvFbq1vTEvcOBmQw4e9Njv,JPnI01rCa9XLvVmAy5sXlr" />
             <Pin Id="IXHkHeDLo9QLwZyABUTdrH" Name="Node Context" Kind="InputPin" Bounds="1158,38" />
             <Link Id="SrTWNYzIszGOET6Yx8QtIF" Ids="IXHkHeDLo9QLwZyABUTdrH,QvFbq1vTEvcOBmQw4e9Njv" IsHidden="true" />
-            <ControlPoint Id="CsVHHUQhVNOOz7dGTBKiEM" Bounds="581,587" />
+            <ControlPoint Id="CsVHHUQhVNOOz7dGTBKiEM" Bounds="328,600" />
             <Link Id="MGRMMCu9ww3QDEzQlvTB24" Ids="SktP4LUVDnVNAUL8y0dZnq,CsVHHUQhVNOOz7dGTBKiEM" />
             <Pin Id="SSnxPfPFUwpNGoevy3CRxB" Name="Result" Kind="OutputPin" Bounds="1211,301" />
             <Link Id="BM8KNWZA1J9QSpJ9nF1eUK" Ids="CsVHHUQhVNOOz7dGTBKiEM,SSnxPfPFUwpNGoevy3CRxB" IsHidden="true" />
@@ -5449,24 +5449,6 @@
           </Node>
           <!--
 
-    ************************ Widget ************************
-
--->
-          <Node Name="Widget" Bounds="824,379" Id="QGZWPkoW4iaM4T1OSpwJhZ">
-            <p:NodeReference>
-              <Choice Kind="ForwardDefinition" Name="Forward" />
-              <FullNameCategoryReference ID="Primitive" />
-            </p:NodeReference>
-            <p:TypeAnnotation LastCategoryFullName="RCP.Protocol" LastDependency="RCPSharp.dll">
-              <Choice Kind="TypeFlag" Name="Widget" />
-            </p:TypeAnnotation>
-            <Patch Id="MsAQdVTI5cQLBh9haj9aYO">
-              <Canvas Id="OPnMPlffD2SNgefcJjc1nI" BordersChecked="false" CanvasType="Group" />
-              <ProcessDefinition Id="PF2omLMWp7oQDnlHxs3sdU" IsHidden="true" />
-            </Patch>
-          </Node>
-          <!--
-
     ************************ EnumParameter ************************
 
 -->
@@ -6262,6 +6244,44 @@
           </Patch>
         </Patch>
       </Node>
+      <Canvas Id="AaMgv88GHFfMbqGdb5o3rg" Name="Widgets" Position="590,329">
+        <!--
+
+    ************************ Widget ************************
+
+-->
+        <Node Name="Widget" Bounds="432,298" Id="R4NNLbLLb4NPFHeomfK03n">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <FullNameCategoryReference ID="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="RCP.Protocol" LastDependency="RCPSharp.dll">
+            <Choice Kind="TypeFlag" Name="Widget" />
+          </p:TypeAnnotation>
+          <Patch Id="FS7IbWSm0jSOFuzzpVdfaj">
+            <Canvas Id="QXN8G3S0k4FOUkrWienjpz" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="LG6ToFPaiwZMN9AXrkp41w" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ Widgettype ************************
+
+-->
+        <Node Name="Widgettype" Bounds="419,358" Id="R83o2lLk8YdMBOFWBBtTNM">
+          <p:NodeReference>
+            <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+            <CategoryReference Kind="Category" Name="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="RCP.Protocol.RcpTypes" LastDependency="RCPSharp.dll">
+            <Choice Kind="TypeFlag" Name="Widgettype" />
+          </p:TypeAnnotation>
+          <Patch Id="CgKbnBzA3IsLTLqKDEWyWp">
+            <Canvas Id="QsHHcio9GFmPc87hMB5a6O" BordersChecked="false" CanvasType="Group" />
+            <ProcessDefinition Id="TJZmXiapRAyOEZrs282I7K" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
     </Canvas>
     <!--
 
