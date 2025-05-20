@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="T0t5rOJ5AAFPY6cCTmFEbV" LanguageVersion="2024.6.7" Version="0.128">
+  <NugetDependency Id="UptyXQPbA7oOZ0CM8XD0J1" Location="VL.CoreLib" Version="2024.6.7" />
+  <Patch Id="QkCpKPcrD4mLMDG5NsDYby">
+    <Canvas Id="IA9NgTXk3lNMmqIN0Z6bTT" DefaultCategory="Main" CanvasType="FullCategory">
+      <!--
+
+    ************************ Rabbit ************************
+
+-->
+      <Node Name="Rabbit" Bounds="352,125" Id="GOR5lJlUjenMJo0YvjMw57">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" />
+        </p:NodeReference>
+        <Patch Id="UmcuVzcYxr3N2dJA6dHtHZ">
+          <Canvas Id="VsRURGczktoPOdV4QgCcei" CanvasType="Group">
+            <Node Bounds="416,175,211,206" Id="KVw4UH21yr7ODpJD2T6Z6C">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+              </p:NodeReference>
+              <Pin Id="B1ts7lTfLPcMZS53l6tdTm" Name="Force" Kind="InputPin" />
+              <Pin Id="F1YY7w22oJQMvOA5eUebEy" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True" />
+              <Pin Id="HO2laV1zvKAQHhLhiHzwP8" Name="Has Changed" Kind="OutputPin" />
+              <Patch Id="VWAmiD3AA0gMpCOF2ELYPm" ManuallySortedPins="true">
+                <Patch Id="NB1XIXeNFItPAD0M20jsZ7" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="QWxLwUx7nvLPq9nF6WnBsL" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="429,295,52,26" Id="V2NWcQulcEuNqum0Iw1T1Z">
+                  <p:NodeReference LastCategoryFullName="RCP.RCPServer" LastDependency="RCPSharp.csproj" OverloadStrategy="AllPinsThatAreNotCommon">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="RCPServer" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Transporter" />
+                  </p:NodeReference>
+                  <Pin Id="SqDP3vbDJp9MX1mhTjRQ1J" Name="Transporter" Kind="InputPin" />
+                  <Pin Id="Sum0wvDFnSvPPP4YiW8PQr" Name="Application Id" Kind="InputPin" />
+                  <Pin Id="CaoHwmmgQ9iNyvll1ZdOnX" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="472,198,137,26" Id="FPjuHnRqvYhNDJEjTGTe37">
+                  <p:NodeReference LastCategoryFullName="RCP.Transporter.FleckWebsocketServerTransporter" LastDependency="RCPSharp.csproj">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="FleckWebsocketServerTransporter" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="AXOpbhBB5VoN024SCreKIH" Name="Remote Host" Kind="InputPin" />
+                  <Pin Id="Ct84ZD7nYW4Nf3K8aaMjyb" Name="Port" Kind="InputPin" />
+                  <Pin Id="TWmV2A1ezMyL1QgTVYmqdc" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pad Id="V2Uiy2Xhb8zMmITovXsdMU" Comment="Application Id" Bounds="495,276,35,15" ShowValueBox="true" isIOBox="true" Value="vvvv">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pad>
+              </Patch>
+              <ControlPoint Id="LPPlgnW4vumNwlBd82EI4c" Bounds="428,375" Alignment="Bottom" />
+              <ControlPoint Id="V63x2AacbQ4LLHa7Qsj8lf" Bounds="492,375" Alignment="Bottom" />
+              <ControlPoint Id="GgYxQi1rW8pOEXMOqiq6II" Bounds="473,181" Alignment="Top" />
+              <ControlPoint Id="HVYHzH1DQ7eP6owmd51iPR" Bounds="606,181" Alignment="Top" />
+            </Node>
+            <ControlPoint Id="H5nolthDV3KNFsQMtofvNs" Bounds="475,153" />
+            <ControlPoint Id="AFLU6yW0AeBNrVYtE0xiNq" Bounds="605,150" />
+            <Node Bounds="454,511,137,26" Id="AHmiPMhFaPVOtTPTifmV2D">
+              <p:NodeReference LastCategoryFullName="RCP.Transporter.FleckWebsocketServerTransporter" LastDependency="RCPSharp.csproj">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="FleckWebsocketServerTransporter" />
+                <Choice Kind="OperationCallFlag" Name="ConnectionCount" />
+              </p:NodeReference>
+              <Pin Id="TeQCJU3e1h2NLRU2GdUhgc" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Pq4F9y7Ui2dPVpnM0XQgST" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="PcevBuiKAziNsi9mEScJmf" Name="Connection Count" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="R8bNGWfmxCKLAmHb5sdlae" Bounds="588,560" />
+          </Canvas>
+          <Patch Id="DfAVyBVNogmPiPehygB1RA" Name="Create" />
+          <Patch Id="SCZrBawylLSMxpSbdBUkw3" Name="Update">
+            <Pin Id="Ao7fVCCoIPrNrfhvLETzrp" Name="Remote Host" Kind="InputPin" DefaultValue="127.0.0.1" />
+            <Pin Id="IggSQwR9TX6PQwTxRdXgcw" Name="Port" Kind="InputPin" DefaultValue="10000" />
+            <Pin Id="BEVixYhC1ZiMSjHHHgJUDq" Name="Connection Count" Kind="OutputPin" />
+          </Patch>
+          <ProcessDefinition Id="Qu66K88yAlnPT5gRHL30L8">
+            <Fragment Id="PnPpa8E9OA5MBMYoQvbFGd" Patch="DfAVyBVNogmPiPehygB1RA" Enabled="true" />
+            <Fragment Id="EnhXkpHKpM4MjczxfPY54Y" Patch="SCZrBawylLSMxpSbdBUkw3" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="G08vevYAj6SMIpDSgTdiNs" Ids="CaoHwmmgQ9iNyvll1ZdOnX,LPPlgnW4vumNwlBd82EI4c" />
+          <Link Id="LLneYaL0Eq2OB9CAkS9Q8M" Ids="TWmV2A1ezMyL1QgTVYmqdc,V63x2AacbQ4LLHa7Qsj8lf" />
+          <Link Id="NGQwDm7BcA2LP505sNAFNd" Ids="GgYxQi1rW8pOEXMOqiq6II,AXOpbhBB5VoN024SCreKIH" />
+          <Link Id="VoxWJwfmjHLL7UVs8wDtpT" Ids="H5nolthDV3KNFsQMtofvNs,GgYxQi1rW8pOEXMOqiq6II" />
+          <Link Id="NmyyDwT5I91PFAWgIrf4L5" Ids="Ao7fVCCoIPrNrfhvLETzrp,H5nolthDV3KNFsQMtofvNs" IsHidden="true" />
+          <Link Id="IyayM8q359vP9wr7AjVSjr" Ids="HVYHzH1DQ7eP6owmd51iPR,Ct84ZD7nYW4Nf3K8aaMjyb" />
+          <Link Id="HJcQvnUvBGqMkyp5yjnmQ1" Ids="AFLU6yW0AeBNrVYtE0xiNq,HVYHzH1DQ7eP6owmd51iPR" />
+          <Link Id="NZQMjswdVv8Ly8xe4h0cQj" Ids="IggSQwR9TX6PQwTxRdXgcw,AFLU6yW0AeBNrVYtE0xiNq" IsHidden="true" />
+          <Link Id="VuzkWiZgY2JMMpBop76Th4" Ids="TWmV2A1ezMyL1QgTVYmqdc,SqDP3vbDJp9MX1mhTjRQ1J" />
+          <Link Id="NI8T5cYup7HQStlv2GYNnE" Ids="V2Uiy2Xhb8zMmITovXsdMU,Sum0wvDFnSvPPP4YiW8PQr" />
+          <Link Id="HugpTbZgcBkOGDs7qq6Prs" Ids="V63x2AacbQ4LLHa7Qsj8lf,TeQCJU3e1h2NLRU2GdUhgc" />
+          <Link Id="OLpTZcCBZW6Mc9bTBdkLRe" Ids="PcevBuiKAziNsi9mEScJmf,R8bNGWfmxCKLAmHb5sdlae" />
+          <Link Id="SQD0tmd1lEaQCkVQKyV7oT" Ids="R8bNGWfmxCKLAmHb5sdlae,BEVixYhC1ZiMSjHHHgJUDq" IsHidden="true" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="BUjbreo8HUtPgtSAmx3HWf">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="LD6vdJp9eWuMb3OZzqDlXn">
+        <Canvas Id="VF9i6KefTooOi4f4FzRZZb" CanvasType="Group">
+          <Node Bounds="487,181,45,19" Id="PupIBjHrHNUMtdKy2qE7BI">
+            <p:NodeReference LastCategoryFullName="Main" LastDependency="HowTo Shake hands.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Rabbit" />
+            </p:NodeReference>
+            <Pin Id="C0mINYbD6rYM1a4a4MzGIU" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JKMNJY7n6dcQA74ux8XJJL" Name="Remote Host" Kind="InputPin" />
+            <Pin Id="VPWWMrhAmlROoql73lefTy" Name="Port" Kind="InputPin" />
+            <Pin Id="NmsvUZbLQRxM5yYZE0rsK4" Name="Connection Count" Kind="OutputPin" />
+          </Node>
+          <Pad Id="NeNqZ4eDsjYPuBJcNVfeEO" Comment="Connection Count" Bounds="499,254,35,15" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="IUiIq4vOx30OZRxseOBF3n" Name="Create" />
+        <Patch Id="INcTSNT9x9ONV9b5ebol5W" Name="Update" />
+        <ProcessDefinition Id="HSSCGQsVUeYQb1MZZXVczr">
+          <Fragment Id="CEk5BKW3jGlPneLkFkqPro" Patch="IUiIq4vOx30OZRxseOBF3n" Enabled="true" />
+          <Fragment Id="GybGdlMM9BOOMY7pRsveDN" Patch="INcTSNT9x9ONV9b5ebol5W" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="FRiqHsdfn8EOwqGwguhzP1" Ids="NmsvUZbLQRxM5yYZE0rsK4,NeNqZ4eDsjYPuBJcNVfeEO" />
+      </Patch>
+    </Node>
+  </Patch>
+  <ProjectDependency Id="LlreQNCVe9tOjyzJwuhWgK" Location="../rcp-csharp/RCPSharp.csproj" />
+</Document>

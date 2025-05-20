@@ -1,0 +1,3 @@
+[submodule "rcp-csharp"]
+	path = rcp-csharp
+	url = https://github.com/rabbitControl/rcp-csharp.git
