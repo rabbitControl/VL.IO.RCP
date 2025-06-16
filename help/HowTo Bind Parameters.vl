@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="AMCWplhFICfPpyd8f1webT" LanguageVersion="2025.7.0-0392-g07231ec37a" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="AMCWplhFICfPpyd8f1webT" LanguageVersion="2025.7.0-0398-gdabf618629" Version="0.128">
   <NugetDependency Id="AgAq7mLeQ23PkopseUepwc" Location="VL.CoreLib" Version="2024.6.6" />
   <Patch Id="RMfBWsG2PUKOsnxzNBuO8c">
     <Canvas Id="MC9nDBud5Z6OepRGe6bxFx" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -22,14 +22,17 @@
               <Choice Kind="ProcessAppFlag" Name="Rabbit" />
             </p:NodeReference>
             <Pin Id="BVkLJWT5M8vOcx4q9o5ZJM" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="HHJGktWmFPHNm6vo7Zkg38" Name="Show as Column" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="KTiBG0n0pFiMjTW5YM1OOu" Name="Show as Column" Kind="InputPin" IsHidden="true" />
             <Pin Id="Ocni1RRo7FuPKtxVR0nxhs" Name="Model" Kind="InputPin">
-              <p:DefaultValue r:Type="Spread [Collections]&lt;BindingModel [IO.RCP]&gt;" xmlns:r="reflection" r:Version="2" />
+              <p:DefaultValue r:Type="Spread [Collections]&lt;BindingModel [IO.RCP]&gt;" xmlns:r="reflection" r:Version="2">
+                <Item Channel_Path="asd" />
+              </p:DefaultValue>
             </Pin>
             <Pin Id="HLVnL3IFsDpL5WS778Cq2k" Name="Remote Host" Kind="InputPin" />
             <Pin Id="UQAWFZeWPC4NbkL8h3WwgM" Name="Port" Kind="InputPin" />
             <Pin Id="P8S7KnyrAmqOmPeerZeOkT" Name="Application Id" Kind="InputPin" />
             <Pin Id="Dd8UaJ3zjrVP1oYE0QRhc9" Name="Transporter" Kind="InputPin" />
+            <Pin Id="CHtjHBo4sLPMnzkdaclPh1" Name="Read Only" Kind="InputPin" />
             <Pin Id="KZKZNXisGKgN49NcBktMQJ" Name="Enabled" Kind="InputPin" />
             <Pin Id="L8oIaQzliqRNFEVuSctaws" Name="Output" Kind="OutputPin" />
             <Pin Id="BtOj6i9Iv2gMW6XgZj00cE" Name="Connection Count" Kind="OutputPin" />
@@ -267,29 +270,7 @@
             <Pin Id="UAToVSgdBdnOMAGpiBTEww" Name="Description" Kind="InputPin" IsHidden="true" />
             <Pin Id="QOsy82vNq1DM7zloNPYpjY" Name="Tags" Kind="InputPin" IsHidden="true" />
             <Pin Id="I1Wa6IrpGurOZVy8dflVbA" Name="Order" Kind="InputPin" IsHidden="true" />
-          </Node>
-          <Node Bounds="973,311,125,19" Id="AEJzsxNz2PuLaUepusC8pI">
-            <p:NodeReference LastCategoryFullName="IO.OSCQuery" LastDependency="VL.IO.OSCQuery.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="OSCQueryServer" />
-            </p:NodeReference>
-            <Pin Id="FUaNkDD1TutQGwVcFO1EqD" Name="Show Binding Column" Kind="InputPin" IsHidden="true" />
-            <Pin Id="OwQu66h4zUZL6M7oTjZpAk" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Ruv2rOh96E7LV9OPsp7Aja" Name="Model" Kind="InputPin" IsHidden="true">
-              <p:DefaultValue r:Type="Spread [Collections]&lt;BindingModel [IO.OSCQuery]&gt;" xmlns:r="reflection" r:Version="2">
-                <Item Channel_Path="asd" />
-              </p:DefaultValue>
-            </Pin>
-            <Pin Id="JTNBqTK7QS9ODrAe9zQ41O" Name="Service Name" Kind="InputPin" />
-            <Pin Id="Bc3H804NtCFQR1OBtFoXAt" Name="Nickname" Kind="InputPin" />
-            <Pin Id="V4YHoyXrNDEMa9HfPK5ydt" Name="HTTP IP" Kind="InputPin" />
-            <Pin Id="Ck0pDxFIVwoPE8sO0CEcbW" Name="HTTP Port" Kind="InputPin" />
-            <Pin Id="FSF0xcKHoKWPLa5iAG5Z2c" Name="OSC IP" Kind="InputPin" IsHidden="true" />
-            <Pin Id="VVMfcfoBRgpLTQxr8OvIob" Name="OSC Port" Kind="InputPin" />
-            <Pin Id="KIhts18ONxLPxpoGUUTezA" Name="Websocket IP" Kind="InputPin" IsHidden="true" />
-            <Pin Id="VLrfgCJLXB6P4eKlHXopPL" Name="WebSocket Port" Kind="InputPin" />
-            <Pin Id="C2AMxL9dPVtPfpddqa0W3o" Name="Access" Kind="InputPin" />
-            <Pin Id="RsR7aoOgO2VOmwkXSZHyB9" Name="Output" Kind="StateOutputPin" />
+            <Pin Id="Rz4qHcr7UopOYmjG1OMyYE" Name="Read Only" Kind="InputPin" />
           </Node>
         </Canvas>
         <Patch Id="HwnAQw7XXpHPzkJ3LoSazd" Name="Create" />
@@ -322,7 +303,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="GyJgmM8dsXuP8RVWxnVHom" Location="VL.Core" Version="2024.6.6" />
-  <NugetDependency Id="Ij8Qk0VVbn9OyUtJidLmdU" Location="VL.Skia" Version="2024.6.6" />
   <NugetDependency Id="Drbn7qMg6TJQEQLTVb7QyH" Location="VL.IO.RCP" Version="0.0.0.0" />
-  <NugetDependency Id="GGlXTREGGxbP3LdR8TGpn3" Location="VL.IO.OSCQuery" Version="0.0.0" />
 </Document>
