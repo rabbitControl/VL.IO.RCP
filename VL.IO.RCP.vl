@@ -545,6 +545,7 @@
               <Pin Id="Q6W8nNOfEl6NTy1yV0EcQb" Name="Node Context" Kind="InputPin" IsHidden="true" />
               <Pin Id="BvB6VLosbHvObfb6IotIIJ" Name="At Least Run Once" Kind="InputPin" />
               <Pin Id="FLIcZUF8rB1OSMYANX6PBP" Name="Force Push" Kind="InputPin" IsHidden="true" />
+              <ControlPoint Id="LTC6zeNt6pEP5SnS4x6Q9z" Bounds="1765,302" Alignment="Top" />
             </Node>
             <Node Bounds="1804,191,106,19" Id="J8I6eGLy571L60MgbD8QaN">
               <p:NodeReference LastCategoryFullName="Modules.Utils" LastDependency="ModelUtils.vl">
@@ -641,6 +642,15 @@
               </p:TypeAnnotation>
             </Pad>
             <ControlPoint Id="MkB3YNSRfeROnk1S3RF7tN" Bounds="2260,361" />
+            <Node Bounds="1657,210,111,26" Id="PhybwOzboGbOgK6qixkp1b">
+              <p:NodeReference LastCategoryFullName="Reactive.ChannelHub" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="OnChannelsChanged" />
+              </p:NodeReference>
+              <Pin Id="STVIgRRO9oiL5BueVioWEE" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="NHfjaIbSNxUOWqU1ohxVNS" Name="On Channels Changed" Kind="OutputPin" />
+              <Pin Id="ICSmw39YjjNPhFguZwP6Og" Name="Channel Hub" Kind="InputPin" IsHidden="true" />
+            </Node>
           </Canvas>
           <ProcessDefinition Id="QV046f16oKWPCWIKnFJ32d" HasStateOut="true">
             <Fragment Id="Dee0b6JpKJqNbPoA80LSQf" Patch="CxLhmyIDF6CPB9E1b4YKuQ" Enabled="true" />
@@ -867,6 +877,7 @@
           <Link Id="BwGZmLUc2B2OCXVFyXevI4" Ids="MkB3YNSRfeROnk1S3RF7tN,LDZrOBumWBfNZrwP6E3aRx" IsHidden="true" />
           <Link Id="CWwARNOht6LNXpzSvVOHpl" Ids="AmoHgw6L9vjMreKtKf1eS5,AoE51W2NLIwOTv9DyNA7we" />
           <Link Id="S2E5roxyitSL2MW7uXRHti" Ids="HqIlv2x4PFKNe2r8tvqZNn,UNdiDmBPwYeNIswGugFuf2" />
+          <Link Id="IRhiuTkuvGgLR0ya4OMfKW" Ids="NHfjaIbSNxUOWqU1ohxVNS,LTC6zeNt6pEP5SnS4x6Q9z" />
         </Patch>
       </Node>
       <Canvas Id="Orbd1EvGRxiP5pjQPaZ09t" Name="Advanced.Conversions" Position="565,192">
@@ -10821,7 +10832,7 @@
           <Patch Id="NkVovVdd1iyLRXtFOzIYDQ" Name="Update">
             <Pin Id="CiTNabgMcGoM7qAkds51FB" Name="Input" Kind="InputPin" />
             <Pin Id="Cd7tkh6f1i3OY5XfmWD6Ey" Name="Channel" Kind="InputPin" />
-            <Pin Id="BLe9fLrahxmM39Tw3To7Z3" Name="Model" Kind="InputPin" />
+            <Pin Id="GW6JyTpnnHIMGUDwLWnkV3" Name="Model" Kind="InputPin" />
             <Pin Id="AmiftEtJvcCOlz9xCl3Gp4" Name="Label" Kind="InputPin" />
             <Pin Id="UvRJLAdZp3JNulaKHYx1V6" Name="Description" Kind="InputPin" />
             <Pin Id="Ld4j5Yp4ttXNkBwKJZXI3O" Name="Tags" Kind="InputPin" />
@@ -12119,7 +12130,7 @@
   <PlatformDependency Id="NTMEKBdDuWkMZJdybS2Ve3" Location="System.Numerics.Vectors" />
   <PlatformDependency Id="RNicYtgZmIuNwri1lL895p" Location="System.Security.Cryptography.Primitives" />
   <PlatformDependency Id="QkWsOOgF5spMAJVUjz3mM8" Location="VL.Lang.dll" />
-  <PlatformDependency Id="RDmjz0u8sT8Lvhqoniaka7" Location="../../rcp-csharp/lib/net6.0/RCPSharp.dll" />
   <PlatformDependency Id="Cqhn16jf2boMzogyKch14l" Location="System.Runtime" />
   <NugetDependency Id="IvZ9XCxWb3mOFXx0A52W7U" Location="VL.Core" Version="2024.6.6" />
+  <NugetDependency Id="Pzunwdw2dGzLRmqlRUW41z" Location="RCPSharp" Version="0.5.0-alpha" />
 </Document>
