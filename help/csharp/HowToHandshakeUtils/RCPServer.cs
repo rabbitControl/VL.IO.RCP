@@ -1,6 +1,8 @@
 using Kaitai;
 using Microsoft.Extensions.Logging;
+using RCP.Parameters;
 using RCP.Protocol;
+using RCP.Types;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,7 +21,7 @@ namespace RCP
         Int16 FIdCounter = 1;
         ILogger FLog;
 
-        //public IReadOnlyDictionary<Int16, Parameter> Parameters => FParams;
+        public IReadOnlyDictionary<int, Parameter> Parameters => FParams;
 
         public string ApplicationId { get; }
 
@@ -50,11 +52,11 @@ namespace RCP
 		}
 
         #region Parameters
-        //public Parameter CreateParameter(RcpTypes.Datatype type, string label = "", GroupParameter group = null)
-        //{
-        //    var param = Parameter.Create(this, FIdCounter++, type);
-        //    return AddAndReturn(param, label, group);
-        //}
+        public Parameter CreateParameter(RcpTypes.Datatype type, string label = "", GroupParameter group = null)
+        {
+            var param = Parameter.Create(this, FIdCounter++, type);
+            return AddAndReturn(param, label, group);
+        }
 
         //public ArrayParameter<T> CreateArrayParameter<T>(string label = "", params int[] structure) => CreateArrayParameter<T>(label, null, structure);
 
@@ -77,12 +79,12 @@ namespace RCP
         //    return AddAndReturn(param, label, group);
         //}
 
-        //public NumberParameter<T> CreateNumberParameter<T>(string label = "", GroupParameter group = null) /*where T : struct*/
-        //{
-        //    var datatype = TypeDefinition.GetDatatype(typeof(T));
-        //    var param = (NumberParameter<T>)CreateParameter(datatype, label, group);
-        //    return AddAndReturn(param, label, group);
-        //}
+        public NumberParameter<T> CreateNumberParameter<T>(string label = "", GroupParameter group = null) /*where T : struct*/
+        {
+            var datatype = TypeDefinition.GetDatatype(typeof(T));
+            var param = (NumberParameter<T>)CreateParameter(datatype, label, group);
+            return AddAndReturn(param, label, group);
+        }
 
         //public ValueParameter<T> CreateValueParameter<T>(string label = "", GroupParameter group = null)
         //{
@@ -137,28 +139,28 @@ namespace RCP
         //    return AddAndReturn(param, label, group);
         //}
 
-        //TParameter AddAndReturn<TParameter>(TParameter param, string label, GroupParameter group) where TParameter : Parameter
-        //{
-        //    param.Label = label;
-        //    AddParameter(param, group);
-        //    return param;
-        //}
+        TParameter AddAndReturn<TParameter>(TParameter param, string label, GroupParameter group) where TParameter : Parameter
+        {
+            param.Label = label;
+            AddParameter(param, group);
+            return param;
+        }
 
-        //public void AddParameter(Parameter param, GroupParameter group)
-        //{
-        //    base.AddParameter(param);
+        public void AddParameter(Parameter param, GroupParameter group)
+        {
+            base.AddParameter(param);
 
-        //    if (group == null)
-        //        group = Root;
+            if (group == null)
+                group = Root;
 
-        //    group.AddParameter(param);
-        //}
+            group.AddParameter(param);
+        }
 
-        //public override void RemoveParameter(Parameter param)
-        //{
-        //    FParams.Remove(param.Id);
-        //    FParamsToRemove.Add(param.Id);
-        //}
+        public override void RemoveParameter(Parameter param)
+        {
+            FParams.Remove(param.Id);
+            FParamsToRemove.Add(param.Id);
+        }
 
         public override void Update()
         {
@@ -186,7 +188,7 @@ namespace RCP
         {
             if (!FTransporters.Contains(transporter))
             {
-                transporter.Received.Subscribe(r => ReceiveFromClientCB(r.Item1, r.Item2));
+                transporter.Received = ReceiveFromClientCB;
                 FTransporters.Add(transporter);
                 return true;
             }
@@ -205,12 +207,12 @@ namespace RCP
             return false;
         }
 
-        void ReceiveFromClientCB(ArraySegment<byte> bytes, string senderId)
+        void ReceiveFromClientCB(byte[] bytes, string senderId)
 		{
             FLog.LogDebug(senderId);
 			try
             {
-			    var packet = Packet.Parse(new KaitaiStream(bytes.Array), this);
+			    var packet = Packet.Parse(new KaitaiStream(bytes), this);
 		        switch (packet.PacketType)
 		        {
                     case RcpTypes.PacketTypes.Info:
@@ -236,9 +238,7 @@ namespace RCP
                             //check version 
                             if (Parser.IsVersionValid(serverInfo.HandshakeVersion, clientInfo.RCPVersion, clientInfo.HandshakeVersion))
                             {
-                                var pa = new Packet(RcpTypes.PacketTypes.Initialize);
-                                pa.Data = 0;
-                                SendToOne(pa, senderId);
+                                FLog?.LogInformation("version good!");
                             }
                             else
                                 FLog?.LogInformation("version no good!");
@@ -258,31 +258,42 @@ namespace RCP
                     //        break;
                     //    }
 
-                    //case RcpTypes.Command.Updatevalue:
-                    //    {
-                    //        //TODO: actually only set the parameters value
-                    //        Log?.Invoke("received: update value");
-                    //        var param = packet.Data as Parameter;
-                    //        if (FParams.ContainsKey(param.Id))
-                    //            SendToMultiple(bytes, senderId);
-                    //        param.RaiseEvents();
-                    //        break;
-                    //    }
 
                     case RcpTypes.PacketTypes.Initialize:
                         {
                             var count = (int)packet.Data;
                             FLog?.LogInformation("init requests: {0}", [ count ]);
 
-                            //client requests all parameters
-                            //foreach (var param in FParams.Values)
-                            //            {
-                            //                param.ResetForInitialize();
-                            // SendToOne(Pack(RcpTypes.Command.Update, param), senderId);
-                            //            }
+                            var initPack = new Packet(RcpTypes.PacketTypes.Initialize);
+                            initPack.Data = Parameters.Count();
+                            SendToOne(initPack, senderId);
+                            
+                            if (count == 0)
+                            {
+                                //client requests all parameters
+                                foreach (var param in FParams.Values)
+                                {
+                                    param.ResetForInitialize();
+                                    var updatePack = new Packet(RcpTypes.PacketTypes.Update);
+                                    updatePack.Data = param;
+                                    SendToOne(updatePack, senderId);
+                                }
+                            }
+
                             break;
                         }
-		        }
+
+                    case RcpTypes.PacketTypes.Updatevalue:
+                        {
+                            //TODO: actually only set the parameters value
+                            FLog?.LogInformation("received: update value");
+                            var param = packet.Data as Parameter;
+                            if (FParams.ContainsKey(param.Id))
+                                SendToMultiple(bytes, senderId);
+                            param.RaiseEvents();
+                            break;
+                        }
+                }
             }
             catch (Exception e)
             {
@@ -303,16 +314,16 @@ namespace RCP
         //          }
         //}
 
-        //      void SendToMultiple(byte[] bytes, string exceptClientId = "")
-        //      {
-        //          using (var stream = new MemoryStream())
-        //          using (var writer = new BinaryWriter(stream))
-        //          {
-        //              Log?.Invoke("sending to multiple");
-        //              foreach (var transporter in FTransporters)
-        //                  transporter.SendToAll(bytes, exceptClientId);
-        //          }
-        //      }
+        void SendToMultiple(byte[] bytes, string exceptClientId = "")
+        {
+            using (var stream = new MemoryStream())
+            using (var writer = new BinaryWriter(stream))
+            {
+                FLog?.LogInformation("sending to multiple");
+                foreach (var transporter in FTransporters)
+                    transporter.SendToAll(bytes, exceptClientId);
+            }
+        }
 
         void SendToOne(Packet packet, string clientId)
         {

@@ -5,14 +5,14 @@ using static RCP.Protocol.RcpTypes;
 
 namespace RCP.Protocol;
 
-public class Parser
+public static class Parser
 {
-    public RcpTypes.PacketTypes ReadPacketType(KaitaiStream stream)
+    public static RcpTypes.PacketTypes ReadPacketType(KaitaiStream stream)
     { 
         stream.ReadBitsInt(3);
         return (RcpTypes.PacketTypes)stream.ReadBitsInt(5);
     }
-    public Version ReadVersion(KaitaiStream stream)
+    public static Version ReadVersion(KaitaiStream stream)
     {
         var v = new Version();
         v.Major = stream.ReadByte();
@@ -20,7 +20,7 @@ public class Parser
         return v;
     }
 
-    public InfoData ReadInfoData(KaitaiStream stream)
+    public static InfoData ReadInfoData(KaitaiStream stream)
     {
         var nfo = new InfoData();
         nfo.RCPVersion = ReadVersion(stream);
@@ -64,7 +64,7 @@ public class Parser
     //}
 
     //"big endian"
-    public int ReadInt(KaitaiStream stream)
+    public static int ReadInt(KaitaiStream stream)
     {
         var value = 0;
         for (int i = 0; i < 4; i++)
@@ -80,7 +80,7 @@ public class Parser
         return value;
     }
 
-    public string ReadString(KaitaiStream stream)
+    public static string ReadString(KaitaiStream stream)
     {
         var count = ReadInt(stream);
         return Encoding.UTF8.GetString(stream.ReadBytes(count));
