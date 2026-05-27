@@ -32,36 +32,44 @@ namespace RCP
         public event EventHandler<IParameter> ParameterAdded;
         public event EventHandler<IParameter> ParameterRemoved;
 
-        //      protected Packet Pack(RcpTypes.Command command, Parameter parameter)
-        //{
-        //	var packet = new Packet(command);
-        //	packet.Data = parameter;
+        protected Packet Pack(RcpTypes.PacketTypes packetType, Parameter parameter)
+        {
+            var packet = new Packet(packetType);
+            packet.Data = parameter;
 
-        //	return packet;
-        //}
+            return packet;
+        }
 
-        //      protected Packet Pack(RcpTypes.Command command, short id)
-        //      {
-        //          var packet = new Packet(command);
-        //          packet.Data = id;
+        protected Packet Pack(RcpTypes.PacketTypes packetType, int id)
+        {
+            var packet = new Packet(packetType);
+            packet.Data = id;
 
-        //          return packet;
-        //      }
+            return packet;
+        }
 
-        //      protected Packet Pack(RcpTypes.Command command, InfoData infoData)
-        //      {
-        //          var packet = new Packet(command);
-        //          packet.Data = infoData;
+        protected Packet Pack(RcpTypes.PacketTypes packetType, short id)
+        {
+            var packet = new Packet(packetType);
+            packet.Data = id;
 
-        //          return packet;
-        //      }
+            return packet;
+        }
 
-        //      protected Packet Pack(RcpTypes.Command command)
-        //{
-        //	var packet = new Packet(command);
+        protected Packet Pack(RcpTypes.PacketTypes packetType, InfoData infoData)
+        {
+            var packet = new Packet(packetType);
+            packet.Data = infoData;
 
-        //	return packet;
-        //}
+            return packet;
+        }
+
+        protected Packet Pack(RcpTypes.PacketTypes packetType)
+        {
+            var packet = new Packet(packetType);
+
+            return packet;
+        }
 
         public abstract void Dispose();
         public abstract void Update();

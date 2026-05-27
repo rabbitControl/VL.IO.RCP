@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fleck" Version="1.2.0" />
-    <PackageReference Include="VL.Core" Version="2025.7.2-0008-g5ff512c901" />
+    <PackageReference Include="VL.Core" Version="2025.7.2" />
     <PackageReference Include="WatsonWebsocket" Version="4.1.2" />
   </ItemGroup>
   <ItemGroup>

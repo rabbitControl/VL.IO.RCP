@@ -1,4 +1,5 @@
 using Kaitai;
+using Microsoft.Extensions.Options;
 using System.Linq;
 using System.Text;
 using static RCP.Protocol.RcpTypes;
@@ -134,6 +135,14 @@ public static class Parser
 
     //    return bytes;
     //}
+
+    public static byte AddOptionId(ParameterOptions optionId, bool optionsFollow)
+    {
+        var oid = (byte)optionId;
+        if (!optionsFollow)
+            oid |= 128;
+        return oid;
+    }
 
     //"big endian"
     public static byte[] AddIntBytes(int value)

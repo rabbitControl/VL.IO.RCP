@@ -67,11 +67,11 @@ namespace RCP
         //    return AddAndReturn(param, label, group);
         //}
 
-        //public Parameter CreateBangParameter(string label = "", GroupParameter group = null)
-        //{
-        //    var param = Parameter.Create(this, FIdCounter++, RcpTypes.Datatype.Bang);
-        //    return AddAndReturn(param, label, group);
-        //}
+        public Parameter CreateBangParameter(string label = "", GroupParameter group = null)
+        {
+            var param = Parameter.Create(this, FIdCounter++, RcpTypes.Datatype.Bang);
+            return AddAndReturn(param, label, group);
+        }
 
         //public Parameter CreateRangeParameter(RcpTypes.Datatype elementType, string label = "", GroupParameter group = null)
         //{
@@ -86,24 +86,24 @@ namespace RCP
             return AddAndReturn(param, label, group);
         }
 
-        //public ValueParameter<T> CreateValueParameter<T>(string label = "", GroupParameter group = null)
-        //{
-        //    var datatype = TypeDefinition.GetDatatype(typeof(T));
-        //    var param = CreateParameter(datatype, label, group) as ValueParameter<T>;
-        //    return AddAndReturn(param, label, group);
-        //}
+        public ValueParameter<T> CreateValueParameter<T>(string label = "", GroupParameter group = null)
+        {
+            var datatype = TypeDefinition.GetDatatype(typeof(T));
+            var param = CreateParameter(datatype, label, group) as ValueParameter<T>;
+            return AddAndReturn(param, label, group);
+        }
 
-        //public StringParameter CreateStringParameter(string label = "", GroupParameter group = null)
-        //{
-        //    var param = CreateParameter(RcpTypes.Datatype.String, label, group) as StringParameter;
-        //    return AddAndReturn(param, label, group);
-        //}
+        public StringParameter CreateStringParameter(string label = "", GroupParameter group = null)
+        {
+            var param = CreateParameter(RcpTypes.Datatype.String, label, group) as StringParameter;
+            return AddAndReturn(param, label, group);
+        }
 
-        //public UriParameter CreateUriParameter(string label = "", GroupParameter group = null)
-        //{
-        //    var param = CreateParameter(RcpTypes.Datatype.Uri, label, group) as UriParameter;
-        //    return AddAndReturn(param, label, group);
-        //}
+        public UriParameter CreateUriParameter(string label = "", GroupParameter group = null)
+        {
+            var param = CreateParameter(RcpTypes.Datatype.Uri, label, group) as UriParameter;
+            return AddAndReturn(param, label, group);
+        }
 
         //public ImageParameter CreateImageParameter(string label = "", GroupParameter group = null)
         //{
@@ -119,11 +119,11 @@ namespace RCP
         //    return param;
         //}
 
-        //public EnumParameter CreateEnumParameter(string label = "", GroupParameter group = null)
-        //{
-        //    var param = CreateParameter(RcpTypes.Datatype.Enum, label, group) as EnumParameter;
-        //    return AddAndReturn(param, label, group);
-        //}
+        public EnumParameter CreateEnumParameter(string label = "", GroupParameter group = null)
+        {
+            var param = CreateParameter(RcpTypes.Datatype.Enum, label, group) as EnumParameter;
+            return AddAndReturn(param, label, group);
+        }
 
         //public ArrayParameter<string> CreateEnumArrayParameter(string label, params int[] structure)
         //{
@@ -133,11 +133,11 @@ namespace RCP
         //    return param;
         //}
 
-        //public GroupParameter CreateGroup(string label = "", GroupParameter group = null)
-        //{
-        //    var param = Parameter.Create(this, FIdCounter++, RcpTypes.Datatype.Group) as GroupParameter;
-        //    return AddAndReturn(param, label, group);
-        //}
+        public GroupParameter CreateGroup(string label = "", GroupParameter group = null)
+        {
+            var param = Parameter.Create(this, FIdCounter++, RcpTypes.Datatype.Group) as GroupParameter;
+            return AddAndReturn(param, label, group);
+        }
 
         TParameter AddAndReturn<TParameter>(TParameter param, string label, GroupParameter group) where TParameter : Parameter
         {
@@ -164,15 +164,15 @@ namespace RCP
 
         public override void Update()
         {
-            //foreach (var id in FParamsToRemove)
-            //    SendToMultiple(Pack(RcpTypes.Command.Remove, id));
-            //FParamsToRemove.Clear();
+            foreach (var id in FParamsToRemove)
+                SendToMultiple(Pack(RcpTypes.PacketTypes.Remove, id));
+            FParamsToRemove.Clear();
 
-            //foreach (var parameter in FParams.Values)
-            //    if (parameter.OnlyValueChanged)
-            //        SendToMultiple(Pack(RcpTypes.Command.Updatevalue, parameter));
-            //    else if (parameter.IsDirty)
-            //        SendToMultiple(Pack(RcpTypes.Command.Update, parameter));
+            foreach (var parameter in FParams.Values)
+                if (parameter.OnlyValueChanged)
+                    SendToMultiple(Pack(RcpTypes.PacketTypes.Updatevalue, parameter));
+                else if (parameter.IsDirty)
+                    SendToMultiple(Pack(RcpTypes.PacketTypes.Update, parameter));
         }
         #endregion
 
@@ -301,18 +301,18 @@ namespace RCP
             }
         }
 
-        //void SendToMultiple(Packet packet, string exceptClientId = "")
-        //{
-        //	using (var stream = new MemoryStream())
-        //          using (var writer = new BinaryWriter(stream))
-        //          {
-        //              Log?.Invoke("sending to multiple");
-        //              packet.Write(writer);
-        //              var bytes = stream.ToArray();
-        //          	foreach (var transporter in FTransporters)
-        //			transporter.SendToAll(bytes, exceptClientId);
-        //          }
-        //}
+        void SendToMultiple(Packet packet, string exceptClientId = "")
+        {
+            using (var stream = new MemoryStream())
+            using (var writer = new BinaryWriter(stream))
+            {
+                //Log?.Invoke("sending to multiple");
+                packet.Write(writer);
+                var bytes = stream.ToArray();
+                foreach (var transporter in FTransporters)
+                    transporter.SendToAll(bytes, exceptClientId);
+            }
+        }
 
         void SendToMultiple(byte[] bytes, string exceptClientId = "")
         {

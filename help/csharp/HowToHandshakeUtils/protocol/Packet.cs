@@ -34,12 +34,18 @@ namespace RCP.Protocol
                         packet.Data = Parser.ReadInt(input);
                         break;
                     }
+                case RcpTypes.PacketTypes.Update:
+                    {
+                        // expect parameter
+                        packet.Data = Parameter.Parse(input, manager);
+                        break;
+                    }
                 case RcpTypes.PacketTypes.Updatevalue:
                     {
                         //read id
                         var id = Parser.ReadInt(input);
                         // read datatype
-                        var datatype = (RcpTypes.Datatype)(input.ReadU1() & ~128);
+                        var datatype = Parameter.ReadDatatype(input);// (RcpTypes.Datatype)(input.ReadU1() & ~128);
                         //get parameter
                         var parameter = manager.GetParameter(id);
                         //make sure the parameter already exists (apparently there are cases where the server sends an update before the addparameter?!
@@ -146,6 +152,18 @@ namespace RCP.Protocol
                 case RcpTypes.PacketTypes.Update:
                     {
                         (Data as Parameter).Write(writer);
+                        break;
+                    }
+                case RcpTypes.PacketTypes.Updatevalue:
+                    {
+                        var param = (Data as Parameter);
+                        //id
+                        writer.Write(Parser.AddIntBytes(param.Id));
+                        //datatype
+                        writer.Write((byte)param.TypeDefinition.Datatype);
+                        //value
+                        param.WriteValue(writer, false);
+                        //needsTerminator = false;
                         break;
                     }
                     //}

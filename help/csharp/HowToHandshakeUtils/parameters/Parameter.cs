@@ -1,15 +1,15 @@
+using Kaitai;
+using Microsoft.Extensions.Options;
+using RCP.Exceptions;
+using RCP.IO;
+using RCP.Protocol;
+using RCP.Types;
 using System;
+using System.Collections.Immutable;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Threading;
-using System.ComponentModel;
-using System.Collections.Immutable;
-
-using Kaitai;
-using RCP.IO;
-using RCP.Exceptions;
-using RCP.Protocol;
-using RCP.Types;
 
 namespace RCP.Parameters
 {
@@ -238,10 +238,7 @@ namespace RCP.Parameters
                 if (IsChanged(ParameterChangedFlags.Label))
                 {
                     ClearChanged(ParameterChangedFlags.Label);
-                    var optionId = (byte)RcpTypes.ParameterOptions.Label;
-                    if (!IsDirty)
-                        optionId |= 128;
-                    writer.Write(optionId);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Label, IsDirty));
 
                     foreach (var language in FLabels.Keys)
                     {
@@ -254,10 +251,7 @@ namespace RCP.Parameters
                 if (IsChanged(ParameterChangedFlags.Description))
                 {
                     ClearChanged(ParameterChangedFlags.Description);
-                    var optionId = (byte)RcpTypes.ParameterOptions.Description;
-                    if (!IsDirty)
-                        optionId |= 128;
-                    writer.Write(optionId);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Description, IsDirty));
 
                     foreach (var language in FDescriptions.Keys)
                     {
@@ -267,48 +261,57 @@ namespace RCP.Parameters
                     writer.Write((byte)0);
                 }
 
-                //if (IsChanged(ParameterChangedFlags.Tags))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Tags);
-                //    RcpTypes.TinyString.Write(Tags, writer);
-                //}
+                if (IsChanged(ParameterChangedFlags.Tags))
+                {
+                    ClearChanged(ParameterChangedFlags.Tags);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Tags, IsDirty));
+                    writer.Write(Parser.AddStringBytes(Tags));
+                }
 
-                //if (IsChanged(ParameterChangedFlags.Order))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Order);
-                //    writer.Write(Order, ByteOrder.BigEndian);
-                //}
+                if (IsChanged(ParameterChangedFlags.Order))
+                {
+                    ClearChanged(ParameterChangedFlags.Order);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Order, IsDirty));
+                    writer.Write(Parser.AddIntBytes(Order));
+                }
 
-                //if (IsChanged(ParameterChangedFlags.ParentId))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Parentid);
-                //    writer.Write(ParentId, ByteOrder.BigEndian);
-                //}
+                if (IsChanged(ParameterChangedFlags.ParentId))
+                {
+                    ClearChanged(ParameterChangedFlags.ParentId);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Parentid, IsDirty));
+                    writer.Write(Parser.AddIntBytes(ParentId));
+                }
 
-                //if (IsChanged(ParameterChangedFlags.Widget) || (Widget?.IsDirty ?? false))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Widget);
-                //    Widget.Write(writer);
-                //}
+                if (IsChanged(ParameterChangedFlags.Widget) || (Widget?.IsDirty ?? false))
+                {
+                    ClearChanged(ParameterChangedFlags.Widget);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Widget, IsDirty));
+                    Widget.Write(writer);
+                }
 
-                //if (IsChanged(ParameterChangedFlags.Userdata))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Userdata);
-                //    writer.Write(Userdata.Length, ByteOrder.BigEndian);
-                //    writer.Write(Userdata);
-                //}
+                if (IsChanged(ParameterChangedFlags.Userdata))
+                {
+                    ClearChanged(ParameterChangedFlags.Userdata);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Userdata, IsDirty));
+                    writer.Write(Parser.AddIntBytes(Userdata.Length));
+                    writer.Write(Userdata);
+                }
 
-                //if (IsChanged(ParameterChangedFlags.UserId))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Userid);
-                //    RcpTypes.TinyString.Write(UserId, writer);
-                //}
+                if (IsChanged(ParameterChangedFlags.UserId))
+                {
+                    ClearChanged(ParameterChangedFlags.UserId);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Userid, IsDirty));
+                    writer.Write(Parser.AddStringBytes(UserId));
+                }
 
-                //if (IsChanged(ParameterChangedFlags.Readonly))
-                //{
-                //    writer.Write((byte)RcpTypes.ParameterOptions.Readonly);
-                //    writer.Write(Readonly);
-                //}
+                if (IsChanged(ParameterChangedFlags.Readonly))
+                {
+                    ClearChanged(ParameterChangedFlags.Readonly);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Readonly, IsDirty));
+                    writer.Write(Readonly);
+                }
+
+                //todo: Enabeld
             }
             else //terminate
                 writer.Write((byte)0);
@@ -327,7 +330,7 @@ namespace RCP.Parameters
         public static Parameter Parse(KaitaiStream input, IParameterManager manager)
         {
             // get mandatory id
-            var id = input.ReadS2be();
+            var id = Parser.ReadInt(input);
 
             var datatype = ReadDatatype(input);
 
@@ -338,14 +341,14 @@ namespace RCP.Parameters
                 elementType = 0;
 
             var parameter = manager.GetParameter(id) ?? Create(manager, id, datatype, elementType);
-            parameter.TypeDefinition.ParseOptions(input);
-            parameter.ParseOptions(input);
+            //parameter.TypeDefinition.ParseOptions(input);
+            //parameter.ParseOptions(input);
             return parameter;
         }
 
-        private static RcpTypes.Datatype ReadDatatype(KaitaiStream input)
+        public static RcpTypes.Datatype ReadDatatype(KaitaiStream input)
         {
-            var datatype = (RcpTypes.Datatype)input.ReadU1();
+            var datatype = (RcpTypes.Datatype)(input.ReadU1() & ~128); //(RcpTypes.Datatype)input.ReadU1();
             if (!Enum.IsDefined(typeof(RcpTypes.Datatype), datatype))
                 throw new RCPDataErrorException("Parameter parsing: Unknown datatype!");
             return datatype;
