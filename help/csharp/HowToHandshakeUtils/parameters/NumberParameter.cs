@@ -9,7 +9,7 @@ namespace RCP.Parameters
     {
         public new NumberDefinition<T> TypeDefinition => base.TypeDefinition as NumberDefinition<T>;
 
-        public NumberParameter(Int16 id, IParameterManager manager, NumberDefinition<T> typeDefinition) 
+        public NumberParameter(int id, IParameterManager manager, NumberDefinition<T> typeDefinition) 
             : base(id, manager, typeDefinition)
         {
         }

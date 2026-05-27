@@ -7,7 +7,7 @@ namespace RCP.Parameters
     {
         public new StringDefinition TypeDefinition => base.TypeDefinition as StringDefinition;
 
-        public StringParameter(Int16 id, IParameterManager manager, StringDefinition typeDefinition) 
+        public StringParameter(int id, IParameterManager manager, StringDefinition typeDefinition) 
             : base(id, manager, typeDefinition)
         {
         }

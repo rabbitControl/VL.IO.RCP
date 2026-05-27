@@ -35,7 +35,7 @@ namespace RCP.Types
             }
         }
 
-        public override Parameter CreateParameter(short id, IParameterManager manager) => new ArrayParameter<T>(id, manager, this);
+        public override Parameter CreateParameter(int id, IParameterManager manager) => new ArrayParameter<T>(id, manager, this);
 
         protected override void WriteOptions(BinaryWriter writer)
         {

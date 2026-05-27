@@ -16,7 +16,7 @@ namespace RCP.Types
 
         public override Type ClrType => null;
 
-        public override Parameter CreateParameter(short id, IParameterManager manager) => new GroupParameter(id, manager, this);
+        public override Parameter CreateParameter(int id, IParameterManager manager) => new GroupParameter(id, manager, this);
 
         public override TypeDefinition CreateArray(int[] structure)
         {

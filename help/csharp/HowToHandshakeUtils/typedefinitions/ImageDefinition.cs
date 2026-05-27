@@ -14,7 +14,7 @@ namespace RCP.Types
         {
         }
 
-        public override Parameter CreateParameter(short id, IParameterManager manager) => new ImageParameter(id, manager, this);
+        public override Parameter CreateParameter(int id, IParameterManager manager) => new ImageParameter(id, manager, this);
 
         public override byte[] ReadValue(KaitaiStream input)
         {

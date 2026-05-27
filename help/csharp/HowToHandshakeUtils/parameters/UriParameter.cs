@@ -7,7 +7,7 @@ namespace RCP.Parameters
     {
         public new UriDefinition TypeDefinition => base.TypeDefinition as UriDefinition;
 
-        public UriParameter(Int16 id, IParameterManager manager, UriDefinition typeDefinition) 
+        public UriParameter(int id, IParameterManager manager, UriDefinition typeDefinition) 
             : base(id, manager, typeDefinition)
         {
         }

@@ -19,7 +19,7 @@ namespace RCP.Parameters
             set => TypeDefinition.MultiSelect = value;
         }
 
-        public EnumParameter(Int16 id, IParameterManager manager, EnumDefinition typeDefinition)
+        public EnumParameter(int id, IParameterManager manager, EnumDefinition typeDefinition)
             : base(id, manager, typeDefinition)
         {
         }

@@ -33,11 +33,11 @@ namespace RCP.Parameters
 
     public abstract class Parameter : RCPObject, IParameter, IWriteable
     {
-        public static Parameter Create(IParameterManager manager, Int16 id, RcpTypes.Datatype datatype) => Create(manager, id, datatype, 0);
+        public static Parameter Create(IParameterManager manager, int id, RcpTypes.Datatype datatype) => Create(manager, id, datatype, 0);
 
-        public static Parameter Create(IParameterManager manager, Int16 id, RcpTypes.Datatype datatype, RcpTypes.Datatype elementType) => Create(manager, id, datatype, elementType, null);
+        public static Parameter Create(IParameterManager manager, int id, RcpTypes.Datatype datatype, RcpTypes.Datatype elementType) => Create(manager, id, datatype, elementType, null);
 
-        public static Parameter Create(IParameterManager manager, Int16 id, RcpTypes.Datatype datatype, RcpTypes.Datatype elementType, int[] structure)
+        public static Parameter Create(IParameterManager manager, int id, RcpTypes.Datatype datatype, RcpTypes.Datatype elementType, int[] structure)
         {
             TypeDefinition typeDefinition, elementTypeDefinition;
             switch (datatype)
@@ -60,7 +60,7 @@ namespace RCP.Parameters
         }
 
         IParameterManager FManager;
-        Int16 FParentId;
+        int FParentId;
         ImmutableDictionary<string, string> FLabels = ImmutableDictionary<string, string>.Empty;
         ImmutableDictionary<string, string> FDescriptions = ImmutableDictionary<string, string>.Empty;
         string FTags = "";
@@ -74,7 +74,7 @@ namespace RCP.Parameters
         public event EventHandler Updated;
         public event EventHandler ValueUpdated;
 
-        public Parameter(Int16 id, IParameterManager manager, TypeDefinition type)
+        public Parameter(int id, IParameterManager manager, TypeDefinition type)
         {
             Id = id;
             FManager = manager;
@@ -85,10 +85,10 @@ namespace RCP.Parameters
             type.PropertyChanged += (s, p) => OnPropertyChanged(p.PropertyName);
         }
 
-        public Int16 Id { get; }
+        public int Id { get; }
         public TypeDefinition TypeDefinition { get; }
 
-        public Int16 ParentId
+        public int ParentId
         {
             get { return FParentId; }
             set
@@ -484,7 +484,7 @@ namespace RCP.Parameters
     {
         T FValue;
 
-        public ValueParameter(Int16 id, IParameterManager manager, DefaultDefinition<T> type) 
+        public ValueParameter(int id, IParameterManager manager, DefaultDefinition<T> type) 
             : base(id, manager, type)
         {
             FValue = type.Default;

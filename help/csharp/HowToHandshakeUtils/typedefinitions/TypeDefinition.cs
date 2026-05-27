@@ -175,7 +175,7 @@ namespace RCP.Types
 
         public abstract TypeDefinition CreateArray(int[] structure);
         public abstract TypeDefinition CreateRange();
-        public abstract Parameter CreateParameter(Int16 id, IParameterManager manager);
+        public abstract Parameter CreateParameter(int id, IParameterManager manager);
 
         public virtual void ResetForInitialize()
         {

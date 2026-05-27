@@ -13,7 +13,7 @@ namespace RCP.Parameters
 
         public event EventHandler OnBang;
 
-        public BangParameter(Int16 id, IParameterManager manager)
+        public BangParameter(int id, IParameterManager manager)
             : base(id, manager, new BangDefinition())
         {
         }

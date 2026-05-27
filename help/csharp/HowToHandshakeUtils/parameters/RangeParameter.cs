@@ -8,7 +8,7 @@ namespace RCP.Parameters
     {
         public new RangeDefinition<T> TypeDefinition => base.TypeDefinition as RangeDefinition<T>;
 
-        public RangeParameter(Int16 id, IParameterManager manager, RangeDefinition<T> typeDefinition)
+        public RangeParameter(int id, IParameterManager manager, RangeDefinition<T> typeDefinition)
             : base(id, manager, typeDefinition)
         {
         }

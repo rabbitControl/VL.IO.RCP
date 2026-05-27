@@ -22,7 +22,7 @@ namespace RCP.Types
             throw new NotImplementedException();
         }
 
-        public override Parameter CreateParameter(short id, IParameterManager manager) => new BangParameter(id, manager);
+        public override Parameter CreateParameter(int id, IParameterManager manager) => new BangParameter(id, manager);
 
         public override TypeDefinition CreateRange()
         {

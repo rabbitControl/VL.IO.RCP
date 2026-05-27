@@ -16,9 +16,9 @@ namespace RCP
 {
     public class RCPServer: ClientServerBase
     {
-        List<short> FParamsToRemove = new List<short>();
+        List<int> FParamsToRemove = new List<int>();
 		List<IServerTransporter> FTransporters = new List<IServerTransporter>();
-        Int16 FIdCounter = 1;
+        int FIdCounter = 1;
         ILogger FLog;
 
         public IReadOnlyDictionary<int, Parameter> Parameters => FParams;

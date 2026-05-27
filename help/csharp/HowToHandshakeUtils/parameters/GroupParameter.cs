@@ -14,7 +14,7 @@ namespace RCP.Parameters
         private List<IParameter> FAddedParams = new List<IParameter>();
         private List<IParameter> FRemovedParams = new List<IParameter>();
 
-        public GroupParameter(Int16 id, IParameterManager manager, GroupDefinition typeDefinition): 
+        public GroupParameter(int id, IParameterManager manager, GroupDefinition typeDefinition): 
             base (id, manager, typeDefinition)
         {
         }

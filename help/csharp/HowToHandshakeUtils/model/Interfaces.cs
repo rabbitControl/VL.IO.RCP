@@ -92,13 +92,13 @@ namespace RCP
 
     public interface IParameter : IWriteable, INotifyPropertyChanged
     {
-        Int16 Id { get; }
+        int Id { get; }
         ITypeDefinition TypeDefinition { get; }
         string Label { get; set; }
         string Description { get; set; }
         string Tags { get; set; }
         int Order { get; set; }
-        Int16 ParentId { get; }
+        int ParentId { get; }
         Widget Widget { get; set; }
         byte[] Userdata { get; set; }
         string UserId { get; set; }

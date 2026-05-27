@@ -16,7 +16,7 @@ namespace RCP.Types
             ElementType = elementType;
         }
 
-        public override Parameter CreateParameter(short id, IParameterManager manager) => new RangeParameter<T>(id, manager, this);
+        public override Parameter CreateParameter(int id, IParameterManager manager) => new RangeParameter<T>(id, manager, this);
 
         public override TypeDefinition CreateRange()
         {

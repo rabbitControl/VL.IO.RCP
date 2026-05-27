@@ -7,7 +7,7 @@ namespace RCP.Parameters
     {
         public new ArrayDefinition<T> TypeDefinition => base.TypeDefinition as ArrayDefinition<T>;
 
-        public ArrayParameter(Int16 id, IParameterManager manager, ArrayDefinition<T> typeDefinition)
+        public ArrayParameter(int id, IParameterManager manager, ArrayDefinition<T> typeDefinition)
             : base(id, manager, typeDefinition)
         {
         }

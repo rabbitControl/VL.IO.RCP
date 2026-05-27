@@ -77,7 +77,7 @@ namespace RCP.Types
         protected abstract T DefaultMaximum { get; }
         protected abstract T DefaultMulitpleOf { get; }
 
-        public override sealed Parameter CreateParameter(short id, IParameterManager manager) => new NumberParameter<T>(id, manager, this);
+        public override sealed Parameter CreateParameter(int id, IParameterManager manager) => new NumberParameter<T>(id, manager, this);
         public override sealed TypeDefinition CreateRange() => new RangeDefinition<T>(this);
 
         public override void ResetForInitialize()
