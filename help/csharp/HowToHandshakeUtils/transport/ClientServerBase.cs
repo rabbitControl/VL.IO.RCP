@@ -48,14 +48,6 @@ namespace RCP
             return packet;
         }
 
-        protected Packet Pack(RcpTypes.PacketTypes packetType, short id)
-        {
-            var packet = new Packet(packetType);
-            packet.Data = id;
-
-            return packet;
-        }
-
         protected Packet Pack(RcpTypes.PacketTypes packetType, InfoData infoData)
         {
             var packet = new Packet(packetType);

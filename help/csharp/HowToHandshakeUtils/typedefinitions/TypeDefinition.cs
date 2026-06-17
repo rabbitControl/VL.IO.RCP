@@ -215,14 +215,13 @@ namespace RCP.Types
 
         public virtual void ParseOptions(KaitaiStream input)
         {
-            while (true)
+            var optionsFollow = true;
+            while (optionsFollow)
             {
-                var code = input.ReadU1();
-                if (code == 0) // terminator
-                    break;
+                var option = Parser.ReadOptionId(input, out optionsFollow);
 
                 // handle option in specific implementation
-                if (!HandleOption(input, code))
+                if (!HandleOption(input, option))
                 {
                     throw new RCPUnsupportedFeatureException();
                 }

@@ -28,7 +28,8 @@ namespace RCP.Parameters
         Widget = 1 << 7,
         Value = 1 << 8,
         Type = 1 << 9,
-        Readonly = 1 << 10
+        Readonly = 1 << 10,
+        Enabled = 1 << 11
     }
 
     public abstract class Parameter : RCPObject, IParameter, IWriteable
@@ -70,6 +71,7 @@ namespace RCP.Parameters
         private string FUserId = "";
         private Widget FWidget = new Widget(RcpTypes.Widgettype.Default);
         private bool FReadonly;
+        private bool FEnabled;
 
         public event EventHandler Updated;
         public event EventHandler ValueUpdated;
@@ -185,6 +187,16 @@ namespace RCP.Parameters
             {
                 if (SetProperty(ref FReadonly, value))
                     SetChanged(ParameterChangedFlags.Readonly);
+            }
+        }
+
+        public bool Enabled
+        {
+            get => FEnabled;
+            set
+            {
+                if (SetProperty(ref FEnabled, value))
+                    SetChanged(ParameterChangedFlags.Enabled);
             }
         }
 
@@ -311,7 +323,12 @@ namespace RCP.Parameters
                     writer.Write(Readonly);
                 }
 
-                //todo: Enabeld
+                if (IsChanged(ParameterChangedFlags.Enabled))
+                {
+                    ClearChanged(ParameterChangedFlags.Enabled);
+                    writer.Write(Parser.AddOptionId(RcpTypes.ParameterOptions.Enabled, IsDirty));
+                    writer.Write(Enabled);
+                }
             }
             else //terminate
                 writer.Write((byte)0);
@@ -332,27 +349,23 @@ namespace RCP.Parameters
             // get mandatory id
             var id = Parser.ReadInt(input);
 
-            var datatype = ReadDatatype(input);
+            var datatype = Parser.ReadDatatypeId(input, out var hasOptions);
 
             RcpTypes.Datatype elementType;
             if (TypeDefinition.HasElementType(datatype))
-                elementType = ReadDatatype(input);
+                elementType = Parser.ReadDatatypeId(input, out var elementTypeHasOptions);
             else
                 elementType = 0;
 
             var parameter = manager.GetParameter(id) ?? Create(manager, id, datatype, elementType);
-            //parameter.TypeDefinition.ParseOptions(input);
-            //parameter.ParseOptions(input);
+            if (hasOptions)
+                parameter.TypeDefinition.ParseOptions(input);
+            if (input.PeekChar() != 0x80)
+                parameter.ParseOptions(input);
             return parameter;
         }
 
-        public static RcpTypes.Datatype ReadDatatype(KaitaiStream input)
-        {
-            var datatype = (RcpTypes.Datatype)(input.ReadU1() & ~128); //(RcpTypes.Datatype)input.ReadU1();
-            if (!Enum.IsDefined(typeof(RcpTypes.Datatype), datatype))
-                throw new RCPDataErrorException("Parameter parsing: Unknown datatype!");
-            return datatype;
-        }
+        
 
         protected virtual bool HandleOption(KaitaiStream input, RcpTypes.ParameterOptions code)
         {
@@ -362,64 +375,69 @@ namespace RCP.Parameters
         private void ParseOptions(KaitaiStream input)
         {
             // get options from the stream
-            while (true)
+            var optionsFollow = true;
+            while (optionsFollow)
             {
-                var code = input.ReadU1();
-                if (code == 0)
-                    break;
+                var option = (RcpTypes.ParameterOptions)Parser.ReadOptionId(input, out optionsFollow);
 
-                var option = (RcpTypes.ParameterOptions)code;
                 if (!Enum.IsDefined(typeof(RcpTypes.ParameterOptions), option))
                     throw new RCPDataErrorException("Parameter parsing: Unknown option: " + option.ToString());
 
                 switch (option)
                 {
-                    //case RcpTypes.ParameterOptions.Label:
-                    //    while (input.PeekChar() > 0)
-                    //    {
-                    //        var language = new string(input.ReadChars(3));
-                    //        FLabels = FLabels.SetItem(language, new RcpTypes.TinyString(input).Data);
-                    //        SetChanged(ParameterChangedFlags.Label);
-                    //    }
-                    //    input.ReadByte(); //0 terminator
-                    //    break;
+                    case RcpTypes.ParameterOptions.Label:
+                        while (input.PeekChar() > 0)
+                        {
+                            var language = new string(input.ReadChars(3));
+                            var count = Parser.ReadInt(input);
+                            FLabels = FLabels.SetItem(language, Encoding.UTF8.GetString(input.ReadBytes(count)));
+                            SetChanged(ParameterChangedFlags.Label);
+                        }
+                        input.ReadByte(); //0 terminator
+                        break;
 
-                    //case RcpTypes.ParameterOptions.Description:
-                    //    while (input.PeekChar() > 0)
-                    //    {
-                    //        var language = new string(input.ReadChars(3));
-                    //        FDescriptions = FDescriptions.SetItem(language, new RcpTypes.ShortString(input).Data);
-                    //        SetChanged(ParameterChangedFlags.Description);
-                    //    }
-                    //    input.ReadByte(); //0 terminator
-                    //    break;
+                    case RcpTypes.ParameterOptions.Description:
+                        while (input.PeekChar() > 0)
+                        {
+                            var language = new string(input.ReadChars(3));
+                            var count = Parser.ReadInt(input);
+                            FDescriptions = FDescriptions.SetItem(language, Encoding.UTF8.GetString(input.ReadBytes(count)));
+                            SetChanged(ParameterChangedFlags.Label);
+                        }
+                        input.ReadByte(); //0 terminator
+                        break;
 
-                    //case RcpTypes.ParameterOptions.Tags:
-                    //    Tags = new RcpTypes.TinyString(input).Data;
-                    //    break;
+                    case RcpTypes.ParameterOptions.Tags:
+                        Tags = Parser.ReadString(input);
+                        break;
 
                     case RcpTypes.ParameterOptions.Order:
-                        Order = input.ReadS4be();
+                        Order = Parser.ReadInt(input);
                         break;
 
                     case RcpTypes.ParameterOptions.Parentid:
-                        ParentId = input.ReadS2be();
+                        ParentId = Parser.ReadInt(input);
                         break;
 
                     case RcpTypes.ParameterOptions.Widget:
                         Widget = Widget.Parse(input);
                         break;
 
-                    //case RcpTypes.ParameterOptions.Userdata:
-                    //    Userdata = new RcpTypes.Userdata(input).Data;
-                    //    break;
+                    case RcpTypes.ParameterOptions.Userdata:
+                        var byteCount = Parser.ReadInt(input);
+                        Userdata = input.ReadBytes(byteCount);
+                        break;
 
-                    //case RcpTypes.ParameterOptions.Userid:
-                    //    UserId = new RcpTypes.TinyString(input).Data;
-                    //    break;
+                    case RcpTypes.ParameterOptions.Userid:
+                        UserId = Parser.ReadString(input);
+                        break;
 
                     case RcpTypes.ParameterOptions.Readonly:
                         Readonly = input.ReadBoolean();
+                        break;
+
+                    case RcpTypes.ParameterOptions.Enabled:
+                        Enabled = input.ReadBoolean();
                         break;
 
                     default:

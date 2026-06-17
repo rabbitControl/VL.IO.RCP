@@ -1,7 +1,9 @@
 using Kaitai;
 using Microsoft.Extensions.Options;
+using RCP.Exceptions;
 using System.Linq;
 using System.Text;
+using System.Text.Unicode;
 using static RCP.Protocol.RcpTypes;
 
 namespace RCP.Protocol;
@@ -81,10 +83,47 @@ public static class Parser
         return value;
     }
 
+    public static RcpTypes.Datatype ReadDatatypeId(KaitaiStream input, out bool optionsFollow)
+    {
+        var datatypeID = input.ReadU1();
+        var datatype = (RcpTypes.Datatype)(datatypeID & ~128);
+        optionsFollow = (datatypeID & 128) == 0;
+        if (!Enum.IsDefined(typeof(RcpTypes.Datatype), datatype))
+            throw new RCPDataErrorException("Parameter parsing: Unknown datatype!");
+        return datatype;
+    }
+
+    public static byte ReadOptionId(KaitaiStream input, out bool optionsFollow)
+    {
+        var optionId = input.ReadU1();
+        var option = (byte)(optionId & ~128);
+        optionsFollow = (optionId & 128) == 0;
+        //if (!Enum.IsDefined(typeof(RcpTypes.), option))
+        //    throw new RCPDataErrorException("Parameter parsing: Unknown datatype!");
+        return option;
+    }
+
     public static string ReadString(KaitaiStream stream)
     {
         var count = ReadInt(stream);
         return Encoding.UTF8.GetString(stream.ReadBytes(count));
+    }
+
+    public static string ReadLanguageString(KaitaiStream stream)
+    {
+        //TODO: actually support multiple languages
+        //currently simply returns last 
+
+        var output = "";
+        while (stream.PeekChar() != 0)
+        {
+            var lang = Encoding.UTF8.GetString(stream.ReadBytes(3));
+            var count = ReadInt(stream);
+            
+            output = Encoding.UTF8.GetString(stream.ReadBytes(count));
+        }
+
+        return output;
     }
 
     public static byte[] AddVersionBytes(Version version)

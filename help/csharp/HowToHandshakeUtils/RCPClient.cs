@@ -143,7 +143,7 @@ namespace RCP
 
                 case RcpTypes.PacketTypes.Remove:
                         {
-                            var id = (short)packet.Data;
+                            var id = (int)packet.Data;
 
                             if (FParams.ContainsKey(id))
                                 RemoveParameter(FParams[id]);

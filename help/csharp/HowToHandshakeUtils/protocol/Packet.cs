@@ -45,7 +45,7 @@ namespace RCP.Protocol
                         //read id
                         var id = Parser.ReadInt(input);
                         // read datatype
-                        var datatype = Parameter.ReadDatatype(input);// (RcpTypes.Datatype)(input.ReadU1() & ~128);
+                        var datatype = Parser.ReadDatatypeId(input, out var optionsFollow);
                         //get parameter
                         var parameter = manager.GetParameter(id);
                         //make sure the parameter already exists (apparently there are cases where the server sends an update before the addparameter?!
@@ -58,77 +58,82 @@ namespace RCP.Protocol
                         }
                         break;
                     }
+                case RcpTypes.PacketTypes.Remove:
+                    {
+                        packet.Data = Parser.ReadInt(input);
+                        break;
+                    }
 
 
-                    //            if (command == RcpTypes.Command.Updatevalue)
-                    //            {
-                    //                // read id
-                    //                var id = input.ReadS2be();
-                    //                // read datatype
-                    //                var datatype = (RcpTypes.Datatype)input.ReadU1();
-                    //                //get parameter
-                    //                var parameter = manager.GetParameter(id);
-                    //                //make sure the parameter already exists (apparently there are cases where the server sends an update before the addparameter?!
-                    //                if (parameter != null)
-                    //                {
-                    //                    //read value
-                    //                    parameter.ReadValue(input);
-                    //                    packet.Data = parameter;
-                    //                    return packet;
-                    //                }
-                    //                else
-                    //                    return null;
-                    //            }
+                        //            if (command == RcpTypes.Command.Updatevalue)
+                        //            {
+                        //                // read id
+                        //                var id = input.ReadS2be();
+                        //                // read datatype
+                        //                var datatype = (RcpTypes.Datatype)input.ReadU1();
+                        //                //get parameter
+                        //                var parameter = manager.GetParameter(id);
+                        //                //make sure the parameter already exists (apparently there are cases where the server sends an update before the addparameter?!
+                        //                if (parameter != null)
+                        //                {
+                        //                    //read value
+                        //                    parameter.ReadValue(input);
+                        //                    packet.Data = parameter;
+                        //                    return packet;
+                        //                }
+                        //                else
+                        //                    return null;
+                        //            }
 
-                    //            // read packet options
-                    //            while (!input.IsEof)
-                    //            {
-                    //                var code = input.ReadU1();
-                    //                if (code == 0) // terminator
-                    //                    break;
+                        //            // read packet options
+                        //            while (!input.IsEof)
+                        //            {
+                        //                var code = input.ReadU1();
+                        //                if (code == 0) // terminator
+                        //                    break;
 
-                    //                var option = (RcpTypes.PacketOptions)code;
-                    //				if (!Enum.IsDefined(typeof(RcpTypes.PacketOptions), option)) 
-                    //                	throw new RCPDataErrorException("Packet parsing: Unknown option: " + option.ToString());
+                        //                var option = (RcpTypes.PacketOptions)code;
+                        //				if (!Enum.IsDefined(typeof(RcpTypes.PacketOptions), option)) 
+                        //                	throw new RCPDataErrorException("Packet parsing: Unknown option: " + option.ToString());
 
-                    //                switch (option)
-                    //                {
-                    //                    case RcpTypes.PacketOptions.Data:
-                    //                        switch (command)
-                    //                        {
-                    ////	                        case RcpTypes.Command.Initialize:
-                    ////	                            // init - should not happen
-                    ////	                            throw new RCPDataErrorException();
+                        //                switch (option)
+                        //                {
+                        //                    case RcpTypes.PacketOptions.Data:
+                        //                        switch (command)
+                        //                        {
+                        ////	                        case RcpTypes.Command.Initialize:
+                        ////	                            // init - should not happen
+                        ////	                            throw new RCPDataErrorException();
 
-                    //                            case RcpTypes.Command.Remove:
-                    //                                // expect int16
-                    //                                packet.Data = input.ReadS2be();
-                    //                                break;
-                    //                            case RcpTypes.Command.Update:
-                    //                                // expect parameter
-                    //                                packet.Data = Parameter.Parse(input, manager);
-                    //                                break;
+                        //                            case RcpTypes.Command.Remove:
+                        //                                // expect int16
+                        //                                packet.Data = input.ReadS2be();
+                        //                                break;
+                        //                            case RcpTypes.Command.Update:
+                        //                                // expect parameter
+                        //                                packet.Data = Parameter.Parse(input, manager);
+                        //                                break;
 
 
-                    //                            case RcpTypes.Command.Info:
-                    //                                if (input.PeekChar() > 0)
-                    //                                    packet.Data = InfoData.Parse(input);
-                    //                                else
-                    //                                    packet.Data = null;
-                    //                                break;
-                    //                        }
+                        //                            case RcpTypes.Command.Info:
+                        //                                if (input.PeekChar() > 0)
+                        //                                    packet.Data = InfoData.Parse(input);
+                        //                                else
+                        //                                    packet.Data = null;
+                        //                                break;
+                        //                        }
 
-                    //                        break;
+                        //                        break;
 
-                    //                    case RcpTypes.PacketOptions.Timestamp:
-                    //                        packet.Timestamp = input.ReadU8be();
-                    //                        break;
+                        //                    case RcpTypes.PacketOptions.Timestamp:
+                        //                        packet.Timestamp = input.ReadU8be();
+                        //                        break;
 
-                    //                	default:
-                    //                        throw new RCPUnsupportedFeatureException();
-                    //                }
-                    //            }
-            }
+                        //                	default:
+                        //                        throw new RCPUnsupportedFeatureException();
+                        //                }
+                        //            }
+                    }
             return packet;
         }
 
@@ -164,6 +169,11 @@ namespace RCP.Protocol
                         //value
                         param.WriteValue(writer, false);
                         //needsTerminator = false;
+                        break;
+                    }
+                case RcpTypes.PacketTypes.Remove:
+                    {
+                        writer.Write(Parser.AddIntBytes((int)(Data)));
                         break;
                     }
                     //}

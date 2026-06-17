@@ -145,13 +145,13 @@ namespace RCP.Types
             }
         }
 
-        protected override bool HandleOption(KaitaiStream input, byte code)
+        protected override bool HandleOption(KaitaiStream input, byte optionId)
         {
-            var result = base.HandleOption(input, code);
+            var result = base.HandleOption(input, optionId);
             if (result)
                 return result;
 
-            var option = (RcpTypes.NumberOptions)code;
+            var option = (RcpTypes.NumberOptions)optionId;
             if (!Enum.IsDefined(typeof(RcpTypes.NumberOptions), option))
                 throw new RCPDataErrorException("NumberDefinition parsing: Unknown option: " + option.ToString());
 
@@ -177,9 +177,9 @@ namespace RCP.Types
                 //    Scale = (RcpTypes.NumberScale)input.ReadU1();
                 //    return true;
 
-                //case RcpTypes.NumberOptions.Unit:
-                //    Unit = new RcpTypes.TinyString(input).Data;
-                //    return true;
+                case RcpTypes.NumberOptions.Unit:
+                    Unit = Parser.ReadString(input);
+                    return true;
             }
 
             return false;
